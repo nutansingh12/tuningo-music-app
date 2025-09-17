@@ -1,0 +1,268 @@
+import { SkillTree, Achievement } from '@/types';
+
+// Sample Skill Trees
+export const sampleSkillTrees: SkillTree[] = [
+  {
+    id: 'music-theory-basics',
+    name: 'Music Theory Basics',
+    description: 'Learn the fundamentals of music theory',
+    icon: '🎼',
+    color: 'bg-blue-500',
+    nodes: [
+      {
+        id: 'notes-and-staff',
+        name: 'Notes & Staff',
+        description: 'Learn about musical notes and the staff',
+        type: 'theory',
+        difficulty: 'beginner',
+        xpReward: 50,
+        position: { x: 100, y: 100 },
+        prerequisites: [],
+        icon: '🎵',
+        lessons: [
+          {
+            id: 'intro-to-notes',
+            title: 'Introduction to Musical Notes',
+            description: 'Learn the seven musical notes and their positions',
+            type: 'theory',
+            difficulty: 'beginner',
+            estimatedDuration: 5,
+            xpReward: 25,
+            prerequisites: [],
+            exercises: [
+              {
+                id: 'note-names-quiz',
+                type: 'multiple-choice',
+                question: 'What are the seven musical notes?',
+                options: [
+                  { id: 'a', text: 'A, B, C, D, E, F, G', isCorrect: true },
+                  { id: 'b', text: 'Do, Re, Mi, Fa, Sol, La, Ti', isCorrect: false },
+                  { id: 'c', text: '1, 2, 3, 4, 5, 6, 7', isCorrect: false },
+                  { id: 'd', text: 'C, D, E, F, G, A, B', isCorrect: false },
+                ],
+                correctAnswer: 'a',
+                explanation: 'The seven musical notes are A, B, C, D, E, F, and G. They repeat in this pattern.',
+                difficulty: 'beginner',
+              },
+              {
+                id: 'staff-lines-quiz',
+                type: 'multiple-choice',
+                question: 'How many lines does a standard musical staff have?',
+                options: [
+                  { id: 'a', text: '4 lines', isCorrect: false },
+                  { id: 'b', text: '5 lines', isCorrect: true },
+                  { id: 'c', text: '6 lines', isCorrect: false },
+                  { id: 'd', text: '7 lines', isCorrect: false },
+                ],
+                correctAnswer: 'b',
+                explanation: 'A standard musical staff has 5 lines and 4 spaces.',
+                difficulty: 'beginner',
+              },
+            ],
+            theory: {
+              title: 'Musical Notes and the Staff',
+              content: 'Music is written on a staff, which consists of five horizontal lines. Notes are placed on these lines and in the spaces between them to indicate pitch.',
+              examples: [],
+            },
+          },
+        ],
+      },
+      {
+        id: 'intervals',
+        name: 'Intervals',
+        description: 'Understanding musical intervals',
+        type: 'theory',
+        difficulty: 'beginner',
+        xpReward: 75,
+        position: { x: 200, y: 150 },
+        prerequisites: ['notes-and-staff'],
+        icon: '📏',
+        lessons: [
+          {
+            id: 'basic-intervals',
+            title: 'Basic Intervals',
+            description: 'Learn about major and minor intervals',
+            type: 'theory',
+            difficulty: 'beginner',
+            estimatedDuration: 8,
+            xpReward: 40,
+            prerequisites: ['intro-to-notes'],
+            exercises: [
+              {
+                id: 'interval-identification',
+                type: 'multiple-choice',
+                question: 'What is the interval between C and E?',
+                options: [
+                  { id: 'a', text: 'Major 2nd', isCorrect: false },
+                  { id: 'b', text: 'Major 3rd', isCorrect: true },
+                  { id: 'c', text: 'Perfect 4th', isCorrect: false },
+                  { id: 'd', text: 'Perfect 5th', isCorrect: false },
+                ],
+                correctAnswer: 'b',
+                explanation: 'C to E is a Major 3rd interval, spanning 4 semitones.',
+                difficulty: 'beginner',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ear-training',
+    name: 'Ear Training',
+    description: 'Develop your musical ear',
+    icon: '👂',
+    color: 'bg-green-500',
+    nodes: [
+      {
+        id: 'pitch-recognition',
+        name: 'Pitch Recognition',
+        description: 'Learn to identify different pitches',
+        type: 'ear-training',
+        difficulty: 'beginner',
+        xpReward: 60,
+        position: { x: 100, y: 100 },
+        prerequisites: [],
+        icon: '🎯',
+        lessons: [
+          {
+            id: 'pitch-matching',
+            title: 'Pitch Matching',
+            description: 'Match the pitch you hear',
+            type: 'pitch-matching',
+            difficulty: 'beginner',
+            estimatedDuration: 10,
+            xpReward: 30,
+            prerequisites: [],
+            exercises: [
+              {
+                id: 'match-the-pitch',
+                type: 'pitch-match',
+                question: 'Listen to the note and sing or hum the same pitch',
+                correctAnswer: 'C4',
+                explanation: 'Try to match the exact pitch you heard. Use your voice or an instrument.',
+                difficulty: 'beginner',
+                timeLimit: 30,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'rhythm-training',
+    name: 'Rhythm Training',
+    description: 'Master rhythm and timing',
+    icon: '🥁',
+    color: 'bg-red-500',
+    nodes: [
+      {
+        id: 'basic-rhythm',
+        name: 'Basic Rhythm',
+        description: 'Learn basic rhythm patterns',
+        type: 'rhythm',
+        difficulty: 'beginner',
+        xpReward: 50,
+        position: { x: 100, y: 100 },
+        prerequisites: [],
+        icon: '🎵',
+        lessons: [
+          {
+            id: 'clapping-rhythms',
+            title: 'Clapping Rhythms',
+            description: 'Clap along to simple rhythm patterns',
+            type: 'rhythm-clapping',
+            difficulty: 'beginner',
+            estimatedDuration: 7,
+            xpReward: 25,
+            prerequisites: [],
+            exercises: [
+              {
+                id: 'clap-quarter-notes',
+                type: 'rhythm-tap',
+                question: 'Clap along to this quarter note pattern',
+                correctAnswer: '1-2-3-4',
+                explanation: 'Quarter notes are steady, even beats. Count 1-2-3-4 and clap on each number.',
+                difficulty: 'beginner',
+                timeLimit: 20,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+// Sample Achievements
+export const sampleAchievements: Achievement[] = [
+  {
+    id: 'first-lesson',
+    name: 'First Steps',
+    description: 'Complete your first lesson',
+    icon: '🎯',
+    category: 'skill-mastery',
+    requirement: {
+      type: 'lessons-completed',
+      value: 1,
+    },
+    reward: {
+      xp: 50,
+      gems: 10,
+    },
+    rarity: 'common',
+  },
+  {
+    id: 'streak-7',
+    name: 'Week Warrior',
+    description: 'Maintain a 7-day streak',
+    icon: '🔥',
+    category: 'streak',
+    requirement: {
+      type: 'streak',
+      value: 7,
+    },
+    reward: {
+      xp: 100,
+      gems: 25,
+      hearts: 1,
+    },
+    rarity: 'rare',
+  },
+  {
+    id: 'perfect-pitch',
+    name: 'Perfect Pitch',
+    description: 'Get 100% accuracy on 10 pitch exercises',
+    icon: '🎵',
+    category: 'accuracy',
+    requirement: {
+      type: 'perfect-exercises',
+      value: 10,
+    },
+    reward: {
+      xp: 200,
+      gems: 50,
+      title: 'Pitch Master',
+    },
+    rarity: 'epic',
+  },
+  {
+    id: 'rhythm-master',
+    name: 'Rhythm Master',
+    description: 'Complete all rhythm training lessons',
+    icon: '🥁',
+    category: 'skill-mastery',
+    requirement: {
+      type: 'skill-tree-completed',
+      value: 1,
+    },
+    reward: {
+      xp: 500,
+      gems: 100,
+      avatar: 'rhythm-master-avatar',
+    },
+    rarity: 'legendary',
+  },
+];
