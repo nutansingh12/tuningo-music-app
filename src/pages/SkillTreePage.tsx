@@ -13,6 +13,10 @@ const SkillTreePage = () => {
     skillTrees.length > 0 ? skillTrees[0] : null
   );
 
+  console.log('SkillTreePage: skillTrees from store:', skillTrees);
+  console.log('SkillTreePage: selectedTree:', selectedTree);
+  console.log('SkillTreePage: first node in selected tree:', selectedTree?.nodes[0]);
+
   const getNodeStatus = (node: SkillNode) => {
     if (!progress) return 'locked';
     
@@ -171,7 +175,13 @@ const SkillTreePage = () => {
                 }}
               >
                 {isClickable ? (
-                  <Link to={`/lesson/${node.lessons[0]?.id || 'demo'}`}>
+                  <Link
+                    to={`/lesson/${node.lessons[0]?.id || 'demo'}`}
+                    onClick={() => {
+                      console.log('Navigating to lesson:', node.lessons[0]?.id || 'demo');
+                      console.log('Node lessons:', node.lessons);
+                    }}
+                  >
                     <div className={getNodeClasses(node)} title={node.name}>
                       {getNodeIcon(node)}
                     </div>

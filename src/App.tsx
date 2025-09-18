@@ -27,6 +27,9 @@ function App() {
 
   useEffect(() => {
     // Initialize with sample data
+    console.log('App.tsx: Loading skill trees:', sampleSkillTrees);
+    console.log('App.tsx: First skill tree:', sampleSkillTrees[0]);
+    console.log('App.tsx: First lesson in first tree:', sampleSkillTrees[0]?.nodes[0]);
     setSkillTrees(sampleSkillTrees);
   }, [setSkillTrees]);
 

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { useGameStore } from '@/store/gameStore';
 import { useUserStore } from '@/store/userStore';
+import { sampleSkillTrees } from '@/data/sampleData';
 
 const LessonPage = () => {
   const { lessonId } = useParams();
@@ -34,7 +35,21 @@ const LessonPage = () => {
   const [isListening, setIsListening] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
-  // Demo lesson data (in a real app, this would come from an API)
+  // Function to find lesson by ID from our comprehensive database
+  const findLessonById = (id: string) => {
+    for (const skillTree of sampleSkillTrees) {
+      for (const node of skillTree.nodes) {
+        for (const lesson of node.lessons) {
+          if (lesson.id === id) {
+            return lesson;
+          }
+        }
+      }
+    }
+    return null;
+  };
+
+  // Demo lesson data (fallback)
   const demoLesson = {
     id: 'demo',
     title: 'Musical Notes Basics',
@@ -86,11 +101,40 @@ const LessonPage = () => {
   };
 
   useEffect(() => {
-    // In a real app, fetch lesson by ID
-    if (lessonId === 'demo' || !lessonId) {
+    console.log('LessonPage useEffect - lessonId:', lessonId);
+    console.log('Available skill trees:', sampleSkillTrees.length);
+
+    if (!lessonId) {
+      console.log('No lessonId provided, using demo lesson');
+      setCurrentLesson(demoLesson);
+      return;
+    }
+
+    // Debug: Log all available lesson IDs
+    const allLessonIds: string[] = [];
+    sampleSkillTrees.forEach(tree => {
+      tree.nodes.forEach(node => {
+        node.lessons.forEach(lesson => {
+          allLessonIds.push(lesson.id);
+        });
+      });
+    });
+    console.log('All available lesson IDs:', allLessonIds);
+
+    // Try to find the lesson in our comprehensive database
+    const foundLesson = findLessonById(lessonId);
+    if (foundLesson) {
+      console.log('✅ Found lesson:', foundLesson.title, 'with', foundLesson.exercises.length, 'exercises');
+      setCurrentLesson(foundLesson);
+    } else if (lessonId === 'demo') {
+      console.log('Using demo lesson');
+      setCurrentLesson(demoLesson);
+    } else {
+      console.warn('❌ Lesson not found:', lessonId, 'falling back to demo');
+      console.log('Searched for lesson ID:', lessonId);
       setCurrentLesson(demoLesson);
     }
-    
+
     return () => {
       resetLesson();
     };
