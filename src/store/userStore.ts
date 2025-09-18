@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { User, UserProgress, Achievement, GameSession } from '@/types';
+import { User, UserProgress, Achievement, GameSession, SkillNodeProgress } from '@/types';
 
 interface UserState {
   // User data
@@ -17,6 +17,7 @@ interface UserState {
   updateUser: (updates: Partial<User>) => void;
   setProgress: (progress: UserProgress) => void;
   updateProgress: (updates: Partial<UserProgress>) => void;
+  completeLesson: (lessonId: string, nodeId: string, score: number) => void;
   addXP: (amount: number) => void;
   useHeart: () => boolean;
   restoreHearts: () => void;
@@ -46,7 +47,41 @@ const initialUser: User = {
 
 const initialProgress: UserProgress = {
   userId: 'demo-user',
-  skillTreeProgress: {},
+  skillTreeProgress: {
+    // Unlock the first lesson in each skill tree
+    'node_0_0': { // First lesson in Music Foundations
+      nodeId: 'node_0_0',
+      status: 'available',
+      completedLessons: [],
+      bestScore: 0,
+      attempts: 0,
+      unlockedAt: new Date(),
+    },
+    'node_1_0': { // First lesson in Building Skills
+      nodeId: 'node_1_0',
+      status: 'available',
+      completedLessons: [],
+      bestScore: 0,
+      attempts: 0,
+      unlockedAt: new Date(),
+    },
+    'node_2_0': { // First lesson in Expanding
+      nodeId: 'node_2_0',
+      status: 'available',
+      completedLessons: [],
+      bestScore: 0,
+      attempts: 0,
+      unlockedAt: new Date(),
+    },
+    'node_3_0': { // First lesson in Ear & Voice Training
+      nodeId: 'node_3_0',
+      status: 'available',
+      completedLessons: [],
+      bestScore: 0,
+      attempts: 0,
+      unlockedAt: new Date(),
+    },
+  },
   completedLessons: [],
   dailyGoal: 50, // XP
   weeklyXP: 0,
@@ -83,6 +118,77 @@ export const useUserStore = create<UserState>()(
         set((state) => ({
           progress: state.progress ? { ...state.progress, ...updates } : null,
         })),
+
+      completeLesson: (lessonId, nodeId, score) => {
+        const state = get();
+        if (!state.progress) return;
+
+        // Update skill tree progress for this node
+        const currentNodeProgress = state.progress.skillTreeProgress[nodeId];
+        const updatedNodeProgress: SkillNodeProgress = {
+          nodeId,
+          status: 'completed',
+          completedLessons: currentNodeProgress?.completedLessons
+            ? [...currentNodeProgress.completedLessons, lessonId]
+            : [lessonId],
+          bestScore: Math.max(currentNodeProgress?.bestScore || 0, score),
+          attempts: (currentNodeProgress?.attempts || 0) + 1,
+          unlockedAt: currentNodeProgress?.unlockedAt || new Date(),
+          completedAt: new Date(),
+        };
+
+        // Add lesson to completed lessons if not already there
+        const completedLessons = state.progress.completedLessons.includes(lessonId)
+          ? state.progress.completedLessons
+          : [...state.progress.completedLessons, lessonId];
+
+        set({
+          progress: {
+            ...state.progress,
+            skillTreeProgress: {
+              ...state.progress.skillTreeProgress,
+              [nodeId]: updatedNodeProgress,
+            },
+            completedLessons,
+            statistics: {
+              ...state.progress.statistics,
+              totalLessonsCompleted: state.progress.statistics.totalLessonsCompleted + 1,
+            },
+          },
+        });
+
+        // Unlock the next lesson in the sequence
+        const nodeIdParts = nodeId.split('_');
+        if (nodeIdParts.length === 3) {
+          const categoryIndex = parseInt(nodeIdParts[1]);
+          const lessonIndex = parseInt(nodeIdParts[2]);
+          const nextNodeId = `node_${categoryIndex}_${lessonIndex + 1}`;
+
+          // Check if the next node exists and isn't already unlocked
+          if (!state.progress.skillTreeProgress[nextNodeId]) {
+            set((currentState) => ({
+              progress: currentState.progress ? {
+                ...currentState.progress,
+                skillTreeProgress: {
+                  ...currentState.progress.skillTreeProgress,
+                  [nextNodeId]: {
+                    nodeId: nextNodeId,
+                    status: 'available',
+                    completedLessons: [],
+                    bestScore: 0,
+                    attempts: 0,
+                    unlockedAt: new Date(),
+                  },
+                },
+              } : currentState.progress,
+            }));
+            console.log('🔓 Unlocked next lesson:', nextNodeId);
+          }
+        }
+
+        console.log('🎯 Lesson completed:', lessonId, 'Node:', nodeId, 'Score:', score);
+        console.log('🔓 Updated progress:', get().progress?.skillTreeProgress[nodeId]);
+      },
 
       addXP: (amount) => {
         const state = get();

@@ -30,7 +30,7 @@ const LessonPage = () => {
     resetLesson,
     showFeedbackMessage
   } = useGameStore();
-  const { user, useHeart, addXP } = useUserStore();
+  const { user, useHeart, addXP, completeLesson } = useUserStore();
 
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
   const [isListening, setIsListening] = useState(false);
@@ -223,6 +223,30 @@ const LessonPage = () => {
   };
 
   const handleFinishLesson = () => {
+    if (currentLesson) {
+      // Calculate final score based on exercise results
+      const correctAnswers = exerciseResults.filter(r => r.isCorrect).length;
+      const totalQuestions = exerciseResults.length;
+      const score = Math.round((correctAnswers / totalQuestions) * 100);
+
+      // Find the node ID for this lesson
+      let nodeId = '';
+      sampleSkillTrees.forEach(tree => {
+        tree.nodes.forEach(node => {
+          if (node.lessons.some(lesson => lesson.id === currentLesson.id)) {
+            nodeId = node.id;
+          }
+        });
+      });
+
+      if (nodeId) {
+        console.log('🎯 Completing lesson:', currentLesson.id, 'with score:', score, 'for node:', nodeId);
+        completeLesson(currentLesson.id, nodeId, score);
+      } else {
+        console.warn('⚠️ Could not find node ID for lesson:', currentLesson.id);
+      }
+    }
+
     navigate('/skill-tree');
   };
 
