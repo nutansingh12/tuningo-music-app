@@ -1896,8 +1896,8 @@ export const expandedLessonDatabase = {
           "id": "minor_third",
           "title": "Minor Third",
           "description": "3 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -1906,6 +1906,78 @@ export const expandedLessonDatabase = {
               "options": ["2", "3", "4", "5"],
               "answer": "3",
               "explanation": "A minor third is 3 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a minor third?",
+              "options": ["C to E", "C to D", "A to C", "F to A"],
+              "answer": "A to C",
+              "explanation": "A to C is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How does a minor third sound compared to a major third?",
+              "options": ["Brighter", "Darker/sadder", "The same", "Louder"],
+              "answer": "Darker/sadder",
+              "explanation": "Minor thirds have a darker, more melancholic sound than major thirds"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "Which chord contains a minor third?",
+              "options": ["C major", "C minor", "C augmented", "C suspended"],
+              "answer": "C minor",
+              "explanation": "Minor chords are built with a minor third (C-Eb-G in C minor)"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is E to G?",
+              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
+              "answer": "Minor third",
+              "explanation": "E to G is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the natural minor scale, what interval is from the 1st to 3rd degree?",
+              "options": ["Major third", "Minor third", "Perfect fourth", "Diminished third"],
+              "answer": "Minor third",
+              "explanation": "Natural minor scales have a minor third from tonic to the third degree"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What interval is D to F?",
+              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
+              "answer": "Minor third",
+              "explanation": "D to F is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "How many minor thirds are in an octave?",
+              "options": ["3", "4", "5", "6"],
+              "answer": "4",
+              "explanation": "An octave (12 semitones) contains exactly 4 minor thirds (3 semitones each)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a minor third?",
+              "options": ["Major sixth", "Minor sixth", "Perfect fifth", "Major third"],
+              "answer": "Major sixth",
+              "explanation": "When inverted, a minor third becomes a major sixth"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "Which scale degree relationship creates a minor third in C major?",
+              "options": ["C to E", "D to F", "E to G", "Both B and C"],
+              "answer": "Both B and C",
+              "explanation": "In C major, both D-F and E-G are minor thirds"
             }
           ]
         },
@@ -1913,8 +1985,8 @@ export const expandedLessonDatabase = {
           "id": "major_third",
           "title": "Major Third",
           "description": "4 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -1923,6 +1995,78 @@ export const expandedLessonDatabase = {
               "options": ["3", "4", "5", "6"],
               "answer": "4",
               "explanation": "A major third is 4 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a major third?",
+              "options": ["A to C", "C to E", "E to G", "D to F"],
+              "answer": "C to E",
+              "explanation": "C to E is a major third (4 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How does a major third sound?",
+              "options": ["Dark and sad", "Bright and happy", "Dissonant", "Neutral"],
+              "answer": "Bright and happy",
+              "explanation": "Major thirds have a bright, happy, consonant sound"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "Which chord contains a major third?",
+              "options": ["C minor", "C major", "C diminished", "C suspended"],
+              "answer": "C major",
+              "explanation": "Major chords are built with a major third (C-E-G in C major)"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is F to A?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Tritone"],
+              "answer": "Major third",
+              "explanation": "F to A is a major third (4 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the major scale, what interval is from the 1st to 3rd degree?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Augmented third"],
+              "answer": "Major third",
+              "explanation": "Major scales have a major third from tonic to the third degree"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What interval is G to B?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Tritone"],
+              "answer": "Major third",
+              "explanation": "G to B is a major third (4 semitones)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "How many major thirds are in an octave?",
+              "options": ["2", "3", "4", "6"],
+              "answer": "3",
+              "explanation": "An octave (12 semitones) contains exactly 3 major thirds (4 semitones each)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a major third?",
+              "options": ["Minor sixth", "Major sixth", "Perfect fifth", "Minor third"],
+              "answer": "Minor sixth",
+              "explanation": "When inverted, a major third becomes a minor sixth"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What creates the difference between major and minor chords?",
+              "options": ["The fifth", "The third", "The root", "The seventh"],
+              "answer": "The third",
+              "explanation": "The third determines if a chord is major (major third) or minor (minor third)"
             }
           ]
         },
@@ -1930,8 +2074,8 @@ export const expandedLessonDatabase = {
           "id": "perfect_fourth",
           "title": "Perfect Fourth",
           "description": "5 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -1940,6 +2084,78 @@ export const expandedLessonDatabase = {
               "options": ["4", "5", "6", "7"],
               "answer": "5",
               "explanation": "A perfect fourth is 5 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a perfect fourth?",
+              "options": ["C to E", "C to F", "C to G", "C to A"],
+              "answer": "C to F",
+              "explanation": "C to F is a perfect fourth (5 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How does a perfect fourth sound?",
+              "options": ["Very dissonant", "Consonant and stable", "Bright and happy", "Dark and sad"],
+              "answer": "Consonant and stable",
+              "explanation": "Perfect fourths are consonant and create a sense of stability"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is the frequency ratio of a perfect fourth?",
+              "options": ["3:2", "4:3", "5:4", "6:5"],
+              "answer": "4:3",
+              "explanation": "A perfect fourth has a frequency ratio of 4:3"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is F to Bb?",
+              "options": ["Major third", "Perfect fourth", "Tritone", "Perfect fifth"],
+              "answer": "Perfect fourth",
+              "explanation": "F to Bb is a perfect fourth (5 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a perfect fourth?",
+              "options": ["Perfect fourth", "Perfect fifth", "Major sixth", "Minor seventh"],
+              "answer": "Perfect fifth",
+              "explanation": "When inverted, a perfect fourth becomes a perfect fifth"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "In which chord progression is the perfect fourth prominent?",
+              "options": ["I-V-vi-IV", "ii-V-I", "I-IV-V-I", "All of the above"],
+              "answer": "All of the above",
+              "explanation": "Perfect fourths appear in many common chord progressions"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What interval is G to C?",
+              "options": ["Perfect fourth", "Perfect fifth", "Major sixth", "Minor seventh"],
+              "answer": "Perfect fourth",
+              "explanation": "G to C is a perfect fourth (5 semitones)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "In medieval music, how was the perfect fourth classified?",
+              "options": ["Dissonant", "Perfect consonance", "Imperfect consonance", "Forbidden"],
+              "answer": "Perfect consonance",
+              "explanation": "Medieval theorists classified the perfect fourth as a perfect consonance"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What famous song starts with a perfect fourth?",
+              "options": ["Twinkle Twinkle Little Star", "Amazing Grace", "Here Comes the Bride", "Happy Birthday"],
+              "answer": "Here Comes the Bride",
+              "explanation": "'Here Comes the Bride' (Wedding March) famously starts with a perfect fourth"
             }
           ]
         },
@@ -1947,8 +2163,8 @@ export const expandedLessonDatabase = {
           "id": "tritone",
           "title": "Tritone",
           "description": "6 semitones apart - the devil's interval",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 20,
+          "xpReward": 200,
           "exercises": [
             {
               "id": "ex1",
@@ -1957,6 +2173,94 @@ export const expandedLessonDatabase = {
               "options": ["5", "6", "7", "8"],
               "answer": "6",
               "explanation": "A tritone is 6 semitones apart, historically called the devil's interval"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a tritone?",
+              "options": ["C to F", "C to F#", "C to G", "C to E"],
+              "answer": "C to F#",
+              "explanation": "C to F# (or Gb) is a tritone (6 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "Why was the tritone called 'diabolus in musica'?",
+              "options": ["It was too easy", "It sounded evil/dissonant", "It was too consonant", "It was invented by the devil"],
+              "answer": "It sounded evil/dissonant",
+              "explanation": "'Diabolus in musica' (devil in music) referred to its dissonant, unsettling sound"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What interval is F to B?",
+              "options": ["Perfect fourth", "Tritone", "Perfect fifth", "Major sixth"],
+              "answer": "Tritone",
+              "explanation": "F to B is a tritone (6 semitones)"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "How does a tritone divide the octave?",
+              "options": ["Into thirds", "Exactly in half", "Into quarters", "Unevenly"],
+              "answer": "Exactly in half",
+              "explanation": "A tritone divides the octave exactly in half (6 + 6 = 12 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a tritone?",
+              "options": ["Perfect fourth", "Perfect fifth", "Another tritone", "Major sixth"],
+              "answer": "Another tritone",
+              "explanation": "A tritone inverts to another tritone (6 semitones becomes 6 semitones)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "In which chord is the tritone prominent?",
+              "options": ["Major triad", "Minor triad", "Diminished triad", "Augmented triad"],
+              "answer": "Diminished triad",
+              "explanation": "Diminished triads contain a tritone between the root and fifth"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What role does the tritone play in dominant 7th chords?",
+              "options": ["Creates stability", "Creates tension that wants to resolve", "Makes it sound happy", "Has no effect"],
+              "answer": "Creates tension that wants to resolve",
+              "explanation": "The tritone in dominant 7th chords creates tension that resolves to the tonic"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "In jazz music, how is the tritone used?",
+              "options": ["It's avoided", "For tritone substitution", "Only in ballads", "Only in fast songs"],
+              "answer": "For tritone substitution",
+              "explanation": "Jazz uses tritone substitution to replace dominant chords with chords a tritone away"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What interval is B to F?",
+              "options": ["Perfect fourth", "Tritone", "Perfect fifth", "Diminished fifth"],
+              "answer": "Tritone",
+              "explanation": "B to F is a tritone (6 semitones), also called a diminished fifth"
+            },
+            {
+              "id": "ex11",
+              "type": "multiple-choice",
+              "question": "In medieval times, what was forbidden about the tritone?",
+              "options": ["It was banned from all music", "It was avoided in sacred music", "It could only be played on Sundays", "Nothing was forbidden"],
+              "answer": "It was avoided in sacred music",
+              "explanation": "The tritone was generally avoided in medieval sacred music due to its dissonant sound"
+            },
+            {
+              "id": "ex12",
+              "type": "multiple-choice",
+              "question": "What modern genres embrace the tritone?",
+              "options": ["Classical only", "Jazz and blues", "Heavy metal", "Both B and C"],
+              "answer": "Both B and C",
+              "explanation": "Both jazz/blues and heavy metal music embrace the tritone's dissonant character"
             }
           ]
         },
