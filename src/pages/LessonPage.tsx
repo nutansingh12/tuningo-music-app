@@ -423,18 +423,7 @@ const LessonPage = () => {
                 </div>
               );
             }
-
-            // TEMPORARY: Show test staff notation for all questions to verify component works
-            console.log('🎼 No note detected, showing test staff notation');
-            return (
-              <div className="flex justify-center my-6">
-                <StaffNotation
-                  note="B"
-                  clef="treble"
-                  className="shadow-lg"
-                />
-              </div>
-            );
+            return null;
           })()}
 
           {/* Multiple Choice Exercise */}
