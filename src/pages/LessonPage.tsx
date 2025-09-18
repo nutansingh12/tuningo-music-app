@@ -147,8 +147,17 @@ const LessonPage = () => {
   const handleSubmitAnswer = () => {
     if (!currentExercise || !selectedAnswer) return;
 
+    // Find the selected option and check if it's correct
+    let isCorrect = false;
+    if (currentExercise.type === 'multiple-choice' && currentExercise.options) {
+      const selectedOption = currentExercise.options.find(option => option.id === selectedAnswer);
+      isCorrect = selectedOption?.isCorrect || false;
+    } else {
+      // For non-multiple choice, compare directly with correctAnswer
+      isCorrect = selectedAnswer === currentExercise.correctAnswer;
+    }
+
     // Use a heart for wrong answers
-    const isCorrect = selectedAnswer === currentExercise.correctAnswer;
     if (!isCorrect && user) {
       const heartUsed = useHeart();
       if (!heartUsed) {
