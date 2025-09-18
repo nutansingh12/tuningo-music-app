@@ -1,23 +1,78 @@
-import { SkillTree, Achievement } from '@/types';
+import { SkillTree, Achievement, SkillNodeType, LessonType, Difficulty } from '@/types';
 import { expandedLessonDatabase } from './expandedLessons';
 
 // Use the expanded lesson database with hundreds of lessons
 export const lessonDatabase = expandedLessonDatabase;
+
+// Helper function to determine lesson type based on content
+const getLessonType = (lesson: any): LessonType => {
+  if (lesson.title.toLowerCase().includes('rhythm') || lesson.title.toLowerCase().includes('clap')) {
+    return 'rhythm-clapping';
+  }
+  if (lesson.title.toLowerCase().includes('listening') || lesson.title.toLowerCase().includes('ear')) {
+    return 'listening';
+  }
+  if (lesson.title.toLowerCase().includes('pitch') || lesson.title.toLowerCase().includes('perfect pitch')) {
+    return 'pitch-matching';
+  }
+  if (lesson.title.toLowerCase().includes('chord')) {
+    return 'chord-recognition';
+  }
+  if (lesson.title.toLowerCase().includes('scale')) {
+    return 'scale-practice';
+  }
+  if (lesson.title.toLowerCase().includes('reading') || lesson.title.toLowerCase().includes('clef')) {
+    return 'sight-reading';
+  }
+  return 'theory'; // default
+};
+
+// Helper function to determine skill node type based on category
+const getSkillNodeType = (categoryId: string): SkillNodeType => {
+  switch (categoryId) {
+    case 'foundations':
+      return 'theory';
+    case 'building_skills':
+      return 'theory';
+    case 'expanding':
+      return 'composition';
+    case 'ear_voice_training':
+      return 'ear-training';
+    default:
+      return 'theory';
+  }
+};
+
+// Helper function to determine difficulty based on category and lesson index
+const getDifficulty = (categoryIndex: number, lessonIndex: number): Difficulty => {
+  if (categoryIndex === 0) return 'beginner';
+  if (categoryIndex === 1) return lessonIndex < 25 ? 'beginner' : 'intermediate';
+  if (categoryIndex === 2) return lessonIndex < 50 ? 'intermediate' : 'advanced';
+  return 'advanced';
+};
 
 // Convert lesson database to SkillTree format for compatibility
 export const sampleSkillTrees: SkillTree[] = lessonDatabase.categories.map((category, categoryIndex) => ({
   id: category.id,
   name: category.title,
   description: category.description,
+  icon: categoryIndex === 0 ? '🎼' : categoryIndex === 1 ? '🎹' : categoryIndex === 2 ? '🎸' : '🎤',
   color: category.color,
   nodes: category.lessons.map((lesson, lessonIndex) => ({
     id: `node_${categoryIndex}_${lessonIndex}`,
-    x: 100 + (lessonIndex % 5) * 150,
-    y: 100 + Math.floor(lessonIndex / 5) * 120,
+    name: lesson.title,
+    description: lesson.description,
+    type: getSkillNodeType(category.id),
+    difficulty: getDifficulty(categoryIndex, lessonIndex),
+    xpReward: lesson.xpReward,
     lessons: [{
       id: lesson.id,
       title: lesson.title,
       description: lesson.description,
+      type: getLessonType(lesson),
+      difficulty: getDifficulty(categoryIndex, lessonIndex),
+      estimatedDuration: lesson.estimatedDuration,
+      xpReward: lesson.xpReward,
       exercises: lesson.exercises.map(exercise => ({
         id: exercise.id,
         type: exercise.type as any,
@@ -26,114 +81,173 @@ export const sampleSkillTrees: SkillTree[] = lessonDatabase.categories.map((cate
         correct: exercise.options ? exercise.options.indexOf(exercise.answer) : 0,
         explanation: exercise.explanation,
         instruction: (exercise as any).instruction
-      }))
+      })),
+      prerequisites: []
     }],
-    unlocked: lessonIndex === 0,
-    completed: false,
-    connections: lessonIndex > 0 ? [`node_${categoryIndex}_${lessonIndex - 1}`] : []
-  }))
+    position: {
+      x: 100 + (lessonIndex % 5) * 150,
+      y: 100 + Math.floor(lessonIndex / 5) * 120
+    },
+    prerequisites: lessonIndex > 0 ? [`node_${categoryIndex}_${lessonIndex - 1}`] : [],
+    icon: categoryIndex === 0 ? '📝' : categoryIndex === 1 ? '🎯' : categoryIndex === 2 ? '🎨' : '👂'
+  })),
+  prerequisites: categoryIndex > 0 ? [lessonDatabase.categories[categoryIndex - 1].id] : []
 }));
 
-// Sample achievements
+// Sample achievements with proper type structure
 export const sampleAchievements: Achievement[] = [
   {
     id: 'first_lesson',
-    title: 'First Steps',
+    name: 'First Steps',
     description: 'Complete your first lesson',
     icon: '🎵',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 1,
-    xpReward: 100
+    category: 'skill-mastery',
+    requirement: {
+      type: 'lessons_completed',
+      value: 1
+    },
+    reward: {
+      xp: 100
+    },
+    rarity: 'common'
   },
   {
     id: 'note_master',
-    title: 'Note Master',
+    name: 'Note Master',
     description: 'Complete 10 note recognition lessons',
     icon: '🎼',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 10,
-    xpReward: 250
+    category: 'skill-mastery',
+    requirement: {
+      type: 'note_lessons_completed',
+      value: 10
+    },
+    reward: {
+      xp: 250
+    },
+    rarity: 'common'
   },
   {
     id: 'rhythm_expert',
-    title: 'Rhythm Expert',
+    name: 'Rhythm Expert',
     description: 'Complete 15 rhythm lessons',
     icon: '🥁',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 15,
-    xpReward: 300
+    category: 'skill-mastery',
+    requirement: {
+      type: 'rhythm_lessons_completed',
+      value: 15
+    },
+    reward: {
+      xp: 300
+    },
+    rarity: 'rare'
   },
   {
     id: 'scale_scholar',
-    title: 'Scale Scholar',
+    name: 'Scale Scholar',
     description: 'Master 20 different scales',
     icon: '🎹',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 20,
-    xpReward: 500
+    category: 'skill-mastery',
+    requirement: {
+      type: 'scales_mastered',
+      value: 20
+    },
+    reward: {
+      xp: 500
+    },
+    rarity: 'rare'
   },
   {
     id: 'interval_ace',
-    title: 'Interval Ace',
+    name: 'Interval Ace',
     description: 'Perfect interval recognition',
     icon: '🎯',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 25,
-    xpReward: 400
+    category: 'accuracy',
+    requirement: {
+      type: 'interval_accuracy',
+      value: 95
+    },
+    reward: {
+      xp: 400
+    },
+    rarity: 'epic'
   },
   {
     id: 'chord_champion',
-    title: 'Chord Champion',
+    name: 'Chord Champion',
     description: 'Master 30 chord types',
     icon: '🏆',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 30,
-    xpReward: 600
+    category: 'skill-mastery',
+    requirement: {
+      type: 'chords_mastered',
+      value: 30
+    },
+    reward: {
+      xp: 600
+    },
+    rarity: 'epic'
   },
   {
     id: 'perfect_pitch',
-    title: 'Perfect Pitch',
+    name: 'Perfect Pitch',
     description: 'Identify all 12 notes without reference',
     icon: '👂',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 12,
-    xpReward: 1000
+    category: 'skill-mastery',
+    requirement: {
+      type: 'perfect_pitch_accuracy',
+      value: 100
+    },
+    reward: {
+      xp: 1000,
+      title: 'Perfect Pitch Master'
+    },
+    rarity: 'legendary'
   },
   {
     id: 'composer',
-    title: 'Composer',
+    name: 'Composer',
     description: 'Complete 10 composition exercises',
     icon: '✍️',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 10,
-    xpReward: 750
+    category: 'skill-mastery',
+    requirement: {
+      type: 'compositions_completed',
+      value: 10
+    },
+    reward: {
+      xp: 750
+    },
+    rarity: 'epic'
   },
   {
     id: 'streak_master',
-    title: 'Streak Master',
+    name: 'Streak Master',
     description: 'Maintain a 30-day learning streak',
     icon: '🔥',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 30,
-    xpReward: 800
+    category: 'streak',
+    requirement: {
+      type: 'daily_streak',
+      value: 30,
+      timeframe: 'all-time'
+    },
+    reward: {
+      xp: 800,
+      hearts: 5
+    },
+    rarity: 'epic'
   },
   {
     id: 'theory_genius',
-    title: 'Theory Genius',
+    name: 'Theory Genius',
     description: 'Complete all theory lessons',
     icon: '🧠',
-    unlocked: false,
-    progress: 0,
-    maxProgress: 100,
-    xpReward: 1500
+    category: 'skill-mastery',
+    requirement: {
+      type: 'theory_lessons_completed',
+      value: 100
+    },
+    reward: {
+      xp: 1500,
+      title: 'Theory Master'
+    },
+    rarity: 'legendary'
   }
 ];
