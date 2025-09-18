@@ -406,7 +406,13 @@ const LessonPage = () => {
           {/* Staff Notation Visual Aid */}
           {(() => {
             const noteInfo = extractNoteFromQuestion(currentExercise.question);
+            console.log('🎼 Staff notation check:', {
+              question: currentExercise.question,
+              noteInfo: noteInfo
+            });
+
             if (noteInfo) {
+              console.log('🎼 Displaying staff notation for:', noteInfo);
               return (
                 <div className="flex justify-center my-6">
                   <StaffNotation
@@ -417,7 +423,18 @@ const LessonPage = () => {
                 </div>
               );
             }
-            return null;
+
+            // TEMPORARY: Show test staff notation for all questions to verify component works
+            console.log('🎼 No note detected, showing test staff notation');
+            return (
+              <div className="flex justify-center my-6">
+                <StaffNotation
+                  note="B"
+                  clef="treble"
+                  className="shadow-lg"
+                />
+              </div>
+            );
           })()}
 
           {/* Multiple Choice Exercise */}

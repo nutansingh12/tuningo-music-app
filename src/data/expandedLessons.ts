@@ -107,7 +107,7 @@ export const expandedLessonDatabase = {
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (A on staff)",
+              "question": "Which note is shown?",
               "options": ["A", "B", "C", "D"],
               "answer": "A",
               "explanation": "This is the note A on the staff"
@@ -196,7 +196,7 @@ export const expandedLessonDatabase = {
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (B on staff)",
+              "question": "Which note is shown?",
               "options": ["A", "B", "C", "D"],
               "answer": "B",
               "explanation": "This is the note B on the staff"
@@ -285,7 +285,7 @@ export const expandedLessonDatabase = {
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (C on staff)",
+              "question": "Which note is shown?",
               "options": ["A", "B", "C", "D"],
               "answer": "C",
               "explanation": "This is the note C on the staff"
@@ -368,8 +368,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_d",
           "title": "Recognizing Note D",
           "description": "Master identifying the note D",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -378,6 +378,62 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "D",
               "explanation": "This is the note D on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note comes after C in the musical alphabet?",
+              "options": ["B", "D", "E", "F"],
+              "answer": "D",
+              "explanation": "D comes directly after C in the musical alphabet"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "On a piano, where is D located relative to the black keys?",
+              "options": ["Between two black keys", "To the right of two black keys", "To the left of three black keys", "Between C and E"],
+              "answer": "Between C and E",
+              "explanation": "D is the white key between C and E"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is the note D located?",
+              "options": ["On the fourth line", "In the third space", "Above the staff", "On the second line"],
+              "answer": "Above the staff",
+              "explanation": "In treble clef, D (above middle C) is above the staff"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is from D to F?",
+              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
+              "answer": "Minor third",
+              "explanation": "D to F is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the key of D major, what role does D play?",
+              "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
+              "answer": "Tonic",
+              "explanation": "D is the tonic (first degree) of the D major scale"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What is D# (D sharp)?",
+              "options": ["The same as Eb", "A half step above D", "Both A and B", "A black key"],
+              "answer": "Both A and B",
+              "explanation": "D# is the same as Eb, a half step above D, and played on a black key"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What note is a whole step above D?",
+              "options": ["D#", "E", "F", "C"],
+              "answer": "E",
+              "explanation": "E is a whole step (two semitones) above D"
             }
           ]
         },
@@ -385,8 +441,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_e",
           "title": "Recognizing Note E",
           "description": "Master identifying the note E",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -395,6 +451,62 @@ export const expandedLessonDatabase = {
               "options": ["D", "E", "F", "G"],
               "answer": "E",
               "explanation": "This is the note E on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note comes after D in the musical alphabet?",
+              "options": ["C", "E", "F", "G"],
+              "answer": "E",
+              "explanation": "E comes directly after D in the musical alphabet"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is special about the interval from E to F?",
+              "options": ["It's a whole step", "It's a half step", "It's two steps", "There's a black key between them"],
+              "answer": "It's a half step",
+              "explanation": "E to F is a natural half step with no black key between"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is the note E located?",
+              "options": ["On the bottom line", "In the first space", "On the second line", "In the second space"],
+              "answer": "On the bottom line",
+              "explanation": "In treble clef, E is on the bottom (first) line"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is from E to G?",
+              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
+              "answer": "Minor third",
+              "explanation": "E to G is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the key of E major, what role does E play?",
+              "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
+              "answer": "Tonic",
+              "explanation": "E is the tonic (first degree) of the E major scale"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What note is a whole step below E?",
+              "options": ["D", "Eb", "F", "C"],
+              "answer": "D",
+              "explanation": "D is a whole step (two semitones) below E"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "How many sharps does E major have?",
+              "options": ["2", "3", "4", "5"],
+              "answer": "4",
+              "explanation": "E major has four sharps: F#, C#, G#, and D#"
             }
           ]
         },
@@ -402,8 +514,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_f",
           "title": "Recognizing Note F",
           "description": "Master identifying the note F",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -412,6 +524,62 @@ export const expandedLessonDatabase = {
               "options": ["D", "E", "F", "G"],
               "answer": "F",
               "explanation": "This is the note F on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note comes after E in the musical alphabet?",
+              "options": ["D", "F", "G", "A"],
+              "answer": "F",
+              "explanation": "F comes directly after E in the musical alphabet"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "On a piano, where is F located?",
+              "options": ["To the left of three black keys", "To the right of two black keys", "Between black keys", "To the left of two black keys"],
+              "answer": "To the left of three black keys",
+              "explanation": "F is the white key immediately to the left of the group of three black keys"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is the note F located?",
+              "options": ["In the first space", "On the first line", "In the second space", "On the second line"],
+              "answer": "In the first space",
+              "explanation": "In treble clef, F is in the first space from the bottom"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is from F to A?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Perfect fifth"],
+              "answer": "Major third",
+              "explanation": "F to A is a major third (4 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the key of F major, what role does F play?",
+              "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
+              "answer": "Tonic",
+              "explanation": "F is the tonic (first degree) of the F major scale"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "How many flats does F major have?",
+              "options": ["0", "1", "2", "3"],
+              "answer": "1",
+              "explanation": "F major has one flat: Bb"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What is F# (F sharp)?",
+              "options": ["The same as Gb", "A half step above F", "Both A and B", "A black key"],
+              "answer": "Both A and B",
+              "explanation": "F# is the same as Gb, a half step above F, and played on a black key"
             }
           ]
         },
@@ -419,8 +587,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_g",
           "title": "Recognizing Note G",
           "description": "Master identifying the note G",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -429,6 +597,62 @@ export const expandedLessonDatabase = {
               "options": ["E", "F", "G", "A"],
               "answer": "G",
               "explanation": "This is the note G on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note comes after F in the musical alphabet?",
+              "options": ["E", "G", "A", "H"],
+              "answer": "G",
+              "explanation": "G comes directly after F in the musical alphabet"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note comes before A in the musical alphabet?",
+              "options": ["F", "G", "H", "B"],
+              "answer": "G",
+              "explanation": "G comes directly before A in the musical alphabet"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is the note G located?",
+              "options": ["On the second line", "In the second space", "On the first line", "In the first space"],
+              "answer": "On the second line",
+              "explanation": "In treble clef, G is on the second line from the bottom"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is from G to B?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Perfect fifth"],
+              "answer": "Major third",
+              "explanation": "G to B is a major third (4 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the key of G major, what role does G play?",
+              "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
+              "answer": "Tonic",
+              "explanation": "G is the tonic (first degree) of the G major scale"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "How many sharps does G major have?",
+              "options": ["0", "1", "2", "3"],
+              "answer": "1",
+              "explanation": "G major has one sharp: F#"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What is the treble clef also called?",
+              "options": ["F clef", "G clef", "C clef", "Alto clef"],
+              "answer": "G clef",
+              "explanation": "The treble clef is also called the G clef because it circles around the G line"
             }
           ]
         },
@@ -436,16 +660,72 @@ export const expandedLessonDatabase = {
           "id": "treble_clef_lines",
           "title": "Treble Clef Line Notes",
           "description": "Every Good Boy Does Fine",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "What are the treble clef line notes?",
+              "question": "What are the treble clef line notes from bottom to top?",
               "options": ["E-G-B-D-F", "F-A-C-E", "A-C-E-G", "G-B-D-F-A"],
               "answer": "E-G-B-D-F",
               "explanation": "Every Good Boy Does Fine: E-G-B-D-F"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note is on the bottom line of treble clef?",
+              "options": ["E", "G", "B", "D"],
+              "answer": "E",
+              "explanation": "E is on the bottom line - 'Every Good Boy Does Fine'"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note is on the second line of treble clef?",
+              "options": ["E", "G", "B", "D"],
+              "answer": "G",
+              "explanation": "G is on the second line - 'Every Good Boy Does Fine'"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note is on the middle line of treble clef?",
+              "options": ["E", "G", "B", "D"],
+              "answer": "B",
+              "explanation": "B is on the middle (third) line - 'Every Good Boy Does Fine'"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What note is on the fourth line of treble clef?",
+              "options": ["B", "D", "F", "A"],
+              "answer": "D",
+              "explanation": "D is on the fourth line - 'Every Good Boy Does Fine'"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What note is on the top line of treble clef?",
+              "options": ["D", "F", "A", "C"],
+              "answer": "F",
+              "explanation": "F is on the top (fifth) line - 'Every Good Boy Does Fine'"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What memory device helps remember treble clef lines?",
+              "options": ["Every Good Boy Does Fine", "FACE", "All Cows Eat Grass", "Good Boys Do Fine Always"],
+              "answer": "Every Good Boy Does Fine",
+              "explanation": "Every Good Boy Does Fine helps remember E-G-B-D-F"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "How many lines are in the treble clef staff?",
+              "options": ["4", "5", "6", "7"],
+              "answer": "5",
+              "explanation": "The treble clef staff has 5 lines"
             }
           ]
         },
@@ -453,16 +733,72 @@ export const expandedLessonDatabase = {
           "id": "treble_clef_spaces",
           "title": "Treble Clef Space Notes",
           "description": "FACE in the space",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "What are the treble clef space notes?",
+              "question": "What are the treble clef space notes from bottom to top?",
               "options": ["E-G-B-D", "F-A-C-E", "A-C-E-G", "G-B-D-F"],
               "answer": "F-A-C-E",
               "explanation": "The spaces spell FACE: F-A-C-E"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note is in the first space of treble clef?",
+              "options": ["F", "A", "C", "E"],
+              "answer": "F",
+              "explanation": "F is in the first space - FACE"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note is in the second space of treble clef?",
+              "options": ["F", "A", "C", "E"],
+              "answer": "A",
+              "explanation": "A is in the second space - FACE"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note is in the third space of treble clef?",
+              "options": ["F", "A", "C", "E"],
+              "answer": "C",
+              "explanation": "C is in the third space - FACE"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What note is in the fourth space of treble clef?",
+              "options": ["A", "C", "E", "G"],
+              "answer": "E",
+              "explanation": "E is in the fourth (top) space - FACE"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What word do the treble clef spaces spell?",
+              "options": ["FACE", "BEAD", "CAGE", "FADE"],
+              "answer": "FACE",
+              "explanation": "The spaces spell FACE: F-A-C-E"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "How many spaces are in the treble clef staff?",
+              "options": ["3", "4", "5", "6"],
+              "answer": "4",
+              "explanation": "The treble clef staff has 4 spaces between the 5 lines"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "Which is easier to remember: treble clef lines or spaces?",
+              "options": ["Lines", "Spaces", "Both are equal", "Neither"],
+              "answer": "Spaces",
+              "explanation": "Many find FACE easier to remember than Every Good Boy Does Fine"
             }
           ]
         },
@@ -470,16 +806,72 @@ export const expandedLessonDatabase = {
           "id": "bass_clef_lines",
           "title": "Bass Clef Line Notes",
           "description": "Good Boys Do Fine Always",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "What are the bass clef line notes?",
+              "question": "What are the bass clef line notes from bottom to top?",
               "options": ["G-B-D-F-A", "A-C-E-G", "E-G-B-D-F", "F-A-C-E"],
               "answer": "G-B-D-F-A",
               "explanation": "Good Boys Do Fine Always: G-B-D-F-A"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note is on the bottom line of bass clef?",
+              "options": ["G", "B", "D", "F"],
+              "answer": "G",
+              "explanation": "G is on the bottom line - 'Good Boys Do Fine Always'"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note is on the second line of bass clef?",
+              "options": ["G", "B", "D", "F"],
+              "answer": "B",
+              "explanation": "B is on the second line - 'Good Boys Do Fine Always'"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note is on the middle line of bass clef?",
+              "options": ["B", "D", "F", "A"],
+              "answer": "D",
+              "explanation": "D is on the middle (third) line - 'Good Boys Do Fine Always'"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What note is on the fourth line of bass clef?",
+              "options": ["D", "F", "A", "C"],
+              "answer": "F",
+              "explanation": "F is on the fourth line - 'Good Boys Do Fine Always'"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What note is on the top line of bass clef?",
+              "options": ["F", "A", "C", "E"],
+              "answer": "A",
+              "explanation": "A is on the top (fifth) line - 'Good Boys Do Fine Always'"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What memory device helps remember bass clef lines?",
+              "options": ["Every Good Boy Does Fine", "FACE", "All Cows Eat Grass", "Good Boys Do Fine Always"],
+              "answer": "Good Boys Do Fine Always",
+              "explanation": "Good Boys Do Fine Always helps remember G-B-D-F-A"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "The bass clef is also called what?",
+              "options": ["G clef", "F clef", "C clef", "Alto clef"],
+              "answer": "F clef",
+              "explanation": "The bass clef is also called the F clef because it marks the F line"
             }
           ]
         },
@@ -487,16 +879,72 @@ export const expandedLessonDatabase = {
           "id": "bass_clef_spaces",
           "title": "Bass Clef Space Notes",
           "description": "All Cows Eat Grass",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "What are the bass clef space notes?",
+              "question": "What are the bass clef space notes from bottom to top?",
               "options": ["F-A-C-E", "A-C-E-G", "E-G-B-D", "G-B-D-F"],
               "answer": "A-C-E-G",
               "explanation": "All Cows Eat Grass: A-C-E-G"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note is in the first space of bass clef?",
+              "options": ["A", "C", "E", "G"],
+              "answer": "A",
+              "explanation": "A is in the first space - All Cows Eat Grass"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note is in the second space of bass clef?",
+              "options": ["A", "C", "E", "G"],
+              "answer": "C",
+              "explanation": "C is in the second space - All Cows Eat Grass"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note is in the third space of bass clef?",
+              "options": ["A", "C", "E", "G"],
+              "answer": "E",
+              "explanation": "E is in the third space - All Cows Eat Grass"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What note is in the fourth space of bass clef?",
+              "options": ["C", "E", "G", "B"],
+              "answer": "G",
+              "explanation": "G is in the fourth (top) space - All Cows Eat Grass"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What phrase helps remember bass clef spaces?",
+              "options": ["All Cows Eat Grass", "FACE", "Every Good Boy Does Fine", "Good Boys Do Fine Always"],
+              "answer": "All Cows Eat Grass",
+              "explanation": "All Cows Eat Grass helps remember A-C-E-G"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "Which clef is used for lower-pitched instruments?",
+              "options": ["Treble clef", "Bass clef", "Alto clef", "Tenor clef"],
+              "answer": "Bass clef",
+              "explanation": "Bass clef is used for lower-pitched instruments and voices"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What instruments commonly use bass clef?",
+              "options": ["Violin, flute", "Cello, tuba, left hand piano", "Trumpet, clarinet", "Piccolo, violin"],
+              "answer": "Cello, tuba, left hand piano",
+              "explanation": "Lower instruments like cello, tuba, and piano left hand use bass clef"
             }
           ]
         },
@@ -504,8 +952,8 @@ export const expandedLessonDatabase = {
           "id": "ledger_lines_above",
           "title": "Ledger Lines Above Staff",
           "description": "Notes above the staff",
-          "estimatedDuration": 7,
-          "xpReward": 70,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -514,6 +962,78 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "A",
               "explanation": "The first ledger line above treble clef is A"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What are ledger lines?",
+              "options": ["Extra lines above or below the staff", "Lines within the staff", "Curved lines", "Vertical lines"],
+              "answer": "Extra lines above or below the staff",
+              "explanation": "Ledger lines extend the staff for notes that are too high or low"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note is in the space above the first ledger line above treble clef?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "B",
+              "explanation": "B is in the space above the first ledger line (A)"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note is on the second ledger line above treble clef?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "C",
+              "explanation": "The second ledger line above treble clef is C"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "Why do we need ledger lines?",
+              "options": ["To make music look fancy", "For notes outside the staff range", "To separate measures", "To show tempo"],
+              "answer": "For notes outside the staff range",
+              "explanation": "Ledger lines allow us to write notes that are too high or low for the regular staff"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "How long should ledger lines be?",
+              "options": ["As long as the staff", "Just past the note head", "Half the staff width", "Very short"],
+              "answer": "Just past the note head",
+              "explanation": "Ledger lines should extend just past the note head on both sides"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What note is in the space above the second ledger line above treble clef?",
+              "options": ["B", "C", "D", "E"],
+              "answer": "D",
+              "explanation": "D is in the space above the second ledger line (C)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "Are ledger lines used in both treble and bass clef?",
+              "options": ["Only treble", "Only bass", "Both clefs", "Neither"],
+              "answer": "Both clefs",
+              "explanation": "Ledger lines can be used above or below any clef"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What note is on the third ledger line above treble clef?",
+              "options": ["C", "D", "E", "F"],
+              "answer": "E",
+              "explanation": "The third ledger line above treble clef is E"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "When reading ledger lines, what pattern continues?",
+              "options": ["Random notes", "The same line-space pattern as the staff", "Only sharp notes", "Only flat notes"],
+              "answer": "The same line-space pattern as the staff",
+              "explanation": "Ledger lines continue the alphabetical pattern: line-space-line-space"
             }
           ]
         },
@@ -521,8 +1041,8 @@ export const expandedLessonDatabase = {
           "id": "ledger_lines_below",
           "title": "Ledger Lines Below Staff",
           "description": "Notes below the staff",
-          "estimatedDuration": 7,
-          "xpReward": 70,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -531,6 +1051,78 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "C",
               "explanation": "The first ledger line below treble clef is middle C"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note is in the space below the treble staff?",
+              "options": ["B", "C", "D", "E"],
+              "answer": "D",
+              "explanation": "D is in the space below the treble staff"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What note is in the space below the first ledger line below treble clef?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "B",
+              "explanation": "B is in the space below middle C (first ledger line)"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note is on the second ledger line below treble clef?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "A",
+              "explanation": "The second ledger line below treble clef is A"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "Which is more common: ledger lines above or below treble clef?",
+              "options": ["Above", "Below", "Equal", "Neither is used"],
+              "answer": "Above",
+              "explanation": "Ledger lines above treble clef are more commonly used for high notes"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What note is in the space below the second ledger line below treble clef?",
+              "options": ["F", "G", "A", "B"],
+              "answer": "G",
+              "explanation": "G is in the space below the second ledger line (A)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What note is on the third ledger line below treble clef?",
+              "options": ["F", "G", "A", "B"],
+              "answer": "F",
+              "explanation": "The third ledger line below treble clef is F"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "When would you use many ledger lines below treble clef?",
+              "options": ["For very high notes", "For very low notes", "For loud notes", "For soft notes"],
+              "answer": "For very low notes",
+              "explanation": "Many ledger lines below indicate very low pitches"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What's an alternative to using many ledger lines below treble clef?",
+              "options": ["Use bass clef", "Use alto clef", "Use tenor clef", "All of the above"],
+              "answer": "All of the above",
+              "explanation": "Other clefs can be used to avoid excessive ledger lines"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "How do ledger lines help musicians?",
+              "options": ["They extend the range of notation", "They make music prettier", "They show rhythm", "They indicate volume"],
+              "answer": "They extend the range of notation",
+              "explanation": "Ledger lines allow notation of pitches beyond the staff's range"
             }
           ]
         },
@@ -538,16 +1130,88 @@ export const expandedLessonDatabase = {
           "id": "middle_c",
           "title": "Middle C",
           "description": "The center of the piano",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "Where is middle C located?",
+              "question": "Where is middle C located on the grand staff?",
               "options": ["Between treble and bass clef", "Top of treble clef", "Bottom of bass clef", "Above both clefs"],
               "answer": "Between treble and bass clef",
               "explanation": "Middle C sits between the treble and bass clef staves"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "How is middle C written in treble clef?",
+              "options": ["On the staff", "Below the staff with a ledger line", "Above the staff", "In the first space"],
+              "answer": "Below the staff with a ledger line",
+              "explanation": "In treble clef, middle C is written below the staff with a ledger line"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How is middle C written in bass clef?",
+              "options": ["On the staff", "Above the staff with a ledger line", "Below the staff", "On the top line"],
+              "answer": "Above the staff with a ledger line",
+              "explanation": "In bass clef, middle C is written above the staff with a ledger line"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "Why is it called 'middle' C?",
+              "options": ["It's in the middle of the alphabet", "It's in the middle of the piano", "It's the middle note of music", "It's played with the middle finger"],
+              "answer": "It's in the middle of the piano",
+              "explanation": "Middle C is located near the center of a piano keyboard"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is middle C's scientific pitch notation?",
+              "options": ["C3", "C4", "C5", "C6"],
+              "answer": "C4",
+              "explanation": "Middle C is designated as C4 in scientific pitch notation"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What frequency is middle C approximately?",
+              "options": ["220 Hz", "262 Hz", "440 Hz", "523 Hz"],
+              "answer": "262 Hz",
+              "explanation": "Middle C has a frequency of approximately 262 Hz"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "On a piano, where is middle C located?",
+              "options": ["To the left of two black keys", "To the right of three black keys", "Between black keys", "On a black key"],
+              "answer": "To the left of two black keys",
+              "explanation": "Middle C is the white key to the left of the group of two black keys, near the center"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What makes middle C a reference point?",
+              "options": ["It's the loudest note", "It's between treble and bass clef", "It's the first note learned", "It's the easiest to play"],
+              "answer": "It's between treble and bass clef",
+              "explanation": "Middle C serves as a reference point between the two most common clefs"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "Which hand typically plays middle C on piano?",
+              "options": ["Left hand only", "Right hand only", "Either hand", "Both hands together"],
+              "answer": "Either hand",
+              "explanation": "Middle C can be played by either the left or right hand, depending on the music"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What octave does middle C begin?",
+              "options": ["3rd octave", "4th octave", "5th octave", "6th octave"],
+              "answer": "4th octave",
+              "explanation": "Middle C begins the 4th octave in scientific pitch notation"
             }
           ]
         },
@@ -742,16 +1406,56 @@ export const expandedLessonDatabase = {
           "id": "whole_notes",
           "title": "Whole Notes",
           "description": "4 beats in 4/4 time",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
               "type": "multiple-choice",
-              "question": "How many beats does a whole note get?",
+              "question": "How many beats does a whole note get in 4/4 time?",
               "options": ["1", "2", "3", "4"],
               "answer": "4",
               "explanation": "A whole note gets 4 beats in 4/4 time"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What does a whole note look like?",
+              "options": ["Filled note head with stem", "Empty note head with stem", "Empty note head without stem", "Filled note head without stem"],
+              "answer": "Empty note head without stem",
+              "explanation": "A whole note is an empty oval with no stem"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How many whole notes fit in one measure of 4/4 time?",
+              "options": ["1", "2", "3", "4"],
+              "answer": "1",
+              "explanation": "One whole note fills an entire 4/4 measure"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How many half notes equal one whole note?",
+              "options": ["1", "2", "3", "4"],
+              "answer": "2",
+              "explanation": "Two half notes equal one whole note"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "In 3/4 time, how many beats would a whole note get?",
+              "options": ["3", "4", "It doesn't fit", "6"],
+              "answer": "It doesn't fit",
+              "explanation": "A whole note (4 beats) doesn't fit in 3/4 time (3 beats per measure)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "Where is a whole note positioned on the staff?",
+              "options": ["Hanging from a line", "Sitting on a line or in a space", "Always in spaces", "Always on lines"],
+              "answer": "Sitting on a line or in a space",
+              "explanation": "Whole notes sit on lines or in spaces, just like other notes"
             }
           ]
         },
@@ -989,8 +1693,8 @@ export const expandedLessonDatabase = {
           "id": "unison_interval",
           "title": "Unison Interval",
           "description": "Same note, 0 semitones apart",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -999,6 +1703,46 @@ export const expandedLessonDatabase = {
               "options": ["0", "1", "2", "3"],
               "answer": "0",
               "explanation": "A unison is the same note, 0 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is a unison interval?",
+              "options": ["Two different notes", "The same note played twice", "A chord", "A scale"],
+              "answer": "The same note played twice",
+              "explanation": "A unison is when the same pitch is played simultaneously or in succession"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the interval from C to C?",
+              "options": ["Unison", "Octave", "Perfect fifth", "Major third"],
+              "answer": "Unison",
+              "explanation": "C to C (same pitch) is a unison interval"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How does a unison sound?",
+              "options": ["Dissonant", "Perfectly consonant", "Slightly off", "Very dissonant"],
+              "answer": "Perfectly consonant",
+              "explanation": "Unison is the most consonant interval since it's the same pitch"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "In a choir, what creates a unison?",
+              "options": ["Different parts singing different notes", "Everyone singing the same pitch", "Singing in harmony", "Singing scales"],
+              "answer": "Everyone singing the same pitch",
+              "explanation": "Unison in choir means all voices sing the same pitch"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What is the frequency ratio of a unison?",
+              "options": ["1:1", "2:1", "3:2", "4:3"],
+              "answer": "1:1",
+              "explanation": "Unison has a frequency ratio of 1:1 (same frequency)"
             }
           ]
         },
@@ -1006,8 +1750,8 @@ export const expandedLessonDatabase = {
           "id": "minor_second",
           "title": "Minor Second",
           "description": "1 semitone apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
@@ -1016,6 +1760,62 @@ export const expandedLessonDatabase = {
               "options": ["1", "2", "3", "4"],
               "answer": "1",
               "explanation": "A minor second is 1 semitone apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a minor second?",
+              "options": ["C to D", "E to F", "F to G", "G to A"],
+              "answer": "E to F",
+              "explanation": "E to F is a natural minor second (1 semitone)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How does a minor second sound?",
+              "options": ["Very consonant", "Dissonant", "Pleasant", "Neutral"],
+              "answer": "Dissonant",
+              "explanation": "Minor seconds create tension and sound dissonant"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is another name for a minor second?",
+              "options": ["Half step", "Whole step", "Tone", "Ditone"],
+              "answer": "Half step",
+              "explanation": "A minor second is also called a half step or semitone"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "Which is another example of a minor second?",
+              "options": ["B to C", "C to D", "D to E", "A to B"],
+              "answer": "B to C",
+              "explanation": "B to C is a natural minor second (1 semitone)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the chromatic scale, how many minor seconds are there?",
+              "options": ["5", "7", "12", "2"],
+              "answer": "12",
+              "explanation": "The chromatic scale consists of 12 minor seconds (semitones)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What interval is C to C#?",
+              "options": ["Unison", "Minor second", "Major second", "Minor third"],
+              "answer": "Minor second",
+              "explanation": "C to C# is a minor second (1 semitone up)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "How is a minor second used in music?",
+              "options": ["To create tension", "For resolution", "Both A and B", "Neither"],
+              "answer": "Both A and B",
+              "explanation": "Minor seconds create tension that often resolves to consonant intervals"
             }
           ]
         },
@@ -1023,8 +1823,8 @@ export const expandedLessonDatabase = {
           "id": "major_second",
           "title": "Major Second",
           "description": "2 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
@@ -1033,6 +1833,62 @@ export const expandedLessonDatabase = {
               "options": ["1", "2", "3", "4"],
               "answer": "2",
               "explanation": "A major second is 2 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a major second?",
+              "options": ["E to F", "C to D", "B to C", "F# to G"],
+              "answer": "C to D",
+              "explanation": "C to D is a major second (2 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is another name for a major second?",
+              "options": ["Half step", "Whole step", "Semitone", "Quarter tone"],
+              "answer": "Whole step",
+              "explanation": "A major second is also called a whole step or tone"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How does a major second sound compared to a minor second?",
+              "options": ["More dissonant", "Less dissonant", "The same", "Silent"],
+              "answer": "Less dissonant",
+              "explanation": "Major seconds are less dissonant than minor seconds"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "Which is another example of a major second?",
+              "options": ["D to E", "E to F", "B to C", "F to F#"],
+              "answer": "D to E",
+              "explanation": "D to E is a major second (2 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In a major scale, how many major seconds are there?",
+              "options": ["3", "4", "5", "7"],
+              "answer": "5",
+              "explanation": "A major scale contains 5 major seconds and 2 minor seconds"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What interval is F to G?",
+              "options": ["Minor second", "Major second", "Minor third", "Major third"],
+              "answer": "Major second",
+              "explanation": "F to G is a major second (2 semitones)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "How many major seconds equal a perfect fourth?",
+              "options": ["2", "2.5", "3", "4"],
+              "answer": "2.5",
+              "explanation": "A perfect fourth (5 semitones) equals 2.5 major seconds (2 semitones each)"
             }
           ]
         },
@@ -1108,8 +1964,8 @@ export const expandedLessonDatabase = {
           "id": "perfect_fifth",
           "title": "Perfect Fifth",
           "description": "7 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -1118,6 +1974,78 @@ export const expandedLessonDatabase = {
               "options": ["6", "7", "8", "9"],
               "answer": "7",
               "explanation": "A perfect fifth is 7 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a perfect fifth?",
+              "options": ["C to F", "C to G", "C to E", "C to A"],
+              "answer": "C to G",
+              "explanation": "C to G is a perfect fifth (7 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "How does a perfect fifth sound?",
+              "options": ["Very dissonant", "Consonant and stable", "Neutral", "Tense"],
+              "answer": "Consonant and stable",
+              "explanation": "Perfect fifths are very consonant and create a sense of stability"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is the frequency ratio of a perfect fifth?",
+              "options": ["2:1", "3:2", "4:3", "5:4"],
+              "answer": "3:2",
+              "explanation": "A perfect fifth has a frequency ratio of 3:2"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "In which chord is the perfect fifth most prominent?",
+              "options": ["Major triad", "Minor triad", "Diminished triad", "All of the above"],
+              "answer": "All of the above",
+              "explanation": "Perfect fifths appear in major, minor, and diminished triads"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What interval is G to D?",
+              "options": ["Perfect fourth", "Perfect fifth", "Major sixth", "Minor seventh"],
+              "answer": "Perfect fifth",
+              "explanation": "G to D is a perfect fifth (7 semitones)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a perfect fifth?",
+              "options": ["Perfect fourth", "Major fourth", "Minor fourth", "Tritone"],
+              "answer": "Perfect fourth",
+              "explanation": "When inverted, a perfect fifth becomes a perfect fourth"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "In medieval music, what was the perfect fifth called?",
+              "options": ["Diabolus in musica", "Consonantia perfecta", "Quinta perfecta", "Harmonia"],
+              "answer": "Consonantia perfecta",
+              "explanation": "Medieval theorists called perfect consonances 'consonantia perfecta'"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "How many perfect fifths are in the circle of fifths?",
+              "options": ["7", "12", "5", "8"],
+              "answer": "12",
+              "explanation": "The circle of fifths contains 12 perfect fifths, one for each chromatic note"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What happens when you stack perfect fifths?",
+              "options": ["You get major scales", "You get the circle of fifths", "You get dissonance", "Nothing special"],
+              "answer": "You get the circle of fifths",
+              "explanation": "Stacking perfect fifths creates the circle of fifths progression"
             }
           ]
         },
@@ -1219,8 +2147,8 @@ export const expandedLessonDatabase = {
           "id": "c_major_scale",
           "title": "C Major Scale",
           "description": "The foundation scale with no sharps or flats",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 20,
+          "xpReward": 200,
           "exercises": [
             {
               "id": "ex1",
@@ -1229,6 +2157,78 @@ export const expandedLessonDatabase = {
               "options": ["C-D-E-F-G-A-B", "C-D-E-F#-G-A-B", "C-D-E♭-F-G-A-B", "C-D-E-F-G-A-B♭"],
               "answer": "C-D-E-F-G-A-B",
               "explanation": "C major has no sharps or flats: C-D-E-F-G-A-B"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "How many sharps or flats does C major have?",
+              "options": ["1 sharp", "2 flats", "None", "3 sharps"],
+              "answer": "None",
+              "explanation": "C major is the only major scale with no sharps or flats"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the pattern of whole and half steps in C major?",
+              "options": ["W-W-H-W-W-W-H", "W-H-W-W-H-W-W", "H-W-W-H-W-W-W", "W-W-W-H-W-W-H"],
+              "answer": "W-W-H-W-W-W-H",
+              "explanation": "Major scales follow the pattern: Whole-Whole-Half-Whole-Whole-Whole-Half"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is the tonic of C major?",
+              "options": ["C", "D", "E", "G"],
+              "answer": "C",
+              "explanation": "The tonic is the first degree of the scale, which is C in C major"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is the dominant of C major?",
+              "options": ["F", "G", "A", "B"],
+              "answer": "G",
+              "explanation": "The dominant is the fifth degree of the scale, which is G in C major"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What is the subdominant of C major?",
+              "options": ["D", "E", "F", "G"],
+              "answer": "F",
+              "explanation": "The subdominant is the fourth degree of the scale, which is F in C major"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What is the leading tone of C major?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "B",
+              "explanation": "The leading tone is the seventh degree, which leads back to the tonic (B leads to C)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "Why is C major considered the 'natural' scale?",
+              "options": ["It's the easiest to play", "It uses only white keys on piano", "It's the most common", "It sounds the best"],
+              "answer": "It uses only white keys on piano",
+              "explanation": "C major uses only the white keys on a piano, making it appear 'natural'"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What chord is built on the first degree of C major?",
+              "options": ["C major", "D minor", "F major", "G major"],
+              "answer": "C major",
+              "explanation": "The I chord in C major is C major (C-E-G)"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of C major?",
+              "options": ["A minor", "E minor", "D minor", "G minor"],
+              "answer": "A minor",
+              "explanation": "A minor is the relative minor of C major (same notes, different starting point)"
             }
           ]
         },
