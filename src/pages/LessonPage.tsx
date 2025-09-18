@@ -17,15 +17,16 @@ import { sampleSkillTrees } from '@/data/sampleData';
 const LessonPage = () => {
   const { lessonId } = useParams();
   const navigate = useNavigate();
-  const { 
-    currentLesson, 
-    currentExercise, 
-    exerciseIndex, 
+  const {
+    currentLesson,
+    currentExercise,
+    exerciseIndex,
     exerciseResults,
     setCurrentLesson,
     nextExercise,
     previousExercise,
     submitAnswer,
+    submitAnswerWithResult,
     resetLesson,
     showFeedbackMessage
   } = useGameStore();
@@ -184,7 +185,18 @@ const LessonPage = () => {
       console.log('✅ Correct answer!');
     }
 
-    submitAnswer(selectedAnswer);
+    // Show immediate feedback based on our validation
+    if (isCorrect) {
+      showFeedbackMessage('Correct! Well done! 🎉', 'success');
+    } else {
+      showFeedbackMessage(
+        currentExercise.explanation || 'Not quite right. Try again!',
+        'error'
+      );
+    }
+
+    // Submit the answer with our validation result
+    submitAnswerWithResult(selectedAnswer, isCorrect);
     setSelectedAnswer('');
 
     // Move to next exercise after a delay

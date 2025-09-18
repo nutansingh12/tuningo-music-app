@@ -26,6 +26,7 @@ interface GameState {
   nextExercise: () => void;
   previousExercise: () => void;
   submitAnswer: (answer: string | string[]) => void;
+  submitAnswerWithResult: (answer: string | string[], isCorrect: boolean) => void;
   setAudioAnalysis: (analysis: AudioAnalysis | null) => void;
   setListening: (listening: boolean) => void;
   showFeedbackMessage: (message: string, type: 'success' | 'error' | 'info') => void;
@@ -120,6 +121,26 @@ export const useGameStore = create<GameState>((set, get) => ({
         'error'
       );
     }
+  },
+
+  submitAnswerWithResult: (answer, isCorrect) => {
+    const state = get();
+    if (!state.currentExercise) return;
+
+    const result: ExerciseResult = {
+      exerciseId: state.currentExercise.id,
+      userAnswer: answer,
+      isCorrect,
+      timeSpent: 0, // TODO: Track actual time
+      attempts: 1, // TODO: Track attempts
+      score: isCorrect ? 100 : 0,
+    };
+
+    set({
+      exerciseResults: [...state.exerciseResults, result],
+    });
+
+    // Don't show feedback here - it's handled by the calling component
   },
 
   setAudioAnalysis: (analysis) => set({ audioAnalysis: analysis }),
