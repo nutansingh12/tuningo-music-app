@@ -417,6 +417,40 @@ export const expandedLessonDatabase = {
             }
           ]
         },
+        {
+          "id": "accidentals_intro",
+          "title": "Sharps & Flats Basics",
+          "description": "Understanding how notes can be raised or lowered",
+          "estimatedDuration": 6,
+          "xpReward": 60,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "What does a sharp (#) do to a note?",
+              "options": ["Lowers by one semitone", "Raises by one semitone", "Doubles the note", "Removes the note"],
+              "answer": "Raises by one semitone",
+              "explanation": "A sharp (#) raises a note by one semitone."
+            }
+          ]
+        },
+        {
+          "id": "note_durations_mix",
+          "title": "Note Value Comparison",
+          "description": "See how rhythms fit together",
+          "estimatedDuration": 7,
+          "xpReward": 70,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "How many quarter notes equal a whole note?",
+              "options": ["2", "3", "4", "8"],
+              "answer": "4",
+              "explanation": "Four quarter notes equal one whole note."
+            }
+          ]
+        },
         // RHYTHM SERIES (50 lessons)
         {
           "id": "whole_notes",
