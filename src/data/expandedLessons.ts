@@ -17,7 +17,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many letters are in the musical alphabet?",
               "options": ["5", "7", "8", "12"],
               "answer": "7",
@@ -34,7 +34,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (A on staff)",
               "options": ["A", "B", "C", "D"],
               "answer": "A",
@@ -51,7 +51,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (B on staff)",
               "options": ["A", "B", "C", "D"],
               "answer": "B",
@@ -68,7 +68,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (C on staff)",
               "options": ["A", "B", "C", "D"],
               "answer": "C",
@@ -85,7 +85,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (D on staff)",
               "options": ["A", "B", "C", "D"],
               "answer": "D",
@@ -102,7 +102,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (E on staff)",
               "options": ["D", "E", "F", "G"],
               "answer": "E",
@@ -119,7 +119,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (F on staff)",
               "options": ["D", "E", "F", "G"],
               "answer": "F",
@@ -136,7 +136,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is shown? (G on staff)",
               "options": ["E", "F", "G", "A"],
               "answer": "G",
@@ -153,7 +153,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What are the treble clef line notes?",
               "options": ["E-G-B-D-F", "F-A-C-E", "A-C-E-G", "G-B-D-F-A"],
               "answer": "E-G-B-D-F",
@@ -170,7 +170,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What are the treble clef space notes?",
               "options": ["E-G-B-D", "F-A-C-E", "A-C-E-G", "G-B-D-F"],
               "answer": "F-A-C-E",
@@ -187,7 +187,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What are the bass clef line notes?",
               "options": ["G-B-D-F-A", "A-C-E-G", "E-G-B-D-F", "F-A-C-E"],
               "answer": "G-B-D-F-A",
@@ -204,7 +204,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What are the bass clef space notes?",
               "options": ["F-A-C-E", "A-C-E-G", "E-G-B-D", "G-B-D-F"],
               "answer": "A-C-E-G",
@@ -221,7 +221,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What note is on the first ledger line above treble staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "A",
@@ -238,7 +238,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What note is on the first ledger line below treble staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "C",
@@ -255,7 +255,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Where is middle C located?",
               "options": ["Between treble and bass clef", "Top of treble clef", "Bottom of bass clef", "Above both clefs"],
               "answer": "Between treble and bass clef",
@@ -273,7 +273,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which note is on the bottom line of the treble clef?",
               "options": ["E", "G", "C", "A"],
               "answer": "E",
@@ -290,7 +290,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What does a flat (♭) do to a note?",
               "options": ["Raises by one semitone", "Lowers by one semitone", "Repeats the note", "Doubles duration"],
               "answer": "Lowers by one semitone",
@@ -307,7 +307,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What does the natural sign do?",
               "options": ["Raises a note", "Cancels sharps/flats", "Lowers a note", "Repeats a note"],
               "answer": "Cancels sharps/flats",
@@ -324,7 +324,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which rest looks like a small rectangle sitting on top of a line?",
               "options": ["Whole rest", "Half rest", "Quarter rest", "Eighth rest"],
               "answer": "Half rest",
@@ -341,7 +341,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "fill_in_blank",
+              "type": "multiple-choice",
               "question": "Fill in the missing word: The notes in the spaces of the treble clef spell ____.",
               "answer": "FACE",
               "explanation": "Spaces in treble clef spell FACE (F-A-C-E)."
@@ -357,7 +357,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "fill_in_blank",
+              "type": "multiple-choice",
               "question": "The lines of the bass clef from bottom up are G-__-D-F-A.",
               "answer": "B",
               "explanation": "Lines in bass clef: G-B-D-F-A."
@@ -373,7 +373,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many eighth notes equal one quarter note?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -390,7 +390,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which time signature means 3 beats per measure?",
               "options": ["2/4", "3/4", "4/4", "6/8"],
               "answer": "3/4",
@@ -407,7 +407,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "listening",
+              "type": "listening-comprehension",
               "question": "Is this note high or low?",
               "options": ["High", "Low"],
               "answer": "High",
@@ -424,7 +424,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "What does a sharp (#) do to a note?",
               "options": ["Lowers by one semitone", "Raises by one semitone", "Doubles the note", "Removes the note"],
               "answer": "Raises by one semitone",
@@ -441,7 +441,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many quarter notes equal a whole note?",
               "options": ["2", "3", "4", "8"],
               "answer": "4",
@@ -459,7 +459,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many beats does a whole note get?",
               "options": ["1", "2", "3", "4"],
               "answer": "4",
@@ -476,7 +476,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many beats does a half note get?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -493,7 +493,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many beats does a quarter note get?",
               "options": ["1", "2", "3", "4"],
               "answer": "1",
@@ -510,7 +510,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many eighth notes equal one quarter note?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -527,7 +527,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many sixteenth notes equal one quarter note?",
               "options": ["2", "3", "4", "8"],
               "answer": "4",
@@ -544,7 +544,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "A dotted half note gets how many beats?",
               "options": ["2", "3", "4", "6"],
               "answer": "3",
@@ -561,7 +561,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Two tied quarter notes equal how many beats?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -578,7 +578,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many beats of silence is a whole rest?",
               "options": ["1", "2", "3", "4"],
               "answer": "4",
@@ -595,7 +595,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many beats of silence is a half rest?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -612,7 +612,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many beats of silence is a quarter rest?",
               "options": ["1", "2", "3", "4"],
               "answer": "1",
@@ -629,7 +629,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many eighth rests equal one quarter rest?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -646,7 +646,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "In 4/4 time, how many quarter notes fit in one measure?",
               "options": ["2", "3", "4", "8"],
               "answer": "4",
@@ -663,7 +663,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "In 3/4 time, how many quarter notes fit in one measure?",
               "options": ["2", "3", "4", "6"],
               "answer": "3",
@@ -680,7 +680,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "In 2/4 time, how many quarter notes fit in one measure?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -706,7 +706,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a unison?",
               "options": ["0", "1", "2", "3"],
               "answer": "0",
@@ -723,7 +723,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a minor second?",
               "options": ["1", "2", "3", "4"],
               "answer": "1",
@@ -740,7 +740,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a major second?",
               "options": ["1", "2", "3", "4"],
               "answer": "2",
@@ -757,7 +757,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a minor third?",
               "options": ["2", "3", "4", "5"],
               "answer": "3",
@@ -774,7 +774,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a major third?",
               "options": ["3", "4", "5", "6"],
               "answer": "4",
@@ -791,7 +791,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a perfect fourth?",
               "options": ["4", "5", "6", "7"],
               "answer": "5",
@@ -808,7 +808,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a tritone?",
               "options": ["5", "6", "7", "8"],
               "answer": "6",
@@ -825,7 +825,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a perfect fifth?",
               "options": ["6", "7", "8", "9"],
               "answer": "7",
@@ -842,7 +842,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a minor sixth?",
               "options": ["7", "8", "9", "10"],
               "answer": "8",
@@ -859,7 +859,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a major sixth?",
               "options": ["8", "9", "10", "11"],
               "answer": "9",
@@ -876,7 +876,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a minor seventh?",
               "options": ["9", "10", "11", "12"],
               "answer": "10",
@@ -893,7 +893,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a major seventh?",
               "options": ["10", "11", "12", "13"],
               "answer": "11",
@@ -910,7 +910,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many semitones are in a perfect octave?",
               "options": ["10", "11", "12", "13"],
               "answer": "12",
@@ -936,7 +936,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which notes are in the C major scale?",
               "options": ["C-D-E-F-G-A-B", "C-D-E-F#-G-A-B", "C-D-E♭-F-G-A-B", "C-D-E-F-G-A-B♭"],
               "answer": "C-D-E-F-G-A-B",
@@ -953,7 +953,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which sharp is in G major?",
               "options": ["C#", "F#", "G#", "D#"],
               "answer": "F#",
@@ -970,7 +970,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which sharps are in D major?",
               "options": ["F# and C#", "F# and G#", "C# and G#", "F# and D#"],
               "answer": "F# and C#",
@@ -987,7 +987,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many sharps does A major have?",
               "options": ["2", "3", "4", "5"],
               "answer": "3",
@@ -1004,7 +1004,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many sharps does E major have?",
               "options": ["3", "4", "5", "6"],
               "answer": "4",
@@ -1021,7 +1021,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many sharps does B major have?",
               "options": ["4", "5", "6", "7"],
               "answer": "5",
@@ -1038,7 +1038,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many sharps does F# major have?",
               "options": ["5", "6", "7", "8"],
               "answer": "6",
@@ -1055,7 +1055,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "How many sharps does C# major have?",
               "options": ["6", "7", "8", "9"],
               "answer": "7",
@@ -1072,7 +1072,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which flat is in F major?",
               "options": ["A♭", "B♭", "E♭", "D♭"],
               "answer": "B♭",
@@ -1089,7 +1089,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "multiple_choice",
+              "type": "multiple-choice",
               "question": "Which flats are in B♭ major?",
               "options": ["B♭ and E♭", "B♭ and A♭", "E♭ and A♭", "B♭ and D♭"],
               "answer": "B♭ and E♭",
@@ -1115,7 +1115,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "audio_quiz",
+              "type": "listening-comprehension",
               "question": "Are these two notes the same or different?",
               "options": ["Same", "Different"],
               "answer": "Same",
@@ -1132,7 +1132,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "audio_quiz",
+              "type": "listening-comprehension",
               "question": "Is this a major or minor second?",
               "options": ["Major second", "Minor second"],
               "answer": "Major second",
@@ -1149,7 +1149,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "audio_quiz",
+              "type": "listening-comprehension",
               "question": "Is this a major or minor third?",
               "options": ["Major third", "Minor third"],
               "answer": "Major third",
@@ -1166,7 +1166,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "audio_quiz",
+              "type": "listening-comprehension",
               "question": "What note is this?",
               "options": ["C", "D", "E", "F"],
               "answer": "C",
@@ -1183,7 +1183,7 @@ export const expandedLessonDatabase = {
           "exercises": [
             {
               "id": "ex1",
-              "type": "audio_quiz",
+              "type": "listening-comprehension",
               "question": "What note is this?",
               "options": ["C", "D", "E", "F"],
               "answer": "D",
