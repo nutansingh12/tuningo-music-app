@@ -265,6 +265,158 @@ export const expandedLessonDatabase = {
             }
           ]
         },
+        // ADDITIONAL FOUNDATION LESSONS
+        {
+          "id": "notes_staff",
+          "title": "Notes on the Staff",
+          "description": "Learn where notes sit on the treble and bass staff.",
+          "estimatedDuration": 6,
+          "xpReward": 60,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "Which note is on the bottom line of the treble clef?",
+              "options": ["E", "G", "C", "A"],
+              "answer": "E",
+              "explanation": "The bottom line of the treble clef is E."
+            }
+          ]
+        },
+        {
+          "id": "sharps_flats",
+          "title": "Sharps & Flats Basics",
+          "description": "Understand how notes move up or down a semitone.",
+          "estimatedDuration": 6,
+          "xpReward": 60,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "What does a flat (♭) do to a note?",
+              "options": ["Raises by one semitone", "Lowers by one semitone", "Repeats the note", "Doubles duration"],
+              "answer": "Lowers by one semitone",
+              "explanation": "A flat lowers a note by one semitone."
+            }
+          ]
+        },
+        {
+          "id": "natural_sign",
+          "title": "Natural Sign",
+          "description": "How the natural sign cancels sharps and flats.",
+          "estimatedDuration": 5,
+          "xpReward": 50,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "What does the natural sign do?",
+              "options": ["Raises a note", "Cancels sharps/flats", "Lowers a note", "Repeats a note"],
+              "answer": "Cancels sharps/flats",
+              "explanation": "The natural sign restores a note to its natural state."
+            }
+          ]
+        },
+        {
+          "id": "rests_basics",
+          "title": "Rests & Silence",
+          "description": "Understand whole, half, and quarter rests.",
+          "estimatedDuration": 6,
+          "xpReward": 60,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "Which rest looks like a small rectangle sitting on top of a line?",
+              "options": ["Whole rest", "Half rest", "Quarter rest", "Eighth rest"],
+              "answer": "Half rest",
+              "explanation": "The half rest sits on the middle line like a hat."
+            }
+          ]
+        },
+        {
+          "id": "treble_clef",
+          "title": "Treble Clef Reading",
+          "description": "Learn the notes on the treble clef.",
+          "estimatedDuration": 7,
+          "xpReward": 70,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "fill_in_blank",
+              "question": "Fill in the missing word: The notes in the spaces of the treble clef spell ____.",
+              "answer": "FACE",
+              "explanation": "Spaces in treble clef spell FACE (F-A-C-E)."
+            }
+          ]
+        },
+        {
+          "id": "bass_clef",
+          "title": "Bass Clef Reading",
+          "description": "Learn the notes on the bass clef.",
+          "estimatedDuration": 7,
+          "xpReward": 70,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "fill_in_blank",
+              "question": "The lines of the bass clef from bottom up are G-__-D-F-A.",
+              "answer": "B",
+              "explanation": "Lines in bass clef: G-B-D-F-A."
+            }
+          ]
+        },
+        {
+          "id": "note_values",
+          "title": "Note Value Comparison",
+          "description": "See how note durations fit together.",
+          "estimatedDuration": 7,
+          "xpReward": 70,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "How many eighth notes equal one quarter note?",
+              "options": ["1", "2", "3", "4"],
+              "answer": "2",
+              "explanation": "Two eighth notes equal one quarter note."
+            }
+          ]
+        },
+        {
+          "id": "simple_time",
+          "title": "Simple Time Signatures",
+          "description": "Learn 2/4, 3/4, and 4/4.",
+          "estimatedDuration": 6,
+          "xpReward": 60,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "multiple_choice",
+              "question": "Which time signature means 3 beats per measure?",
+              "options": ["2/4", "3/4", "4/4", "6/8"],
+              "answer": "3/4",
+              "explanation": "3/4 means three quarter-note beats per measure."
+            }
+          ]
+        },
+        {
+          "id": "listening_high_low",
+          "title": "Listening Drill: High vs Low",
+          "description": "Differentiate high and low pitches by ear.",
+          "estimatedDuration": 5,
+          "xpReward": 50,
+          "exercises": [
+            {
+              "id": "ex1",
+              "type": "listening",
+              "question": "Is this note high or low?",
+              "options": ["High", "Low"],
+              "answer": "High",
+              "explanation": "The sound is clearly in a high pitch range."
+            }
+          ]
+        },
         // RHYTHM SERIES (50 lessons)
         {
           "id": "whole_notes",
