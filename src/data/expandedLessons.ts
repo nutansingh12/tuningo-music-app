@@ -12,8 +12,8 @@ export const expandedLessonDatabase = {
           "id": "intro_to_notes",
           "title": "Musical Alphabet Basics",
           "description": "Learn the 7 letters of music",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
@@ -22,6 +22,78 @@ export const expandedLessonDatabase = {
               "options": ["5", "7", "8", "12"],
               "answer": "7",
               "explanation": "Music uses 7 letters: A, B, C, D, E, F, G"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What are the first three letters of the musical alphabet?",
+              "options": ["A, B, C", "C, D, E", "F, G, A", "D, E, F"],
+              "answer": "A, B, C",
+              "explanation": "The musical alphabet starts with A, B, C"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What comes after G in the musical alphabet?",
+              "options": ["H", "A", "Z", "Nothing"],
+              "answer": "A",
+              "explanation": "After G, the musical alphabet repeats back to A"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "Which letter comes before C?",
+              "options": ["A", "B", "D", "G"],
+              "answer": "B",
+              "explanation": "B comes before C in the musical alphabet"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What are the last three letters of the musical alphabet?",
+              "options": ["X, Y, Z", "E, F, G", "D, E, F", "F, G, A"],
+              "answer": "E, F, G",
+              "explanation": "The musical alphabet ends with E, F, G before repeating"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "Which letter is in the middle of the musical alphabet?",
+              "options": ["C", "D", "E", "F"],
+              "answer": "D",
+              "explanation": "D is the 4th letter, making it the middle of the 7-letter alphabet"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "How many times does the musical alphabet repeat on a piano?",
+              "options": ["Once", "7 times", "About 7 times", "12 times"],
+              "answer": "About 7 times",
+              "explanation": "A full piano has about 7 complete octaves of the musical alphabet"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "Which letters have no sharp or flat between them?",
+              "options": ["A-B", "B-C and E-F", "C-D", "F-G"],
+              "answer": "B-C and E-F",
+              "explanation": "B-C and E-F are natural half steps with no sharp/flat between"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What letter comes two steps after E?",
+              "options": ["F", "G", "H", "A"],
+              "answer": "G",
+              "explanation": "E → F → G, so G comes two steps after E"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "In the sequence A, B, C, D, E, F, G, which letter is missing from: A, C, E, G?",
+              "options": ["B, D, F", "H, I, J", "X, Y, Z", "None"],
+              "answer": "B, D, F",
+              "explanation": "The missing letters from the musical alphabet are B, D, and F"
             }
           ]
         },
@@ -29,8 +101,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_a",
           "title": "Recognizing Note A",
           "description": "Master identifying the note A",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -39,6 +111,78 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "A",
               "explanation": "This is the note A on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is the first letter of the musical alphabet?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "A",
+              "explanation": "A is the first letter of the musical alphabet"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "On a piano, where is the note A located relative to the black keys?",
+              "options": ["Between two black keys", "To the left of three black keys", "To the right of two black keys", "It varies"],
+              "answer": "To the right of two black keys",
+              "explanation": "A is located to the right of the group of two black keys"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note comes before A in the musical alphabet?",
+              "options": ["Z", "G", "B", "H"],
+              "answer": "G",
+              "explanation": "G comes before A, then the alphabet repeats"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What note comes after A?",
+              "options": ["B", "C", "G", "A#"],
+              "answer": "B",
+              "explanation": "B comes directly after A in the musical alphabet"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "How many semitones are between A and A# (A sharp)?",
+              "options": ["1", "2", "3", "12"],
+              "answer": "1",
+              "explanation": "A sharp is one semitone (half step) above A"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What is the frequency of the A above middle C (A4)?",
+              "options": ["220 Hz", "440 Hz", "880 Hz", "110 Hz"],
+              "answer": "440 Hz",
+              "explanation": "A4 (the A above middle C) is standardized at 440 Hz"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is the note A located?",
+              "options": ["On the second line", "In the second space", "On the first line", "Above the staff"],
+              "answer": "In the second space",
+              "explanation": "In treble clef, A is located in the second space from the bottom"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What interval is from A to C?",
+              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
+              "answer": "Minor third",
+              "explanation": "A to C is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "Which key signature has A as its tonic (starting note)?",
+              "options": ["A major", "C major", "G major", "F major"],
+              "answer": "A major",
+              "explanation": "A major is the key that starts on the note A"
             }
           ]
         },
@@ -46,8 +190,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_b",
           "title": "Recognizing Note B",
           "description": "Master identifying the note B",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -56,6 +200,78 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "B",
               "explanation": "This is the note B on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What note comes after A in the musical alphabet?",
+              "options": ["B", "C", "A#", "Bb"],
+              "answer": "B",
+              "explanation": "B comes directly after A in the musical alphabet"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "On a piano, where is B located?",
+              "options": ["On a black key", "To the right of the group of three black keys", "Between two white keys", "To the left of C"],
+              "answer": "To the left of C",
+              "explanation": "B is the white key immediately to the left of C"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is special about the interval from B to C?",
+              "options": ["It's a whole step", "It's a half step", "It's two steps", "There's a black key between them"],
+              "answer": "It's a half step",
+              "explanation": "B to C is a natural half step with no black key between"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is the note B located?",
+              "options": ["On the middle line", "In the top space", "On the second line", "In the third space"],
+              "answer": "On the middle line",
+              "explanation": "In treble clef, B is on the middle (third) line"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What note is a whole step below B?",
+              "options": ["A", "Bb", "C", "A#"],
+              "answer": "A",
+              "explanation": "A is a whole step (two semitones) below B"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What is Bb (B flat)?",
+              "options": ["The same as A#", "A half step below B", "Both A and B", "A different note entirely"],
+              "answer": "Both A and B",
+              "explanation": "Bb is the same as A# and is a half step below B"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "In the C major scale, what role does B play?",
+              "options": ["It's the tonic", "It's the leading tone", "It's the dominant", "It's not in C major"],
+              "answer": "It's the leading tone",
+              "explanation": "B is the 7th degree of C major, called the leading tone"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What interval is from B to D?",
+              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
+              "answer": "Minor third",
+              "explanation": "B to D is a minor third (3 semitones)"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "Which key signature has B as its tonic?",
+              "options": ["B major", "Bb major", "Both A and B", "B minor"],
+              "answer": "Both A and B",
+              "explanation": "Both B major and B minor have B as their tonic note"
             }
           ]
         },
@@ -63,8 +279,8 @@ export const expandedLessonDatabase = {
           "id": "note_recognition_c",
           "title": "Recognizing Note C",
           "description": "Master identifying the note C",
-          "estimatedDuration": 4,
-          "xpReward": 40,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
@@ -73,6 +289,78 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "C",
               "explanation": "This is the note C on the staff"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is special about middle C?",
+              "options": ["It's the highest note", "It's between treble and bass clef", "It's the loudest note", "It's always sharp"],
+              "answer": "It's between treble and bass clef",
+              "explanation": "Middle C sits between the treble and bass clef staves"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "On a piano, where is C located?",
+              "options": ["On a black key", "To the left of two black keys", "To the right of three black keys", "Between black keys"],
+              "answer": "To the left of two black keys",
+              "explanation": "C is the white key immediately to the left of the group of two black keys"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What note comes before C?",
+              "options": ["B", "D", "C#", "Bb"],
+              "answer": "B",
+              "explanation": "B comes directly before C in the musical alphabet"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is the interval from C to E?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Major second"],
+              "answer": "Major third",
+              "explanation": "C to E is a major third (4 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the key of C major, what role does C play?",
+              "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
+              "answer": "Tonic",
+              "explanation": "C is the tonic (first degree) of the C major scale"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "How many sharps or flats are in the key of C major?",
+              "options": ["1 sharp", "2 flats", "None", "3 sharps"],
+              "answer": "None",
+              "explanation": "C major has no sharps or flats - all natural notes"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What is C# (C sharp)?",
+              "options": ["The same as Db", "A half step above C", "Both A and B", "A black key"],
+              "answer": "Both A and B",
+              "explanation": "C# is the same as Db, a half step above C, and played on a black key"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "In treble clef, where is middle C written?",
+              "options": ["On the staff", "Below the staff with a ledger line", "Above the staff", "On the first line"],
+              "answer": "Below the staff with a ledger line",
+              "explanation": "Middle C is written below the treble staff with a ledger line"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What frequency is middle C approximately?",
+              "options": ["220 Hz", "262 Hz", "440 Hz", "523 Hz"],
+              "answer": "262 Hz",
+              "explanation": "Middle C (C4) has a frequency of approximately 262 Hz"
             }
           ]
         },
