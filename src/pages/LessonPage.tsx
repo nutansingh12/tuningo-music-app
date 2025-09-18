@@ -141,29 +141,47 @@ const LessonPage = () => {
   }, [lessonId, setCurrentLesson, resetLesson]);
 
   const handleAnswerSelect = (answerId: string) => {
+    console.log('🔍 Answer selected:', answerId);
     setSelectedAnswer(answerId);
   };
 
   const handleSubmitAnswer = () => {
-    if (!currentExercise || !selectedAnswer) return;
+    console.log('🔍 handleSubmitAnswer called');
+    console.log('🔍 currentExercise:', currentExercise);
+    console.log('🔍 selectedAnswer:', selectedAnswer);
+
+    if (!currentExercise || !selectedAnswer) {
+      console.log('❌ Missing currentExercise or selectedAnswer');
+      return;
+    }
 
     // Find the selected option and check if it's correct
     let isCorrect = false;
     if (currentExercise.type === 'multiple-choice' && currentExercise.options) {
+      console.log('🔍 Multiple choice exercise with options:', currentExercise.options);
       const selectedOption = currentExercise.options.find(option => option.id === selectedAnswer);
+      console.log('🔍 selectedOption:', selectedOption);
       isCorrect = selectedOption?.isCorrect || false;
+      console.log('🔍 isCorrect from selectedOption.isCorrect:', isCorrect);
     } else {
       // For non-multiple choice, compare directly with correctAnswer
+      console.log('🔍 Non-multiple choice, comparing:', selectedAnswer, '===', currentExercise.correctAnswer);
       isCorrect = selectedAnswer === currentExercise.correctAnswer;
+      console.log('🔍 isCorrect from direct comparison:', isCorrect);
     }
+
+    console.log('🎯 Final isCorrect result:', isCorrect);
 
     // Use a heart for wrong answers
     if (!isCorrect && user) {
+      console.log('💔 Wrong answer, using heart');
       const heartUsed = useHeart();
       if (!heartUsed) {
         showFeedbackMessage('No hearts left! Take a break and try again later.', 'error');
         return;
       }
+    } else if (isCorrect) {
+      console.log('✅ Correct answer!');
     }
 
     submitAnswer(selectedAnswer);
