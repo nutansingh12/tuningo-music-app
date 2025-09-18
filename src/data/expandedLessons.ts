@@ -1,5 +1,3 @@
-import { SkillTree, Achievement } from '@/types';
-
 // MASSIVE LESSON DATABASE - HUNDREDS OF UNIQUE LESSONS
 export const expandedLessonDatabase = {
   "categories": [

@@ -1,4 +1,4 @@
-import { SkillTree, Achievement, SkillNodeType, LessonType, Difficulty } from '@/types';
+import { SkillTree, Achievement, SkillNodeType, LessonType, Difficulty, ExerciseType } from '@/types';
 import { expandedLessonDatabase } from './expandedLessons';
 
 // Use the expanded lesson database with hundreds of lessons
@@ -75,12 +75,16 @@ export const sampleSkillTrees: SkillTree[] = lessonDatabase.categories.map((cate
       xpReward: lesson.xpReward,
       exercises: lesson.exercises.map(exercise => ({
         id: exercise.id,
-        type: exercise.type as any,
+        type: exercise.type as ExerciseType,
         question: exercise.question,
-        options: exercise.options || [],
-        correct: exercise.options ? exercise.options.indexOf(exercise.answer) : 0,
+        options: (exercise as any).options ? (exercise as any).options.map((option: string, index: number) => ({
+          id: `option_${index}`,
+          text: option,
+          isCorrect: option === (exercise as any).answer
+        })) : undefined,
+        correctAnswer: (exercise as any).answer || '',
         explanation: exercise.explanation,
-        instruction: (exercise as any).instruction
+        difficulty: getDifficulty(categoryIndex, lessonIndex)
       })),
       prerequisites: []
     }],
