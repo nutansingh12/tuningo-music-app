@@ -223,18 +223,29 @@ const LessonPage = () => {
   };
 
   const handleFinishLesson = () => {
+    console.log('🚀 handleFinishLesson called!');
+    console.log('🚀 currentLesson:', currentLesson);
+    console.log('🚀 exerciseResults:', exerciseResults);
+
     if (currentLesson) {
       // Calculate final score based on exercise results
       const correctAnswers = exerciseResults.filter(r => r.isCorrect).length;
       const totalQuestions = exerciseResults.length;
       const score = Math.round((correctAnswers / totalQuestions) * 100);
 
+      console.log('🚀 Score calculation:', { correctAnswers, totalQuestions, score });
+
       // Find the node ID for this lesson
       let nodeId = '';
-      sampleSkillTrees.forEach(tree => {
-        tree.nodes.forEach(node => {
+      console.log('🚀 Searching for node ID in sampleSkillTrees:', sampleSkillTrees.length, 'trees');
+
+      sampleSkillTrees.forEach((tree, treeIndex) => {
+        console.log(`🚀 Checking tree ${treeIndex}:`, tree.title, 'with', tree.nodes.length, 'nodes');
+        tree.nodes.forEach((node, nodeIndex) => {
+          console.log(`🚀 Checking node ${nodeIndex}:`, node.id, 'with', node.lessons.length, 'lessons');
           if (node.lessons.some(lesson => lesson.id === currentLesson.id)) {
             nodeId = node.id;
+            console.log('🚀 Found matching node:', nodeId);
           }
         });
       });
@@ -245,8 +256,11 @@ const LessonPage = () => {
       } else {
         console.warn('⚠️ Could not find node ID for lesson:', currentLesson.id);
       }
+    } else {
+      console.warn('⚠️ No currentLesson found!');
     }
 
+    console.log('🚀 Navigating to skill-tree');
     navigate('/skill-tree');
   };
 
