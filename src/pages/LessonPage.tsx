@@ -13,6 +13,36 @@ import {
 import { useGameStore } from '@/store/gameStore';
 import { useUserStore } from '@/store/userStore';
 import { sampleSkillTrees } from '@/data/sampleData';
+import StaffNotation from '@/components/StaffNotation';
+
+// Helper function to extract note information from question text
+const extractNoteFromQuestion = (question: string): { note: string; clef: 'treble' | 'bass' } | null => {
+  const lowerQuestion = question.toLowerCase();
+
+  // Look for patterns like "A on staff", "B on staff", etc.
+  const noteOnStaffMatch = lowerQuestion.match(/([a-g])\s+on\s+staff/);
+  if (noteOnStaffMatch) {
+    return {
+      note: noteOnStaffMatch[1].toUpperCase(),
+      clef: 'treble' // Default to treble clef
+    };
+  }
+
+  // Look for patterns like "treble clef" or "bass clef"
+  const clefMatch = lowerQuestion.match(/(treble|bass)\s+clef/);
+  const clef = clefMatch ? (clefMatch[1] as 'treble' | 'bass') : 'treble';
+
+  // Look for specific note mentions in context of staff
+  const noteMatch = lowerQuestion.match(/note\s+([a-g])/);
+  if (noteMatch) {
+    return {
+      note: noteMatch[1].toUpperCase(),
+      clef
+    };
+  }
+
+  return null;
+};
 
 const LessonPage = () => {
   const { lessonId } = useParams();
@@ -372,6 +402,23 @@ const LessonPage = () => {
           <h3 className="text-xl font-semibold text-center">
             {currentExercise.question}
           </h3>
+
+          {/* Staff Notation Visual Aid */}
+          {(() => {
+            const noteInfo = extractNoteFromQuestion(currentExercise.question);
+            if (noteInfo) {
+              return (
+                <div className="flex justify-center my-6">
+                  <StaffNotation
+                    note={noteInfo.note}
+                    clef={noteInfo.clef}
+                    className="shadow-lg"
+                  />
+                </div>
+              );
+            }
+            return null;
+          })()}
 
           {/* Multiple Choice Exercise */}
           {currentExercise.type === 'multiple-choice' && currentExercise.options && (
