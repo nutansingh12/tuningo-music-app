@@ -3206,19 +3206,107 @@ export const expandedLessonDatabase = {
           ]
         },
         {
-          "id": "f_sharp_major_scale",
-          "title": "F# Major Scale",
-          "description": "Six sharps: F#, C#, G#, D#, A#, and E#",
-          "estimatedDuration": 7,
-          "xpReward": 70,
+          "id": "f_and_f_sharp_major_scales",
+          "title": "F Major & F# Major Scales",
+          "description": "Comparing flat and sharp major scales",
+          "estimatedDuration": 20,
+          "xpReward": 200,
           "exercises": [
             {
               "id": "ex1",
+              "type": "multiple-choice",
+              "question": "How many flats does F major have?",
+              "options": ["0", "1", "2", "3"],
+              "answer": "1",
+              "explanation": "F major has one flat: B♭"
+            },
+            {
+              "id": "ex2",
               "type": "multiple-choice",
               "question": "How many sharps does F# major have?",
               "options": ["5", "6", "7", "8"],
               "answer": "6",
               "explanation": "F# major has six sharps: F#, C#, G#, D#, A#, and E#"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What are the notes in F major scale?",
+              "options": ["F-G-A-B♭-C-D-E", "F-G-A-B-C-D-E", "F-G-A♭-B♭-C-D-E♭", "F-G-A-B♭-C-D♭-E"],
+              "answer": "F-G-A-B♭-C-D-E",
+              "explanation": "F major scale: F-G-A-B♭-C-D-E (only B is flatted)"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What are the notes in F# major scale?",
+              "options": ["F#-G#-A#-B-C#-D#-E#", "F#-G-A-B-C-D-E", "F#-G#-A-B-C#-D-E", "F-G#-A#-B-C#-D#-F"],
+              "answer": "F#-G#-A#-B-C#-D#-E#",
+              "explanation": "F# major scale: F#-G#-A#-B-C#-D#-E# (six sharps, all notes except B are sharped)"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of F major?",
+              "options": ["A minor", "D minor", "G minor", "C minor"],
+              "answer": "D minor",
+              "explanation": "D minor is the relative minor of F major (same key signature)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of F# major?",
+              "options": ["C# minor", "D# minor", "G# minor", "A# minor"],
+              "answer": "D# minor",
+              "explanation": "D# minor is the relative minor of F# major (same key signature)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "In the circle of fifths, F major is how many steps from C major?",
+              "options": ["1 step counter-clockwise", "2 steps counter-clockwise", "1 step clockwise", "3 steps counter-clockwise"],
+              "answer": "1 step counter-clockwise",
+              "explanation": "F major is one step counter-clockwise from C major (C→F)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "In the circle of fifths, F# major is how many steps from C major?",
+              "options": ["5 steps clockwise", "6 steps clockwise", "7 steps clockwise", "4 steps clockwise"],
+              "answer": "6 steps clockwise",
+              "explanation": "F# major is six steps clockwise from C major (C→G→D→A→E→B→F#)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "Which scale has more accidentals: F major or F# major?",
+              "options": ["F major", "F# major", "They have the same", "Neither has accidentals"],
+              "answer": "F# major",
+              "explanation": "F# major has 6 sharps while F major has only 1 flat"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What is the dominant chord in F major?",
+              "options": ["B♭ major", "C major", "D minor", "G minor"],
+              "answer": "C major",
+              "explanation": "The dominant (V) chord in F major is C major"
+            },
+            {
+              "id": "ex11",
+              "type": "multiple-choice",
+              "question": "What is the dominant chord in F# major?",
+              "options": ["B major", "C# major", "D# minor", "G# minor"],
+              "answer": "C# major",
+              "explanation": "The dominant (V) chord in F# major is C# major"
+            },
+            {
+              "id": "ex12",
+              "type": "multiple-choice",
+              "question": "Which enharmonic relationship exists between these scales?",
+              "options": ["F major = E# major", "F# major = G♭ major", "Both scales are enharmonic", "No enharmonic relationship"],
+              "answer": "F# major = G♭ major",
+              "explanation": "F# major and G♭ major are enharmonically equivalent (same pitches, different notation)"
             }
           ]
         },
@@ -3236,23 +3324,6 @@ export const expandedLessonDatabase = {
               "options": ["6", "7", "8", "9"],
               "answer": "7",
               "explanation": "C# major has seven sharps: all notes are sharp"
-            }
-          ]
-        },
-        {
-          "id": "f_major_scale",
-          "title": "F Major Scale",
-          "description": "One flat: B♭",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
-            {
-              "id": "ex1",
-              "type": "multiple-choice",
-              "question": "Which flat is in F major?",
-              "options": ["A♭", "B♭", "E♭", "D♭"],
-              "answer": "B♭",
-              "explanation": "F major has one flat: B♭"
             }
           ]
         }
