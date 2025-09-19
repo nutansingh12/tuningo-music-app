@@ -2942,8 +2942,8 @@ export const expandedLessonDatabase = {
           "id": "a_major_scale",
           "title": "A Major Scale",
           "description": "Three sharps: F#, C#, and G#",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -2952,6 +2952,70 @@ export const expandedLessonDatabase = {
               "options": ["2", "3", "4", "5"],
               "answer": "3",
               "explanation": "A major has three sharps: F#, C#, and G#"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What are the notes in A major scale?",
+              "options": ["A-B-C#-D-E-F#-G#", "A-B-C-D-E-F-G", "A-B-C#-D-E-F-G#", "A-B♭-C-D-E♭-F-G"],
+              "answer": "A-B-C#-D-E-F#-G#",
+              "explanation": "A major scale: A-B-C#-D-E-F#-G# (F, C, and G are sharped)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the dominant chord in A major?",
+              "options": ["D major", "E major", "F# minor", "G# diminished"],
+              "answer": "E major",
+              "explanation": "The dominant (V) chord in A major is E major"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is the subdominant chord in A major?",
+              "options": ["B minor", "C# minor", "D major", "E major"],
+              "answer": "D major",
+              "explanation": "The subdominant (IV) chord in A major is D major"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of A major?",
+              "options": ["E minor", "F# minor", "G# minor", "C# minor"],
+              "answer": "F# minor",
+              "explanation": "F# minor is the relative minor of A major (same key signature)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the circle of fifths, A major is how many steps from C major?",
+              "options": ["2 steps clockwise", "3 steps clockwise", "4 steps clockwise", "1 step clockwise"],
+              "answer": "3 steps clockwise",
+              "explanation": "A major is three steps clockwise from C major (C→G→D→A)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What scale degree is G# in A major?",
+              "options": ["6th", "7th", "1st", "2nd"],
+              "answer": "7th",
+              "explanation": "G# is the 7th degree (leading tone) in A major"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "Which mode starts on the 2nd degree of A major?",
+              "options": ["B Dorian", "B Phrygian", "B Mixolydian", "B Aeolian"],
+              "answer": "B Dorian",
+              "explanation": "B Dorian mode uses the same notes as A major, starting on B"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What are the three sharps in A major?",
+              "options": ["F#, C#, G#", "F#, C#, D#", "C#, G#, D#", "F#, G#, A#"],
+              "answer": "F#, C#, G#",
+              "explanation": "A major has three sharps: F#, C#, and G# (in that order)"
             }
           ]
         },
@@ -2959,8 +3023,8 @@ export const expandedLessonDatabase = {
           "id": "e_major_scale",
           "title": "E Major Scale",
           "description": "Four sharps: F#, C#, G#, and D#",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -2969,6 +3033,70 @@ export const expandedLessonDatabase = {
               "options": ["3", "4", "5", "6"],
               "answer": "4",
               "explanation": "E major has four sharps: F#, C#, G#, and D#"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What are the notes in E major scale?",
+              "options": ["E-F#-G#-A-B-C#-D#", "E-F-G-A-B-C-D", "E-F#-G-A-B-C#-D", "E-F-G#-A-B-C-D#"],
+              "answer": "E-F#-G#-A-B-C#-D#",
+              "explanation": "E major scale: E-F#-G#-A-B-C#-D# (F, C, G, and D are sharped)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the dominant chord in E major?",
+              "options": ["A major", "B major", "C# minor", "D# diminished"],
+              "answer": "B major",
+              "explanation": "The dominant (V) chord in E major is B major"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What is the subdominant chord in E major?",
+              "options": ["F# minor", "G# minor", "A major", "B major"],
+              "answer": "A major",
+              "explanation": "The subdominant (IV) chord in E major is A major"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of E major?",
+              "options": ["B minor", "C# minor", "D# minor", "F# minor"],
+              "answer": "C# minor",
+              "explanation": "C# minor is the relative minor of E major (same key signature)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In the circle of fifths, E major is how many steps from C major?",
+              "options": ["3 steps clockwise", "4 steps clockwise", "5 steps clockwise", "2 steps clockwise"],
+              "answer": "4 steps clockwise",
+              "explanation": "E major is four steps clockwise from C major (C→G→D→A→E)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What scale degree is D# in E major?",
+              "options": ["6th", "7th", "1st", "2nd"],
+              "answer": "7th",
+              "explanation": "D# is the 7th degree (leading tone) in E major"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "Which mode starts on the 2nd degree of E major?",
+              "options": ["F# Dorian", "F# Phrygian", "F# Mixolydian", "F# Aeolian"],
+              "answer": "F# Dorian",
+              "explanation": "F# Dorian mode uses the same notes as E major, starting on F#"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "What are the four sharps in E major?",
+              "options": ["F#, C#, G#, D#", "F#, C#, G#, A#", "C#, G#, D#, A#", "F#, G#, D#, A#"],
+              "answer": "F#, C#, G#, D#",
+              "explanation": "E major has four sharps: F#, C#, G#, and D# (in that order)"
             }
           ]
         },
