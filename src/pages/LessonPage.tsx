@@ -8,12 +8,15 @@ import {
   Star,
   Volume2,
   Mic,
-  MicOff
+  MicOff,
+  Play,
+  Pause
 } from 'lucide-react';
 import { useGameStore } from '@/store/gameStore';
 import { useUserStore } from '@/store/userStore';
 import { sampleSkillTrees } from '@/data/sampleData';
 import StaffNotation from '@/components/StaffNotation';
+import { useAudioSynthesizer } from '@/hooks/useAudio';
 
 // Helper function to extract note information from question text
 const extractNoteFromQuestion = (question: string): { note: string; clef: 'treble' | 'bass' } | null => {
@@ -65,6 +68,9 @@ const LessonPage = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
   const [isListening, setIsListening] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+
+  const { playNote, playChord } = useAudioSynthesizer();
 
   // Function to find lesson by ID from our comprehensive database
   const findLessonById = (id: string) => {
@@ -250,6 +256,65 @@ const LessonPage = () => {
       isListening ? 'Stopped listening' : 'Listening for your voice...',
       'info'
     );
+  };
+
+  const playAudioExercise = (audioData: any) => {
+    if (isPlayingAudio) return;
+
+    setIsPlayingAudio(true);
+
+    if (audioData.type === 'interval') {
+      const notes = audioData.notes;
+      const duration = audioData.duration || 1000;
+
+      if (audioData.playSequentially) {
+        // Play notes one after another
+        notes.forEach((noteData: any, index: number) => {
+          setTimeout(() => {
+            playNote(noteData.note, noteData.octave, duration);
+          }, index * (duration + 200));
+        });
+
+        setTimeout(() => {
+          setIsPlayingAudio(false);
+        }, notes.length * (duration + 200));
+      } else {
+        // Play notes simultaneously (harmony)
+        playChord(notes, duration);
+        setTimeout(() => {
+          setIsPlayingAudio(false);
+        }, duration);
+      }
+    } else if (audioData.type === 'comparison') {
+      // Play comparison intervals with pause between
+      const intervals = audioData.intervals;
+      let totalTime = 0;
+
+      intervals.forEach((interval: any, intervalIndex: number) => {
+        const notes = interval.notes;
+        const duration = audioData.duration || 1000;
+
+        setTimeout(() => {
+          showFeedbackMessage(`Playing ${interval.label}`, 'info');
+
+          if (audioData.playSequentially) {
+            notes.forEach((noteData: any, noteIndex: number) => {
+              setTimeout(() => {
+                playNote(noteData.note, noteData.octave, duration);
+              }, noteIndex * (duration + 100));
+            });
+          } else {
+            playChord(notes, duration);
+          }
+        }, totalTime);
+
+        totalTime += (notes.length * (duration + 100)) + 1000; // Add pause between intervals
+      });
+
+      setTimeout(() => {
+        setIsPlayingAudio(false);
+      }, totalTime);
+    }
   };
 
   const handleFinishLesson = () => {
@@ -442,6 +507,54 @@ const LessonPage = () => {
                   {option.text}
                 </button>
               ))}
+            </div>
+          )}
+
+          {/* Audio Multiple Choice Exercise */}
+          {currentExercise.type === 'audio-multiple-choice' && (
+            <div className="space-y-6">
+              {/* Audio Player */}
+              <div className="text-center">
+                <button
+                  onClick={() => playAudioExercise(currentExercise.audioData)}
+                  disabled={isPlayingAudio}
+                  className={`btn-primary flex items-center space-x-2 mx-auto ${
+                    isPlayingAudio ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
+                >
+                  {isPlayingAudio ? (
+                    <>
+                      <Pause className="w-5 h-5" />
+                      <span>Playing...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Play className="w-5 h-5" />
+                      <span>Play Audio</span>
+                    </>
+                  )}
+                </button>
+                <p className="text-sm text-gray-500 mt-2">
+                  Click to play the musical example
+                </p>
+              </div>
+
+              {/* Answer Options */}
+              <div className="space-y-3">
+                {currentExercise.options && currentExercise.options.map((option, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleAnswerSelect(option)}
+                    className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
+                      selectedAnswer === option
+                        ? 'border-primary-500 bg-primary-50'
+                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 

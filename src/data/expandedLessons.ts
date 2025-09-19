@@ -3340,16 +3340,78 @@ export const expandedLessonDatabase = {
           "id": "interval_recognition_unison",
           "title": "Recognizing Unisons",
           "description": "Identify when two notes are the same",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 12,
+          "xpReward": 120,
           "exercises": [
             {
               "id": "ex1",
-              "type": "listening-comprehension",
-              "question": "Are these two notes the same or different?",
-              "options": ["Same", "Different"],
-              "answer": "Same",
-              "explanation": "These notes are identical - a unison"
+              "type": "audio-multiple-choice",
+              "question": "Listen to these two notes. Are they the same or different?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "C", "octave": 4}, {"note": "C", "octave": 4}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Same (Unison)", "Different"],
+              "answer": "Same (Unison)",
+              "explanation": "These notes are identical - a perfect unison (0 semitones apart)"
+            },
+            {
+              "id": "ex2",
+              "type": "audio-multiple-choice",
+              "question": "Listen to these two notes. Are they the same or different?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "G", "octave": 4}, {"note": "A", "octave": 4}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Same (Unison)", "Different"],
+              "answer": "Different",
+              "explanation": "These notes are different - G and A are a major second apart"
+            },
+            {
+              "id": "ex3",
+              "type": "audio-multiple-choice",
+              "question": "Listen to these two notes. Are they the same or different?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "E", "octave": 4}, {"note": "E", "octave": 4}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Same (Unison)", "Different"],
+              "answer": "Same (Unison)",
+              "explanation": "These notes are identical - a perfect unison"
+            },
+            {
+              "id": "ex4",
+              "type": "audio-multiple-choice",
+              "question": "Listen to these two notes played together. What interval do you hear?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "F", "octave": 4}, {"note": "F", "octave": 4}],
+                "playSequentially": false,
+                "duration": 2000
+              },
+              "options": ["Unison", "Second", "Third", "Fourth"],
+              "answer": "Unison",
+              "explanation": "When two identical notes are played together, they create a unison"
+            },
+            {
+              "id": "ex5",
+              "type": "audio-multiple-choice",
+              "question": "Listen carefully. Are these notes the same pitch?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "D", "octave": 4}, {"note": "D", "octave": 5}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Same pitch", "Different pitch"],
+              "answer": "Different pitch",
+              "explanation": "These are both D notes but in different octaves - same note name, different pitch"
             }
           ]
         },
@@ -3357,16 +3419,95 @@ export const expandedLessonDatabase = {
           "id": "interval_recognition_second",
           "title": "Recognizing Seconds",
           "description": "Identify major and minor seconds by ear",
-          "estimatedDuration": 6,
-          "xpReward": 60,
+          "estimatedDuration": 15,
+          "xpReward": 150,
           "exercises": [
             {
               "id": "ex1",
-              "type": "listening-comprehension",
-              "question": "Is this a major or minor second?",
+              "type": "audio-multiple-choice",
+              "question": "Listen to this interval. Is it a major or minor second?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "C", "octave": 4}, {"note": "D", "octave": 4}],
+                "playSequentially": true,
+                "duration": 1000
+              },
               "options": ["Major second", "Minor second"],
               "answer": "Major second",
-              "explanation": "This is a major second - 2 semitones apart"
+              "explanation": "C to D is a major second - 2 semitones apart (whole step)"
+            },
+            {
+              "id": "ex2",
+              "type": "audio-multiple-choice",
+              "question": "Listen to this interval. Is it a major or minor second?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "E", "octave": 4}, {"note": "F", "octave": 4}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Major second", "Minor second"],
+              "answer": "Minor second",
+              "explanation": "E to F is a minor second - 1 semitone apart (half step)"
+            },
+            {
+              "id": "ex3",
+              "type": "audio-multiple-choice",
+              "question": "Listen to this interval played harmonically. What type of second is it?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "F", "octave": 4}, {"note": "G", "octave": 4}],
+                "playSequentially": false,
+                "duration": 2000
+              },
+              "options": ["Major second", "Minor second"],
+              "answer": "Major second",
+              "explanation": "F to G is a major second - sounds more open and consonant than a minor second"
+            },
+            {
+              "id": "ex4",
+              "type": "audio-multiple-choice",
+              "question": "Listen to this interval. What type of second do you hear?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "B", "octave": 4}, {"note": "C", "octave": 5}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Major second", "Minor second"],
+              "answer": "Minor second",
+              "explanation": "B to C is a minor second - very close, tense-sounding interval"
+            },
+            {
+              "id": "ex5",
+              "type": "audio-multiple-choice",
+              "question": "Compare these intervals. Which one is the major second?",
+              "audioData": {
+                "type": "comparison",
+                "intervals": [
+                  {"notes": [{"note": "G", "octave": 4}, {"note": "A♭", "octave": 4}], "label": "Interval A"},
+                  {"notes": [{"note": "G", "octave": 4}, {"note": "A", "octave": 4}], "label": "Interval B"}
+                ],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Interval A", "Interval B"],
+              "answer": "Interval B",
+              "explanation": "Interval B (G to A) is the major second. Interval A (G to A♭) is a minor second"
+            },
+            {
+              "id": "ex6",
+              "type": "audio-multiple-choice",
+              "question": "Listen to this melodic interval. What do you hear?",
+              "audioData": {
+                "type": "interval",
+                "notes": [{"note": "D", "octave": 4}, {"note": "E♭", "octave": 4}],
+                "playSequentially": true,
+                "duration": 1000
+              },
+              "options": ["Major second", "Minor second", "Perfect unison"],
+              "answer": "Minor second",
+              "explanation": "D to E♭ is a minor second - the smallest interval in Western music"
             }
           ]
         },
