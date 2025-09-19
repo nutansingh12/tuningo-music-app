@@ -3101,11 +3101,11 @@ export const expandedLessonDatabase = {
           ]
         },
         {
-          "id": "b_major_scale",
-          "title": "B Major Scale",
-          "description": "Five sharps: F#, C#, G#, D#, and A#",
-          "estimatedDuration": 7,
-          "xpReward": 70,
+          "id": "b_and_bb_major_scales",
+          "title": "B Major & B♭ Major Scales",
+          "description": "Comparing sharp and flat major scales",
+          "estimatedDuration": 20,
+          "xpReward": 200,
           "exercises": [
             {
               "id": "ex1",
@@ -3114,6 +3114,94 @@ export const expandedLessonDatabase = {
               "options": ["4", "5", "6", "7"],
               "answer": "5",
               "explanation": "B major has five sharps: F#, C#, G#, D#, and A#"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "How many flats does B♭ major have?",
+              "options": ["1", "2", "3", "4"],
+              "answer": "2",
+              "explanation": "B♭ major has two flats: B♭ and E♭"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What are the notes in B major scale?",
+              "options": ["B-C#-D#-E-F#-G#-A#", "B-C-D-E-F-G-A", "B-C#-D-E-F#-G-A#", "B-C-D#-E-F-G#-A"],
+              "answer": "B-C#-D#-E-F#-G#-A#",
+              "explanation": "B major scale: B-C#-D#-E-F#-G#-A# (five sharps)"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "What are the notes in B♭ major scale?",
+              "options": ["B♭-C-D-E♭-F-G-A", "B♭-C-D-E-F-G-A", "B-C-D-E♭-F-G-A", "B♭-C-D♭-E♭-F-G-A♭"],
+              "answer": "B♭-C-D-E♭-F-G-A",
+              "explanation": "B♭ major scale: B♭-C-D-E♭-F-G-A (two flats: B♭ and E♭)"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of B major?",
+              "options": ["F# minor", "G# minor", "A# minor", "C# minor"],
+              "answer": "G# minor",
+              "explanation": "G# minor is the relative minor of B major (same key signature)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What is the relative minor of B♭ major?",
+              "options": ["F minor", "G minor", "A minor", "D minor"],
+              "answer": "G minor",
+              "explanation": "G minor is the relative minor of B♭ major (same key signature)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "In the circle of fifths, B major is how many steps from C major?",
+              "options": ["4 steps clockwise", "5 steps clockwise", "6 steps clockwise", "7 steps clockwise"],
+              "answer": "5 steps clockwise",
+              "explanation": "B major is five steps clockwise from C major (C→G→D→A→E→B)"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "In the circle of fifths, B♭ major is how many steps from C major?",
+              "options": ["1 step counter-clockwise", "2 steps counter-clockwise", "3 steps counter-clockwise", "1 step clockwise"],
+              "answer": "2 steps counter-clockwise",
+              "explanation": "B♭ major is two steps counter-clockwise from C major (C→F→B♭)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "Which scale has more accidentals: B major or B♭ major?",
+              "options": ["B major", "B♭ major", "They have the same", "Neither has accidentals"],
+              "answer": "B major",
+              "explanation": "B major has 5 sharps while B♭ major has only 2 flats"
+            },
+            {
+              "id": "ex10",
+              "type": "multiple-choice",
+              "question": "What is the dominant chord in B major?",
+              "options": ["E major", "F# major", "G# minor", "A# diminished"],
+              "answer": "F# major",
+              "explanation": "The dominant (V) chord in B major is F# major"
+            },
+            {
+              "id": "ex11",
+              "type": "multiple-choice",
+              "question": "What is the dominant chord in B♭ major?",
+              "options": ["E♭ major", "F major", "G minor", "A diminished"],
+              "answer": "F major",
+              "explanation": "The dominant (V) chord in B♭ major is F major"
+            },
+            {
+              "id": "ex12",
+              "type": "multiple-choice",
+              "question": "Which enharmonic relationship exists between these scales?",
+              "options": ["B major = C♭ major", "B♭ major = A# major", "Both scales are enharmonic", "No enharmonic relationship"],
+              "answer": "B♭ major = A# major",
+              "explanation": "B♭ major and A# major are enharmonically equivalent (same pitches, different notation)"
             }
           ]
         },
@@ -3165,23 +3253,6 @@ export const expandedLessonDatabase = {
               "options": ["A♭", "B♭", "E♭", "D♭"],
               "answer": "B♭",
               "explanation": "F major has one flat: B♭"
-            }
-          ]
-        },
-        {
-          "id": "bb_major_scale",
-          "title": "B♭ Major Scale",
-          "description": "Two flats: B♭ and E♭",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
-            {
-              "id": "ex1",
-              "type": "multiple-choice",
-              "question": "Which flats are in B♭ major?",
-              "options": ["B♭ and E♭", "B♭ and A♭", "E♭ and A♭", "B♭ and D♭"],
-              "answer": "B♭ and E♭",
-              "explanation": "B♭ major has two flats: B♭ and E♭"
             }
           ]
         }
