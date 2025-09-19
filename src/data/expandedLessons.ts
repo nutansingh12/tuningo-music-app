@@ -2357,8 +2357,8 @@ export const expandedLessonDatabase = {
           "id": "minor_sixth",
           "title": "Minor Sixth",
           "description": "8 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 16,
+          "xpReward": 160,
           "exercises": [
             {
               "id": "ex1",
@@ -2367,6 +2367,62 @@ export const expandedLessonDatabase = {
               "options": ["7", "8", "9", "10"],
               "answer": "8",
               "explanation": "A minor sixth is 8 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a minor sixth?",
+              "options": ["C to A", "C to Ab", "C to B", "C to Bb"],
+              "answer": "C to Ab",
+              "explanation": "C to Ab is a minor sixth (8 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a minor sixth?",
+              "options": ["Major third", "Minor third", "Perfect fourth", "Major second"],
+              "answer": "Major third",
+              "explanation": "When inverted, a minor sixth becomes a major third"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How does a minor sixth sound?",
+              "options": ["Very dissonant", "Melancholic but consonant", "Bright and happy", "Neutral"],
+              "answer": "Melancholic but consonant",
+              "explanation": "Minor sixths have a melancholic yet consonant quality"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is E to C?",
+              "options": ["Major sixth", "Minor sixth", "Perfect fifth", "Minor seventh"],
+              "answer": "Minor sixth",
+              "explanation": "E to C is a minor sixth (8 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In which scale is the minor sixth prominent?",
+              "options": ["Major scale", "Natural minor scale", "Pentatonic scale", "Chromatic scale"],
+              "answer": "Natural minor scale",
+              "explanation": "The natural minor scale features a minor sixth from the tonic"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What famous song features a minor sixth leap?",
+              "options": ["Happy Birthday", "The Entertainer", "Love Story theme", "Twinkle Twinkle"],
+              "answer": "Love Story theme",
+              "explanation": "The Love Story theme famously opens with a minor sixth leap"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What interval is A to F?",
+              "options": ["Perfect fifth", "Minor sixth", "Major sixth", "Minor seventh"],
+              "answer": "Minor sixth",
+              "explanation": "A to F is a minor sixth (8 semitones)"
             }
           ]
         },
@@ -2374,8 +2430,8 @@ export const expandedLessonDatabase = {
           "id": "major_sixth",
           "title": "Major Sixth",
           "description": "9 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 16,
+          "xpReward": 160,
           "exercises": [
             {
               "id": "ex1",
@@ -2384,6 +2440,62 @@ export const expandedLessonDatabase = {
               "options": ["8", "9", "10", "11"],
               "answer": "9",
               "explanation": "A major sixth is 9 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a major sixth?",
+              "options": ["C to Ab", "C to A", "C to Bb", "C to B"],
+              "answer": "C to A",
+              "explanation": "C to A is a major sixth (9 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a major sixth?",
+              "options": ["Minor third", "Major third", "Perfect fourth", "Minor second"],
+              "answer": "Minor third",
+              "explanation": "When inverted, a major sixth becomes a minor third"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How does a major sixth sound?",
+              "options": ["Dissonant", "Warm and consonant", "Tense", "Neutral"],
+              "answer": "Warm and consonant",
+              "explanation": "Major sixths have a warm, consonant, and pleasant sound"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "What interval is F to D?",
+              "options": ["Minor sixth", "Major sixth", "Perfect fifth", "Minor seventh"],
+              "answer": "Major sixth",
+              "explanation": "F to D is a major sixth (9 semitones)"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "In which scale is the major sixth prominent?",
+              "options": ["Natural minor scale", "Major scale", "Harmonic minor scale", "Dorian mode"],
+              "answer": "Major scale",
+              "explanation": "The major scale features a major sixth from the tonic"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "What famous song features a major sixth leap?",
+              "options": ["My Bonnie Lies Over the Ocean", "Amazing Grace", "Silent Night", "Jingle Bells"],
+              "answer": "My Bonnie Lies Over the Ocean",
+              "explanation": "'My Bonnie' famously opens with a major sixth leap on 'My Bon-nie'"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What interval is G to E?",
+              "options": ["Minor sixth", "Major sixth", "Perfect fifth", "Major seventh"],
+              "answer": "Major sixth",
+              "explanation": "G to E is a major sixth (9 semitones)"
             }
           ]
         },
@@ -2391,8 +2503,8 @@ export const expandedLessonDatabase = {
           "id": "minor_seventh",
           "title": "Minor Seventh",
           "description": "10 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -2401,6 +2513,70 @@ export const expandedLessonDatabase = {
               "options": ["9", "10", "11", "12"],
               "answer": "10",
               "explanation": "A minor seventh is 10 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a minor seventh?",
+              "options": ["C to B", "C to Bb", "C to A", "C to Ab"],
+              "answer": "C to Bb",
+              "explanation": "C to Bb is a minor seventh (10 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a minor seventh?",
+              "options": ["Major second", "Minor second", "Perfect fourth", "Major third"],
+              "answer": "Major second",
+              "explanation": "When inverted, a minor seventh becomes a major second"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How does a minor seventh sound?",
+              "options": ["Very consonant", "Mildly dissonant", "Extremely harsh", "Neutral"],
+              "answer": "Mildly dissonant",
+              "explanation": "Minor sevenths are mildly dissonant and create gentle tension"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "In which chord is the minor seventh prominent?",
+              "options": ["Major 7th chord", "Minor 7th chord", "Diminished chord", "Augmented chord"],
+              "answer": "Minor 7th chord",
+              "explanation": "Minor 7th chords contain a minor seventh interval from the root"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What interval is D to C?",
+              "options": ["Major sixth", "Minor seventh", "Major seventh", "Perfect octave"],
+              "answer": "Minor seventh",
+              "explanation": "D to C is a minor seventh (10 semitones)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "In jazz music, how is the minor seventh used?",
+              "options": ["It's avoided", "In dominant 7th chords", "Only in ballads", "For color and sophistication"],
+              "answer": "For color and sophistication",
+              "explanation": "Jazz uses minor sevenths extensively for harmonic color and sophistication"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What interval is G to F?",
+              "options": ["Major sixth", "Minor seventh", "Major seventh", "Perfect fifth"],
+              "answer": "Minor seventh",
+              "explanation": "G to F is a minor seventh (10 semitones)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "How does a minor seventh resolve?",
+              "options": ["Up by step", "Down by step", "Stays the same", "Jumps an octave"],
+              "answer": "Down by step",
+              "explanation": "Minor sevenths typically resolve downward by step for smooth voice leading"
             }
           ]
         },
@@ -2408,8 +2584,8 @@ export const expandedLessonDatabase = {
           "id": "major_seventh",
           "title": "Major Seventh",
           "description": "11 semitones apart",
-          "estimatedDuration": 5,
-          "xpReward": 50,
+          "estimatedDuration": 18,
+          "xpReward": 180,
           "exercises": [
             {
               "id": "ex1",
@@ -2418,6 +2594,70 @@ export const expandedLessonDatabase = {
               "options": ["10", "11", "12", "13"],
               "answer": "11",
               "explanation": "A major seventh is 11 semitones apart"
+            },
+            {
+              "id": "ex2",
+              "type": "multiple-choice",
+              "question": "What is an example of a major seventh?",
+              "options": ["C to Bb", "C to B", "C to A", "C to Ab"],
+              "answer": "C to B",
+              "explanation": "C to B is a major seventh (11 semitones)"
+            },
+            {
+              "id": "ex3",
+              "type": "multiple-choice",
+              "question": "What is the inversion of a major seventh?",
+              "options": ["Minor second", "Major second", "Perfect fourth", "Minor third"],
+              "answer": "Minor second",
+              "explanation": "When inverted, a major seventh becomes a minor second"
+            },
+            {
+              "id": "ex4",
+              "type": "multiple-choice",
+              "question": "How does a major seventh sound?",
+              "options": ["Very consonant", "Sharply dissonant", "Neutral", "Warm"],
+              "answer": "Sharply dissonant",
+              "explanation": "Major sevenths are quite dissonant and create strong tension"
+            },
+            {
+              "id": "ex5",
+              "type": "multiple-choice",
+              "question": "In which chord is the major seventh prominent?",
+              "options": ["Minor 7th chord", "Major 7th chord", "Diminished chord", "Suspended chord"],
+              "answer": "Major 7th chord",
+              "explanation": "Major 7th chords contain a major seventh interval from the root"
+            },
+            {
+              "id": "ex6",
+              "type": "multiple-choice",
+              "question": "What interval is F to E?",
+              "options": ["Minor seventh", "Major seventh", "Perfect octave", "Minor second"],
+              "answer": "Major seventh",
+              "explanation": "F to E is a major seventh (11 semitones)"
+            },
+            {
+              "id": "ex7",
+              "type": "multiple-choice",
+              "question": "In jazz music, how is the major seventh used?",
+              "options": ["It's avoided", "For sophisticated harmony", "Only in fast songs", "Only in minor keys"],
+              "answer": "For sophisticated harmony",
+              "explanation": "Jazz uses major sevenths for sophisticated, colorful harmony"
+            },
+            {
+              "id": "ex8",
+              "type": "multiple-choice",
+              "question": "What interval is B to A#?",
+              "options": ["Minor seventh", "Major seventh", "Perfect octave", "Augmented sixth"],
+              "answer": "Major seventh",
+              "explanation": "B to A# is a major seventh (11 semitones)"
+            },
+            {
+              "id": "ex9",
+              "type": "multiple-choice",
+              "question": "How does a major seventh typically resolve?",
+              "options": ["Down by step", "Up by step", "Stays the same", "Jumps down an octave"],
+              "answer": "Up by step",
+              "explanation": "Major sevenths typically resolve upward by step to the octave"
             }
           ]
         },
