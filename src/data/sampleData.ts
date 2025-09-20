@@ -51,6 +51,17 @@ const getDifficulty = (categoryIndex: number, lessonIndex: number): Difficulty =
   return 'advanced';
 };
 
+// Helper function to randomly select exercises from exercise pool
+const selectRandomExercises = (exercisePool: any[], count: number = 15): any[] => {
+  if (!exercisePool || exercisePool.length === 0) return [];
+
+  // Shuffle the exercise pool
+  const shuffled = [...exercisePool].sort(() => Math.random() - 0.5);
+
+  // Return the requested number of exercises (or all if pool is smaller)
+  return shuffled.slice(0, Math.min(count, shuffled.length));
+};
+
 // Convert lesson database to SkillTree format for compatibility
 export const sampleSkillTrees: SkillTree[] = lessonDatabase.categories.map((category, categoryIndex) => ({
   id: category.id,
@@ -73,19 +84,40 @@ export const sampleSkillTrees: SkillTree[] = lessonDatabase.categories.map((cate
       difficulty: getDifficulty(categoryIndex, lessonIndex),
       estimatedDuration: lesson.estimatedDuration,
       xpReward: lesson.xpReward,
-      exercises: lesson.exercises.map(exercise => ({
-        id: exercise.id,
-        type: exercise.type as ExerciseType,
-        question: exercise.question,
-        options: (exercise as any).options ? (exercise as any).options.map((option: string, index: number) => ({
-          id: `option_${index}`,
-          text: option,
-          isCorrect: option === (exercise as any).answer
-        })) : undefined,
-        correctAnswer: (exercise as any).answer || '',
-        explanation: exercise.explanation,
-        difficulty: getDifficulty(categoryIndex, lessonIndex)
-      })),
+      exercises: (() => {
+        // Check if lesson has exercisePool (for combined lessons like note recognition)
+        if ((lesson as any).exercisePool) {
+          const selectedExercises = selectRandomExercises((lesson as any).exercisePool, 15);
+          return selectedExercises.map(exercise => ({
+            id: exercise.id,
+            type: exercise.type as ExerciseType,
+            question: exercise.question,
+            options: (exercise as any).options ? (exercise as any).options.map((option: string, index: number) => ({
+              id: `option_${index}`,
+              text: option,
+              isCorrect: option === (exercise as any).answer
+            })) : undefined,
+            correctAnswer: (exercise as any).answer || '',
+            explanation: exercise.explanation,
+            difficulty: getDifficulty(categoryIndex, lessonIndex)
+          }));
+        }
+
+        // Regular lesson with fixed exercises
+        return lesson.exercises.map(exercise => ({
+          id: exercise.id,
+          type: exercise.type as ExerciseType,
+          question: exercise.question,
+          options: (exercise as any).options ? (exercise as any).options.map((option: string, index: number) => ({
+            id: `option_${index}`,
+            text: option,
+            isCorrect: option === (exercise as any).answer
+          })) : undefined,
+          correctAnswer: (exercise as any).answer || '',
+          explanation: exercise.explanation,
+          difficulty: getDifficulty(categoryIndex, lessonIndex)
+        }));
+      })(),
       prerequisites: []
     }],
     position: {

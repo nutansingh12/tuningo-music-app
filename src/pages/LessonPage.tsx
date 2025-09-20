@@ -44,6 +44,24 @@ const extractNoteFromQuestion = (question: string): { note: string; clef: 'trebl
     };
   }
 
+  // Look for patterns like "Which note A is shown" or "note A is shown"
+  const whichNoteMatch = lowerQuestion.match(/which\s+note\s+([a-g])\s+is\s+shown/);
+  if (whichNoteMatch) {
+    return {
+      note: whichNoteMatch[1].toUpperCase(),
+      clef
+    };
+  }
+
+  // Look for patterns like "note A on the treble clef" or "note A on the bass clef"
+  const noteOnClefMatch = lowerQuestion.match(/note\s+([a-g])\s+.*on\s+the\s+(treble|bass)\s+clef/);
+  if (noteOnClefMatch) {
+    return {
+      note: noteOnClefMatch[1].toUpperCase(),
+      clef: noteOnClefMatch[2] as 'treble' | 'bass'
+    };
+  }
+
   return null;
 };
 

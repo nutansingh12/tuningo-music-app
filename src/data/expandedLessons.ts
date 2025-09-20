@@ -98,22 +98,23 @@ export const expandedLessonDatabase = {
           ]
         },
         {
-          "id": "note_recognition_a",
-          "title": "Recognizing Note A",
-          "description": "Master identifying the note A",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+          "id": "note_recognition_combined",
+          "title": "Recognizing Notes",
+          "description": "Master identifying all musical notes A-G with randomized exercises",
+          "estimatedDuration": 20,
+          "xpReward": 200,
+          "exercisePool": [
+            // Note A exercises
             {
-              "id": "ex1",
+              "id": "a_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown?",
+              "question": "Which note A is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "A",
               "explanation": "This is the note A on the staff"
             },
             {
-              "id": "ex2",
+              "id": "a_ex2",
               "type": "multiple-choice",
               "question": "What is the first letter of the musical alphabet?",
               "options": ["A", "B", "C", "D"],
@@ -121,7 +122,7 @@ export const expandedLessonDatabase = {
               "explanation": "A is the first letter of the musical alphabet"
             },
             {
-              "id": "ex3",
+              "id": "a_ex3",
               "type": "multiple-choice",
               "question": "On a piano, where is the note A located relative to the black keys?",
               "options": ["Between two black keys", "To the left of three black keys", "To the right of two black keys", "It varies"],
@@ -129,7 +130,7 @@ export const expandedLessonDatabase = {
               "explanation": "A is located to the right of the group of two black keys"
             },
             {
-              "id": "ex4",
+              "id": "a_ex4",
               "type": "multiple-choice",
               "question": "What note comes before A in the musical alphabet?",
               "options": ["Z", "G", "B", "H"],
@@ -137,7 +138,7 @@ export const expandedLessonDatabase = {
               "explanation": "G comes before A, then the alphabet repeats"
             },
             {
-              "id": "ex5",
+              "id": "a_ex5",
               "type": "multiple-choice",
               "question": "What note comes after A?",
               "options": ["B", "C", "G", "A#"],
@@ -145,7 +146,7 @@ export const expandedLessonDatabase = {
               "explanation": "B comes directly after A in the musical alphabet"
             },
             {
-              "id": "ex6",
+              "id": "a_ex6",
               "type": "multiple-choice",
               "question": "How many semitones are between A and A# (A sharp)?",
               "options": ["1", "2", "3", "12"],
@@ -153,7 +154,7 @@ export const expandedLessonDatabase = {
               "explanation": "A sharp is one semitone (half step) above A"
             },
             {
-              "id": "ex7",
+              "id": "a_ex7",
               "type": "multiple-choice",
               "question": "What is the frequency of the A above middle C (A4)?",
               "options": ["220 Hz", "440 Hz", "880 Hz", "110 Hz"],
@@ -161,7 +162,7 @@ export const expandedLessonDatabase = {
               "explanation": "A4 (the A above middle C) is standardized at 440 Hz"
             },
             {
-              "id": "ex8",
+              "id": "a_ex8",
               "type": "multiple-choice",
               "question": "In treble clef, where is the note A located?",
               "options": ["On the second line", "In the second space", "On the first line", "Above the staff"],
@@ -169,7 +170,7 @@ export const expandedLessonDatabase = {
               "explanation": "In treble clef, A is located in the second space from the bottom"
             },
             {
-              "id": "ex9",
+              "id": "a_ex9",
               "type": "multiple-choice",
               "question": "What interval is from A to C?",
               "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
@@ -177,32 +178,24 @@ export const expandedLessonDatabase = {
               "explanation": "A to C is a minor third (3 semitones)"
             },
             {
-              "id": "ex10",
+              "id": "a_ex10",
               "type": "multiple-choice",
               "question": "Which key signature has A as its tonic (starting note)?",
               "options": ["A major", "C major", "G major", "F major"],
               "answer": "A major",
               "explanation": "A major is the key that starts on the note A"
-            }
-          ]
-        },
-        {
-          "id": "note_recognition_b",
-          "title": "Recognizing Note B",
-          "description": "Master identifying the note B",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+            },
+            // Note B exercises
             {
-              "id": "ex1",
+              "id": "b_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown?",
+              "question": "Which note B is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "B",
               "explanation": "This is the note B on the staff"
             },
             {
-              "id": "ex2",
+              "id": "b_ex2",
               "type": "multiple-choice",
               "question": "What note comes after A in the musical alphabet?",
               "options": ["B", "C", "A#", "Bb"],
@@ -210,7 +203,7 @@ export const expandedLessonDatabase = {
               "explanation": "B comes directly after A in the musical alphabet"
             },
             {
-              "id": "ex3",
+              "id": "b_ex3",
               "type": "multiple-choice",
               "question": "On a piano, where is B located?",
               "options": ["On a black key", "To the right of the group of three black keys", "Between two white keys", "To the left of C"],
@@ -218,7 +211,7 @@ export const expandedLessonDatabase = {
               "explanation": "B is the white key immediately to the left of C"
             },
             {
-              "id": "ex4",
+              "id": "b_ex4",
               "type": "multiple-choice",
               "question": "What is special about the interval from B to C?",
               "options": ["It's a whole step", "It's a half step", "It's two steps", "There's a black key between them"],
@@ -226,7 +219,7 @@ export const expandedLessonDatabase = {
               "explanation": "B to C is a natural half step with no black key between"
             },
             {
-              "id": "ex5",
+              "id": "b_ex5",
               "type": "multiple-choice",
               "question": "In treble clef, where is the note B located?",
               "options": ["On the middle line", "In the top space", "On the second line", "In the third space"],
@@ -234,7 +227,7 @@ export const expandedLessonDatabase = {
               "explanation": "In treble clef, B is on the middle (third) line"
             },
             {
-              "id": "ex6",
+              "id": "b_ex6",
               "type": "multiple-choice",
               "question": "What note is a whole step below B?",
               "options": ["A", "Bb", "C", "A#"],
@@ -242,7 +235,7 @@ export const expandedLessonDatabase = {
               "explanation": "A is a whole step (two semitones) below B"
             },
             {
-              "id": "ex7",
+              "id": "b_ex7",
               "type": "multiple-choice",
               "question": "What is Bb (B flat)?",
               "options": ["The same as A#", "A half step below B", "Both A and B", "A different note entirely"],
@@ -250,7 +243,7 @@ export const expandedLessonDatabase = {
               "explanation": "Bb is the same as A# and is a half step below B"
             },
             {
-              "id": "ex8",
+              "id": "b_ex8",
               "type": "multiple-choice",
               "question": "In the C major scale, what role does B play?",
               "options": ["It's the tonic", "It's the leading tone", "It's the dominant", "It's not in C major"],
@@ -258,7 +251,7 @@ export const expandedLessonDatabase = {
               "explanation": "B is the 7th degree of C major, called the leading tone"
             },
             {
-              "id": "ex9",
+              "id": "b_ex9",
               "type": "multiple-choice",
               "question": "What interval is from B to D?",
               "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
@@ -266,32 +259,24 @@ export const expandedLessonDatabase = {
               "explanation": "B to D is a minor third (3 semitones)"
             },
             {
-              "id": "ex10",
+              "id": "b_ex10",
               "type": "multiple-choice",
               "question": "Which key signature has B as its tonic?",
               "options": ["B major", "Bb major", "Both A and B", "B minor"],
               "answer": "Both A and B",
               "explanation": "Both B major and B minor have B as their tonic note"
-            }
-          ]
-        },
-        {
-          "id": "note_recognition_c",
-          "title": "Recognizing Note C",
-          "description": "Master identifying the note C",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+            },
+            // Note C exercises
             {
-              "id": "ex1",
+              "id": "c_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown?",
+              "question": "Which note C is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "C",
               "explanation": "This is the note C on the staff"
             },
             {
-              "id": "ex2",
+              "id": "c_ex2",
               "type": "multiple-choice",
               "question": "What is special about middle C?",
               "options": ["It's the highest note", "It's between treble and bass clef", "It's the loudest note", "It's always sharp"],
@@ -299,7 +284,7 @@ export const expandedLessonDatabase = {
               "explanation": "Middle C sits between the treble and bass clef staves"
             },
             {
-              "id": "ex3",
+              "id": "c_ex3",
               "type": "multiple-choice",
               "question": "On a piano, where is C located?",
               "options": ["On a black key", "To the left of two black keys", "To the right of three black keys", "Between black keys"],
@@ -307,7 +292,7 @@ export const expandedLessonDatabase = {
               "explanation": "C is the white key immediately to the left of the group of two black keys"
             },
             {
-              "id": "ex4",
+              "id": "c_ex4",
               "type": "multiple-choice",
               "question": "What note comes before C?",
               "options": ["B", "D", "C#", "Bb"],
@@ -315,7 +300,7 @@ export const expandedLessonDatabase = {
               "explanation": "B comes directly before C in the musical alphabet"
             },
             {
-              "id": "ex5",
+              "id": "c_ex5",
               "type": "multiple-choice",
               "question": "What is the interval from C to E?",
               "options": ["Minor third", "Major third", "Perfect fourth", "Major second"],
@@ -323,7 +308,7 @@ export const expandedLessonDatabase = {
               "explanation": "C to E is a major third (4 semitones)"
             },
             {
-              "id": "ex6",
+              "id": "c_ex6",
               "type": "multiple-choice",
               "question": "In the key of C major, what role does C play?",
               "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
@@ -331,7 +316,7 @@ export const expandedLessonDatabase = {
               "explanation": "C is the tonic (first degree) of the C major scale"
             },
             {
-              "id": "ex7",
+              "id": "c_ex7",
               "type": "multiple-choice",
               "question": "How many sharps or flats are in the key of C major?",
               "options": ["1 sharp", "2 flats", "None", "3 sharps"],
@@ -339,7 +324,7 @@ export const expandedLessonDatabase = {
               "explanation": "C major has no sharps or flats - all natural notes"
             },
             {
-              "id": "ex8",
+              "id": "c_ex8",
               "type": "multiple-choice",
               "question": "What is C# (C sharp)?",
               "options": ["The same as Db", "A half step above C", "Both A and B", "A black key"],
@@ -347,7 +332,7 @@ export const expandedLessonDatabase = {
               "explanation": "C# is the same as Db, a half step above C, and played on a black key"
             },
             {
-              "id": "ex9",
+              "id": "c_ex9",
               "type": "multiple-choice",
               "question": "In treble clef, where is middle C written?",
               "options": ["On the staff", "Below the staff with a ledger line", "Above the staff", "On the first line"],
@@ -355,32 +340,24 @@ export const expandedLessonDatabase = {
               "explanation": "Middle C is written below the treble staff with a ledger line"
             },
             {
-              "id": "ex10",
+              "id": "c_ex10",
               "type": "multiple-choice",
               "question": "What frequency is middle C approximately?",
               "options": ["220 Hz", "262 Hz", "440 Hz", "523 Hz"],
               "answer": "262 Hz",
               "explanation": "Middle C (C4) has a frequency of approximately 262 Hz"
-            }
-          ]
-        },
-        {
-          "id": "note_recognition_d",
-          "title": "Recognizing Note D",
-          "description": "Master identifying the note D",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+            },
+            // Note D exercises
             {
-              "id": "ex1",
+              "id": "d_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (D on staff)",
+              "question": "Which note D is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "D",
               "explanation": "This is the note D on the staff"
             },
             {
-              "id": "ex2",
+              "id": "d_ex2",
               "type": "multiple-choice",
               "question": "What note comes after C in the musical alphabet?",
               "options": ["B", "D", "E", "F"],
@@ -388,7 +365,7 @@ export const expandedLessonDatabase = {
               "explanation": "D comes directly after C in the musical alphabet"
             },
             {
-              "id": "ex3",
+              "id": "d_ex3",
               "type": "multiple-choice",
               "question": "On a piano, where is D located relative to the black keys?",
               "options": ["Between two black keys", "To the right of two black keys", "To the left of three black keys", "Between C and E"],
@@ -396,7 +373,7 @@ export const expandedLessonDatabase = {
               "explanation": "D is the white key between C and E"
             },
             {
-              "id": "ex4",
+              "id": "d_ex4",
               "type": "multiple-choice",
               "question": "In treble clef, where is the note D located?",
               "options": ["On the fourth line", "In the third space", "Above the staff", "On the second line"],
@@ -404,7 +381,7 @@ export const expandedLessonDatabase = {
               "explanation": "In treble clef, D (above middle C) is above the staff"
             },
             {
-              "id": "ex5",
+              "id": "d_ex5",
               "type": "multiple-choice",
               "question": "What interval is from D to F?",
               "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
@@ -412,7 +389,7 @@ export const expandedLessonDatabase = {
               "explanation": "D to F is a minor third (3 semitones)"
             },
             {
-              "id": "ex6",
+              "id": "d_ex6",
               "type": "multiple-choice",
               "question": "In the key of D major, what role does D play?",
               "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
@@ -420,7 +397,7 @@ export const expandedLessonDatabase = {
               "explanation": "D is the tonic (first degree) of the D major scale"
             },
             {
-              "id": "ex7",
+              "id": "d_ex7",
               "type": "multiple-choice",
               "question": "What is D# (D sharp)?",
               "options": ["The same as Eb", "A half step above D", "Both A and B", "A black key"],
@@ -428,32 +405,24 @@ export const expandedLessonDatabase = {
               "explanation": "D# is the same as Eb, a half step above D, and played on a black key"
             },
             {
-              "id": "ex8",
+              "id": "d_ex8",
               "type": "multiple-choice",
               "question": "What note is a whole step above D?",
               "options": ["D#", "E", "F", "C"],
               "answer": "E",
               "explanation": "E is a whole step (two semitones) above D"
-            }
-          ]
-        },
-        {
-          "id": "note_recognition_e",
-          "title": "Recognizing Note E",
-          "description": "Master identifying the note E",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+            },
+            // Note E exercises
             {
-              "id": "ex1",
+              "id": "e_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (E on staff)",
+              "question": "Which note E is shown on the treble clef staff?",
               "options": ["D", "E", "F", "G"],
               "answer": "E",
               "explanation": "This is the note E on the staff"
             },
             {
-              "id": "ex2",
+              "id": "e_ex2",
               "type": "multiple-choice",
               "question": "What note comes after D in the musical alphabet?",
               "options": ["C", "E", "F", "G"],
@@ -461,7 +430,7 @@ export const expandedLessonDatabase = {
               "explanation": "E comes directly after D in the musical alphabet"
             },
             {
-              "id": "ex3",
+              "id": "e_ex3",
               "type": "multiple-choice",
               "question": "What is special about the interval from E to F?",
               "options": ["It's a whole step", "It's a half step", "It's two steps", "There's a black key between them"],
@@ -469,7 +438,7 @@ export const expandedLessonDatabase = {
               "explanation": "E to F is a natural half step with no black key between"
             },
             {
-              "id": "ex4",
+              "id": "e_ex4",
               "type": "multiple-choice",
               "question": "In treble clef, where is the note E located?",
               "options": ["On the bottom line", "In the first space", "On the second line", "In the second space"],
@@ -477,7 +446,7 @@ export const expandedLessonDatabase = {
               "explanation": "In treble clef, E is on the bottom (first) line"
             },
             {
-              "id": "ex5",
+              "id": "e_ex5",
               "type": "multiple-choice",
               "question": "What interval is from E to G?",
               "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
@@ -485,7 +454,7 @@ export const expandedLessonDatabase = {
               "explanation": "E to G is a minor third (3 semitones)"
             },
             {
-              "id": "ex6",
+              "id": "e_ex6",
               "type": "multiple-choice",
               "question": "In the key of E major, what role does E play?",
               "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
@@ -493,7 +462,7 @@ export const expandedLessonDatabase = {
               "explanation": "E is the tonic (first degree) of the E major scale"
             },
             {
-              "id": "ex7",
+              "id": "e_ex7",
               "type": "multiple-choice",
               "question": "What note is a whole step below E?",
               "options": ["D", "Eb", "F", "C"],
@@ -501,32 +470,24 @@ export const expandedLessonDatabase = {
               "explanation": "D is a whole step (two semitones) below E"
             },
             {
-              "id": "ex8",
+              "id": "e_ex8",
               "type": "multiple-choice",
               "question": "How many sharps does E major have?",
               "options": ["2", "3", "4", "5"],
               "answer": "4",
               "explanation": "E major has four sharps: F#, C#, G#, and D#"
-            }
-          ]
-        },
-        {
-          "id": "note_recognition_f",
-          "title": "Recognizing Note F",
-          "description": "Master identifying the note F",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+            },
+            // Note F exercises
             {
-              "id": "ex1",
+              "id": "f_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (F on staff)",
+              "question": "Which note F is shown on the treble clef staff?",
               "options": ["D", "E", "F", "G"],
               "answer": "F",
               "explanation": "This is the note F on the staff"
             },
             {
-              "id": "ex2",
+              "id": "f_ex2",
               "type": "multiple-choice",
               "question": "What note comes after E in the musical alphabet?",
               "options": ["D", "F", "G", "A"],
@@ -534,7 +495,7 @@ export const expandedLessonDatabase = {
               "explanation": "F comes directly after E in the musical alphabet"
             },
             {
-              "id": "ex3",
+              "id": "f_ex3",
               "type": "multiple-choice",
               "question": "On a piano, where is F located?",
               "options": ["To the left of three black keys", "To the right of two black keys", "Between black keys", "To the left of two black keys"],
@@ -542,7 +503,7 @@ export const expandedLessonDatabase = {
               "explanation": "F is the white key immediately to the left of the group of three black keys"
             },
             {
-              "id": "ex4",
+              "id": "f_ex4",
               "type": "multiple-choice",
               "question": "In treble clef, where is the note F located?",
               "options": ["In the first space", "On the first line", "In the second space", "On the second line"],
@@ -550,7 +511,7 @@ export const expandedLessonDatabase = {
               "explanation": "In treble clef, F is in the first space from the bottom"
             },
             {
-              "id": "ex5",
+              "id": "f_ex5",
               "type": "multiple-choice",
               "question": "What interval is from F to A?",
               "options": ["Minor third", "Major third", "Perfect fourth", "Perfect fifth"],
@@ -558,7 +519,7 @@ export const expandedLessonDatabase = {
               "explanation": "F to A is a major third (4 semitones)"
             },
             {
-              "id": "ex6",
+              "id": "f_ex6",
               "type": "multiple-choice",
               "question": "In the key of F major, what role does F play?",
               "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
@@ -566,7 +527,7 @@ export const expandedLessonDatabase = {
               "explanation": "F is the tonic (first degree) of the F major scale"
             },
             {
-              "id": "ex7",
+              "id": "f_ex7",
               "type": "multiple-choice",
               "question": "How many flats does F major have?",
               "options": ["0", "1", "2", "3"],
@@ -574,32 +535,24 @@ export const expandedLessonDatabase = {
               "explanation": "F major has one flat: Bb"
             },
             {
-              "id": "ex8",
+              "id": "f_ex8",
               "type": "multiple-choice",
               "question": "What is F# (F sharp)?",
               "options": ["The same as Gb", "A half step above F", "Both A and B", "A black key"],
               "answer": "Both A and B",
               "explanation": "F# is the same as Gb, a half step above F, and played on a black key"
-            }
-          ]
-        },
-        {
-          "id": "note_recognition_g",
-          "title": "Recognizing Note G",
-          "description": "Master identifying the note G",
-          "estimatedDuration": 12,
-          "xpReward": 120,
-          "exercises": [
+            },
+            // Note G exercises
             {
-              "id": "ex1",
+              "id": "g_ex1",
               "type": "multiple-choice",
-              "question": "Which note is shown? (G on staff)",
+              "question": "Which note G is shown on the treble clef staff?",
               "options": ["E", "F", "G", "A"],
               "answer": "G",
               "explanation": "This is the note G on the staff"
             },
             {
-              "id": "ex2",
+              "id": "g_ex2",
               "type": "multiple-choice",
               "question": "What note comes after F in the musical alphabet?",
               "options": ["E", "G", "A", "H"],
@@ -607,7 +560,7 @@ export const expandedLessonDatabase = {
               "explanation": "G comes directly after F in the musical alphabet"
             },
             {
-              "id": "ex3",
+              "id": "g_ex3",
               "type": "multiple-choice",
               "question": "What note comes before A in the musical alphabet?",
               "options": ["F", "G", "H", "B"],
@@ -615,7 +568,7 @@ export const expandedLessonDatabase = {
               "explanation": "G comes directly before A in the musical alphabet"
             },
             {
-              "id": "ex4",
+              "id": "g_ex4",
               "type": "multiple-choice",
               "question": "In treble clef, where is the note G located?",
               "options": ["On the second line", "In the second space", "On the first line", "In the first space"],
@@ -623,7 +576,7 @@ export const expandedLessonDatabase = {
               "explanation": "In treble clef, G is on the second line from the bottom"
             },
             {
-              "id": "ex5",
+              "id": "g_ex5",
               "type": "multiple-choice",
               "question": "What interval is from G to B?",
               "options": ["Minor third", "Major third", "Perfect fourth", "Perfect fifth"],
@@ -631,7 +584,7 @@ export const expandedLessonDatabase = {
               "explanation": "G to B is a major third (4 semitones)"
             },
             {
-              "id": "ex6",
+              "id": "g_ex6",
               "type": "multiple-choice",
               "question": "In the key of G major, what role does G play?",
               "options": ["Dominant", "Subdominant", "Tonic", "Leading tone"],
@@ -639,7 +592,7 @@ export const expandedLessonDatabase = {
               "explanation": "G is the tonic (first degree) of the G major scale"
             },
             {
-              "id": "ex7",
+              "id": "g_ex7",
               "type": "multiple-choice",
               "question": "How many sharps does G major have?",
               "options": ["0", "1", "2", "3"],
@@ -647,14 +600,72 @@ export const expandedLessonDatabase = {
               "explanation": "G major has one sharp: F#"
             },
             {
-              "id": "ex8",
+              "id": "g_ex8",
               "type": "multiple-choice",
               "question": "What is the treble clef also called?",
               "options": ["F clef", "G clef", "C clef", "Alto clef"],
               "answer": "G clef",
               "explanation": "The treble clef is also called the G clef because it circles around the G line"
+            },
+            // Bass clef note recognition exercises
+            {
+              "id": "bass_a_ex1",
+              "type": "multiple-choice",
+              "question": "Which note A is shown on the bass clef staff?",
+              "options": ["G", "A", "B", "C"],
+              "answer": "A",
+              "explanation": "This is the note A on the bass clef staff"
+            },
+            {
+              "id": "bass_b_ex1",
+              "type": "multiple-choice",
+              "question": "Which note B is shown on the bass clef staff?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "B",
+              "explanation": "This is the note B on the bass clef staff"
+            },
+            {
+              "id": "bass_c_ex1",
+              "type": "multiple-choice",
+              "question": "Which note C is shown on the bass clef staff?",
+              "options": ["A", "B", "C", "D"],
+              "answer": "C",
+              "explanation": "This is the note C on the bass clef staff"
+            },
+            {
+              "id": "bass_d_ex1",
+              "type": "multiple-choice",
+              "question": "Which note D is shown on the bass clef staff?",
+              "options": ["B", "C", "D", "E"],
+              "answer": "D",
+              "explanation": "This is the note D on the bass clef staff"
+            },
+            {
+              "id": "bass_e_ex1",
+              "type": "multiple-choice",
+              "question": "Which note E is shown on the bass clef staff?",
+              "options": ["C", "D", "E", "F"],
+              "answer": "E",
+              "explanation": "This is the note E on the bass clef staff"
+            },
+            {
+              "id": "bass_f_ex1",
+              "type": "multiple-choice",
+              "question": "Which note F is shown on the bass clef staff?",
+              "options": ["D", "E", "F", "G"],
+              "answer": "F",
+              "explanation": "This is the note F on the bass clef staff"
+            },
+            {
+              "id": "bass_g_ex1",
+              "type": "multiple-choice",
+              "question": "Which note G is shown on the bass clef staff?",
+              "options": ["E", "F", "G", "A"],
+              "answer": "G",
+              "explanation": "This is the note G on the bass clef staff"
             }
-          ]
+          ],
+          "exercises": []
         },
         {
           "id": "treble_clef_lines",
