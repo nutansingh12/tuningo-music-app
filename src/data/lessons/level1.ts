@@ -9,15 +9,24 @@ export const level1Lessons = {
       "id": "intro_to_notes",
       "title": "Musical Alphabet Basics",
       "description": "Learn the 7 letters of music: A, B, C, D, E, F, G",
+      "type": "theory",
+      "difficulty": "beginner",
       "estimatedDuration": 8,
       "xpReward": 100,
+      "prerequisites": [],
       "exercises": [
         {
           "id": "alphabet-1",
           "type": "multiple-choice",
           "question": "How many letters are in the musical alphabet?",
-          "options": ["5", "7", "8", "12"],
-          "answer": "7",
+          "options": [
+            { "id": "a", "text": "5", "isCorrect": false },
+            { "id": "b", "text": "7", "isCorrect": true },
+            { "id": "c", "text": "8", "isCorrect": false },
+            { "id": "d", "text": "12", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "beginner",
           "explanation": "The musical alphabet has 7 letters: A, B, C, D, E, F, G"
         },
         {
@@ -58,8 +67,11 @@ export const level1Lessons = {
       "id": "note_recognition_combined",
       "title": "Recognizing Notes",
       "description": "Learn to identify notes on the treble and bass clef",
+      "type": "sight-reading",
+      "difficulty": "beginner",
       "estimatedDuration": 15,
       "xpReward": 150,
+      "prerequisites": ["intro_to_notes"],
       "exercises": [
         {
           "id": "treble-note-1",

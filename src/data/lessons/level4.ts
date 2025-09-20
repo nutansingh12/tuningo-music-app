@@ -9,8 +9,11 @@ export const level4Lessons = {
       "id": "interval_recognition_unison",
       "title": "Recognizing Unisons",
       "description": "Identify when two notes are the same",
+      "type": "listening",
+      "difficulty": "beginner",
       "estimatedDuration": 12,
       "xpReward": 120,
+      "prerequisites": [],
       "exercises": [
         {
           "id": "ex1",
@@ -22,8 +25,12 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Same (Unison)", "Different"],
-          "answer": "Same (Unison)",
+          "options": [
+            { "id": "a", "text": "Same (Unison)", "isCorrect": true },
+            { "id": "b", "text": "Different", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
           "explanation": "These notes are identical - a perfect unison (0 semitones apart)"
         },
         {
@@ -36,8 +43,12 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Same (Unison)", "Different"],
-          "answer": "Different",
+          "options": [
+            { "id": "a", "text": "Same (Unison)", "isCorrect": false },
+            { "id": "b", "text": "Different", "isCorrect": true }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "beginner",
           "explanation": "These notes are different - G and A are a major second apart"
         },
         {
@@ -50,8 +61,12 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Same (Unison)", "Different"],
-          "answer": "Same (Unison)",
+          "options": [
+            { "id": "a", "text": "Same (Unison)", "isCorrect": true },
+            { "id": "b", "text": "Different", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
           "explanation": "These notes are identical - a perfect unison"
         },
         {
@@ -64,8 +79,12 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Same (Unison)", "Different"],
-          "answer": "Different", 
+          "options": [
+            { "id": "a", "text": "Same (Unison)", "isCorrect": false },
+            { "id": "b", "text": "Different", "isCorrect": true }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "beginner",
           "explanation": "These notes are different - D and F are a major third apart"
         },
         {
@@ -78,18 +97,25 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Same (Unison)", "Different"],
-          "answer": "Same (Unison)",
+          "options": [
+            { "id": "a", "text": "Same (Unison)", "isCorrect": true },
+            { "id": "b", "text": "Different", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
           "explanation": "These notes are identical - a perfect unison"
         }
       ]
     },
     {
       "id": "interval_recognition_seconds",
-      "title": "Recognizing Seconds", 
+      "title": "Recognizing Seconds",
       "description": "Learn to identify major and minor second intervals",
+      "type": "listening",
+      "difficulty": "beginner",
       "estimatedDuration": 15,
       "xpReward": 150,
+      "prerequisites": ["interval_recognition_unison"],
       "exercises": [
         {
           "id": "seconds-1",
@@ -101,8 +127,13 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Major Second", "Minor Second", "Not a Second"],
-          "answer": "Major Second",
+          "options": [
+            { "id": "a", "text": "Major Second", "isCorrect": true },
+            { "id": "b", "text": "Minor Second", "isCorrect": false },
+            { "id": "c", "text": "Not a Second", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
           "explanation": "C to D is a major second (2 semitones apart)"
         },
         {
@@ -115,8 +146,13 @@ export const level4Lessons = {
             "playSequentially": true,
             "duration": 1000
           },
-          "options": ["Major Second", "Minor Second", "Not a Second"],
-          "answer": "Minor Second",
+          "options": [
+            { "id": "a", "text": "Major Second", "isCorrect": false },
+            { "id": "b", "text": "Minor Second", "isCorrect": true },
+            { "id": "c", "text": "Not a Second", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "beginner",
           "explanation": "E to F is a minor second (1 semitone apart)"
         }
       ]

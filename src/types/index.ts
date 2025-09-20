@@ -132,8 +132,9 @@ export interface Exercise {
   difficulty: Difficulty;
 }
 
-export type ExerciseType = 
+export type ExerciseType =
   | 'multiple-choice'
+  | 'audio-multiple-choice'
   | 'pitch-match'
   | 'rhythm-tap'
   | 'chord-builder'
