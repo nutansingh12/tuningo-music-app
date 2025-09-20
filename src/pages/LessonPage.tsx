@@ -270,6 +270,8 @@ const LessonPage = () => {
 
         if (foundLesson && foundLesson.exercises && foundLesson.exercises.length > 0) {
           console.log(`✅ Setting lesson: ${foundLesson.title} with ${foundLesson.exercises.length} exercises`);
+          console.log(`🔍 First exercise:`, foundLesson.exercises[0]);
+          console.log(`🔍 First exercise options:`, foundLesson.exercises[0]?.options);
           setCurrentLesson(foundLesson);
           console.log(`📊 Lesson set successfully`);
         } else {
@@ -333,17 +335,20 @@ const LessonPage = () => {
     let isCorrect = false;
     if (currentExercise.type === 'multiple-choice' && currentExercise.options) {
       console.log('🔍 Multiple choice exercise with options:', currentExercise.options);
+      console.log('🔍 Selected answer:', selectedAnswer);
 
-      // Check if options are in new format {id, text, isCorrect} or old format ["option1", "option2"]
-      const firstOption = currentExercise.options[0];
-      if (typeof firstOption === 'object' && firstOption.id) {
-        // New format: {id, text, isCorrect}
-        const selectedOption = currentExercise.options.find(option => option.id === selectedAnswer);
-        console.log('🔍 New format - selectedOption:', selectedOption);
-        isCorrect = selectedOption?.isCorrect || false;
+      // Try to find the selected option in new format first
+      const selectedOptionNew = currentExercise.options.find(option =>
+        typeof option === 'object' && option !== null && option.id === selectedAnswer
+      );
+
+      if (selectedOptionNew) {
+        // Found in new format: {id, text, isCorrect}
+        console.log('🔍 New format - selectedOption:', selectedOptionNew);
+        isCorrect = selectedOptionNew.isCorrect || false;
         console.log('🔍 New format - isCorrect:', isCorrect);
       } else {
-        // Old format: ["option1", "option2"] with separate answer field
+        // Check if it's old format: ["option1", "option2"] with separate answer field
         const exerciseAnswer = currentExercise.answer || currentExercise.correctAnswer;
         console.log('🔍 Old format - comparing:', selectedAnswer, '===', exerciseAnswer);
         isCorrect = selectedAnswer === exerciseAnswer;
@@ -665,10 +670,13 @@ const LessonPage = () => {
             <div className="space-y-3">
               {currentExercise.options.map((option, index) => {
                 // Handle both new format {id, text, isCorrect} and old format ["option1", "option2"]
-                const isNewFormat = typeof option === 'object' && option.id;
-                const optionKey = isNewFormat ? option.id : index;
-                const optionText = isNewFormat ? option.text : option;
-                const optionValue = isNewFormat ? option.id : option;
+                // Check each option individually since formats can be mixed within the same lesson
+                const isNewFormat = typeof option === 'object' && option !== null && 'id' in option && 'text' in option;
+                const optionKey = isNewFormat ? option.id : `option-${index}`;
+                const optionText = isNewFormat ? option.text : String(option);
+                const optionValue = isNewFormat ? option.id : String(option);
+
+                console.log(`🔍 Option ${index}:`, { option, isNewFormat, optionText, optionValue });
 
                 return (
                   <button
@@ -720,10 +728,13 @@ const LessonPage = () => {
               <div className="space-y-3">
                 {currentExercise.options && currentExercise.options.map((option, index) => {
                   // Handle both new format {id, text, isCorrect} and old format ["option1", "option2"]
-                  const isNewFormat = typeof option === 'object' && option.id;
-                  const optionKey = isNewFormat ? option.id : index;
-                  const optionText = isNewFormat ? option.text : option;
-                  const optionValue = isNewFormat ? option.id : option;
+                  // Check each option individually since formats can be mixed within the same lesson
+                  const isNewFormat = typeof option === 'object' && option !== null && 'id' in option && 'text' in option;
+                  const optionKey = isNewFormat ? option.id : `audio-option-${index}`;
+                  const optionText = isNewFormat ? option.text : String(option);
+                  const optionValue = isNewFormat ? option.id : String(option);
+
+                  console.log(`🔍 Audio Option ${index}:`, { option, isNewFormat, optionText, optionValue });
 
                   return (
                     <button
