@@ -126,6 +126,21 @@ const LessonPage = () => {
 
   const { playNote, playChord } = useAudioSynthesizer();
 
+  // Test audio synthesis on component mount
+  useEffect(() => {
+    console.log('🎵 LessonPage mounted, testing audio synthesis...');
+    console.log('🎵 playNote function:', playNote);
+    console.log('🎵 playChord function:', playChord);
+
+    // Test audio context availability
+    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+    if (AudioContext) {
+      console.log('🎵 AudioContext available');
+    } else {
+      console.error('❌ AudioContext not available');
+    }
+  }, [playNote, playChord]);
+
   // Function to find lesson by ID using lazy loading
   const findLessonById = async (id: string) => {
     console.log(`🔍 Loading lesson: ${id}`);
@@ -414,9 +429,17 @@ const LessonPage = () => {
   };
 
   const playAudioExercise = (audioData: any) => {
-    if (isPlayingAudio) return;
+    console.log('🎵 playAudioExercise called with:', audioData);
 
+    if (isPlayingAudio) {
+      console.log('🎵 Already playing audio, ignoring request');
+      return;
+    }
+
+    console.log('🎵 Setting isPlayingAudio to true');
     setIsPlayingAudio(true);
+
+    console.log('🎵 Processing audio type:', audioData.type);
 
     if (audioData.type === 'interval') {
       const notes = audioData.notes;
@@ -442,17 +465,30 @@ const LessonPage = () => {
       }
     } else if (audioData.type === 'single-note') {
       // Play a single note (for perfect pitch exercises)
+      console.log('🎵 Processing single-note audio type');
       const notes = audioData.notes;
       const duration = audioData.duration || 2000;
+
+      console.log('🎵 Single-note data:', { notes, duration });
 
       if (notes && notes.length > 0) {
         const noteData = notes[0]; // Take the first (and only) note
         console.log(`🎵 Playing single note: ${noteData.note}${noteData.octave} for ${duration}ms`);
-        playNote(noteData.note, noteData.octave, duration);
+
+        // Test with a simple note first
+        console.log('🎵 Testing with C4 note...');
+        playNote('C', 4, 1000);
+
+        // Then play the actual note
+        setTimeout(() => {
+          console.log(`🎵 Now playing actual note: ${noteData.note}${noteData.octave}`);
+          playNote(noteData.note, noteData.octave, duration);
+        }, 1200);
 
         setTimeout(() => {
+          console.log('🎵 Single-note playback complete, setting isPlayingAudio to false');
           setIsPlayingAudio(false);
-        }, duration);
+        }, duration + 1200);
       } else {
         console.error('❌ No notes found in single-note audio data');
         setIsPlayingAudio(false);
