@@ -17,6 +17,7 @@ import { useUserStore } from '@/store/userStore';
 import { sampleSkillTrees } from '@/data/sampleData';
 import StaffNotation from '@/components/StaffNotation';
 import { useAudioSynthesizer } from '@/hooks/useAudio';
+import { loadLessonById } from '@/services/lessonLoader';
 
 // Helper function to extract note information from question text and exercise data
 const extractNoteFromQuestion = (question: string, exercise?: any): { note: string; clef: 'treble' | 'bass' } | null => {
@@ -125,57 +126,20 @@ const LessonPage = () => {
 
   const { playNote, playChord } = useAudioSynthesizer();
 
-  // Function to find lesson by ID from our comprehensive database
-  const findLessonById = (id: string) => {
-    // For ear training lessons, create a simple demo lesson to avoid memory issues
-    if (id === 'interval_recognition_unison') {
-      return {
-        id: 'interval_recognition_unison',
-        title: 'Recognizing Unisons',
-        description: 'Identify when two notes are the same',
-        estimatedDuration: 12,
-        xpReward: 120,
-        exercises: [
-          {
-            id: 'ex1',
-            type: 'audio-multiple-choice' as const,
-            question: 'Listen to these two notes. Are they the same or different?',
-            audioData: {
-              type: 'interval',
-              notes: [{ note: 'C', octave: 4 }, { note: 'C', octave: 4 }],
-              playSequentially: true,
-              duration: 1000
-            },
-            options: [
-              { id: 'a', text: 'Same (Unison)', isCorrect: true },
-              { id: 'b', text: 'Different', isCorrect: false }
-            ],
-            correctAnswer: 'a',
-            explanation: 'These notes are identical - a perfect unison (0 semitones apart)',
-            difficulty: 'beginner' as const
-          },
-          {
-            id: 'ex2',
-            type: 'audio-multiple-choice' as const,
-            question: 'Listen to these two notes. Are they the same or different?',
-            audioData: {
-              type: 'interval',
-              notes: [{ note: 'G', octave: 4 }, { note: 'A', octave: 4 }],
-              playSequentially: true,
-              duration: 1000
-            },
-            options: [
-              { id: 'a', text: 'Same (Unison)', isCorrect: false },
-              { id: 'b', text: 'Different', isCorrect: true }
-            ],
-            correctAnswer: 'b',
-            explanation: 'These notes are different - G and A are a major second apart',
-            difficulty: 'beginner' as const
-          }
-        ]
-      };
+  // Function to find lesson by ID using lazy loading
+  const findLessonById = async (id: string) => {
+    try {
+      console.log(`🔍 Loading lesson: ${id}`);
+      const lesson = await loadLessonById(id);
+      if (lesson) {
+        console.log(`✅ Lesson loaded: ${lesson.title}`);
+        return lesson;
+      }
+    } catch (error) {
+      console.error(`❌ Failed to load lesson ${id}:`, error);
     }
 
+    // Fallback: search in existing skill trees (for backward compatibility)
     for (const skillTree of sampleSkillTrees) {
       for (const node of skillTree.nodes) {
         for (const lesson of node.lessons) {
@@ -240,20 +204,33 @@ const LessonPage = () => {
   };
 
   useEffect(() => {
-    if (!lessonId) {
-      setCurrentLesson(demoLesson);
-      return;
-    }
+    const loadLesson = async () => {
+      if (!lessonId) {
+        setCurrentLesson(demoLesson);
+        return;
+      }
 
-    // Try to find the lesson in our comprehensive database
-    const foundLesson = findLessonById(lessonId);
-    if (foundLesson) {
-      setCurrentLesson(foundLesson);
-    } else if (lessonId === 'demo') {
-      setCurrentLesson(demoLesson);
-    } else {
-      setCurrentLesson(demoLesson);
-    }
+      if (lessonId === 'demo') {
+        setCurrentLesson(demoLesson);
+        return;
+      }
+
+      try {
+        // Try to find the lesson using lazy loading
+        const foundLesson = await findLessonById(lessonId);
+        if (foundLesson) {
+          setCurrentLesson(foundLesson);
+        } else {
+          console.warn(`Lesson not found: ${lessonId}, using demo`);
+          setCurrentLesson(demoLesson);
+        }
+      } catch (error) {
+        console.error(`Error loading lesson ${lessonId}:`, error);
+        setCurrentLesson(demoLesson);
+      }
+    };
+
+    loadLesson();
 
     return () => {
       resetLesson();

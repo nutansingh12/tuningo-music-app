@@ -1,8 +1,16 @@
 import { SkillTree, Achievement, SkillNodeType, LessonType, Difficulty, ExerciseType } from '@/types';
-import { expandedLessonDatabase } from './expandedLessons';
+import { levelMetadata } from '@/services/lessonLoader';
 
-// Use the expanded lesson database with hundreds of lessons
-export const lessonDatabase = expandedLessonDatabase;
+// Lightweight lesson database - only metadata, actual lessons loaded on demand
+export const lessonDatabase = {
+  categories: levelMetadata.map(level => ({
+    id: level.id,
+    title: level.title,
+    description: level.description,
+    color: level.color,
+    lessons: [] // Lessons will be loaded dynamically
+  }))
+};
 
 // Helper function to determine lesson type based on content
 const getLessonType = (lesson: any): LessonType => {
@@ -62,72 +70,67 @@ const selectRandomExercises = (exercisePool: any[], count: number = 15): any[] =
   return shuffled.slice(0, Math.min(count, shuffled.length));
 };
 
-// Convert lesson database to SkillTree format for compatibility
-export const sampleSkillTrees: SkillTree[] = lessonDatabase.categories.map((category, categoryIndex) => ({
-  id: category.id,
-  name: category.title,
-  description: category.description,
+// Generate lightweight skill trees - lessons loaded on demand
+export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryIndex) => ({
+  id: level.id,
+  name: level.title,
+  description: level.description,
   icon: categoryIndex === 0 ? '🎼' : categoryIndex === 1 ? '🎹' : categoryIndex === 2 ? '🎸' : '🎤',
-  color: category.color,
-  nodes: category.lessons.map((lesson, lessonIndex) => ({
-    id: `node_${categoryIndex}_${lessonIndex}`,
-    name: lesson.title,
-    description: lesson.description,
-    type: getSkillNodeType(category.id),
-    difficulty: getDifficulty(categoryIndex, lessonIndex),
-    xpReward: lesson.xpReward,
-    lessons: [{
-      id: lesson.id,
-      title: lesson.title,
-      description: lesson.description,
-      type: getLessonType(lesson),
-      difficulty: getDifficulty(categoryIndex, lessonIndex),
-      estimatedDuration: lesson.estimatedDuration,
-      xpReward: lesson.xpReward,
-      exercises: (() => {
-        // Check if lesson has exercisePool (for combined lessons like note recognition)
-        if ((lesson as any).exercisePool) {
-          const selectedExercises = selectRandomExercises((lesson as any).exercisePool, 15);
-          return selectedExercises.map(exercise => ({
-            id: exercise.id,
-            type: exercise.type as ExerciseType,
-            question: exercise.question,
-            options: (exercise as any).options ? (exercise as any).options.map((option: string, index: number) => ({
-              id: `option_${index}`,
-              text: option,
-              isCorrect: option === (exercise as any).answer
-            })) : undefined,
-            correctAnswer: (exercise as any).answer || '',
-            explanation: exercise.explanation,
-            difficulty: getDifficulty(categoryIndex, lessonIndex)
-          }));
-        }
+  color: level.color,
+  nodes: Array.from({ length: level.lessonCount }, (_, lessonIndex) => {
+    // Create specific lesson IDs for known lessons
+    let lessonId = `${level.id}_lesson_${lessonIndex + 1}`;
+    let lessonTitle = `Lesson ${lessonIndex + 1}`;
 
-        // Regular lesson with fixed exercises
-        return lesson.exercises.map(exercise => ({
-          id: exercise.id,
-          type: exercise.type as ExerciseType,
-          question: exercise.question,
-          options: (exercise as any).options ? (exercise as any).options.map((option: string, index: number) => ({
-            id: `option_${index}`,
-            text: option,
-            isCorrect: option === (exercise as any).answer
-          })) : undefined,
-          correctAnswer: (exercise as any).answer || '',
-          explanation: exercise.explanation,
-          difficulty: getDifficulty(categoryIndex, lessonIndex)
-        }));
-      })(),
-      prerequisites: []
-    }],
-    position: {
-      x: 100 + (lessonIndex % 5) * 150,
-      y: 100 + Math.floor(lessonIndex / 5) * 120
-    },
-    prerequisites: lessonIndex > 0 ? [`node_${categoryIndex}_${lessonIndex - 1}`] : [],
-    icon: categoryIndex === 0 ? '📝' : categoryIndex === 1 ? '🎯' : categoryIndex === 2 ? '🎨' : '👂'
-  })),
-  prerequisites: categoryIndex > 0 ? [lessonDatabase.categories[categoryIndex - 1].id] : []
+    // Special handling for Level 4 (ear training)
+    if (level.id === 'ear_voice_training') {
+      if (lessonIndex === 0) {
+        lessonId = 'interval_recognition_unison';
+        lessonTitle = 'Recognizing Unisons';
+      } else if (lessonIndex === 1) {
+        lessonId = 'interval_recognition_seconds';
+        lessonTitle = 'Recognizing Seconds';
+      }
+    }
+
+    // Special handling for Level 1
+    if (level.id === 'intro_to_notes') {
+      if (lessonIndex === 0) {
+        lessonId = 'intro_to_notes';
+        lessonTitle = 'Musical Alphabet Basics';
+      } else if (lessonIndex === 1) {
+        lessonId = 'note_recognition_combined';
+        lessonTitle = 'Recognizing Notes';
+      }
+    }
+
+    return {
+      id: `node_${categoryIndex}_${lessonIndex}`,
+      name: lessonTitle,
+      description: `${level.title} - ${lessonTitle}`,
+      type: getSkillNodeType(level.id),
+      difficulty: getDifficulty(categoryIndex, lessonIndex),
+      xpReward: 100 + (lessonIndex * 50),
+      lessons: [{
+        id: lessonId,
+        title: lessonTitle,
+        description: `${level.title} - ${lessonTitle}`,
+        type: getLessonType({ title: lessonTitle }),
+        difficulty: getDifficulty(categoryIndex, lessonIndex),
+        estimatedDuration: 10 + (lessonIndex * 5),
+        xpReward: 100 + (lessonIndex * 50),
+        exercises: [], // Will be loaded dynamically
+        prerequisites: []
+      }],
+      position: {
+        x: 100 + (lessonIndex % 5) * 150,
+        y: 100 + Math.floor(lessonIndex / 5) * 120
+      },
+      prerequisites: lessonIndex > 0 ? [`node_${categoryIndex}_${lessonIndex - 1}`] : [],
+      icon: categoryIndex === 0 ? '📝' : categoryIndex === 1 ? '🎯' : categoryIndex === 2 ? '🎨' : '👂'
+    };
+  }),
+  prerequisites: categoryIndex > 0 ? [levelMetadata[categoryIndex - 1].id] : []
 }));
 
 // Sample achievements with proper type structure
