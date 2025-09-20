@@ -127,6 +127,55 @@ const LessonPage = () => {
 
   // Function to find lesson by ID from our comprehensive database
   const findLessonById = (id: string) => {
+    // For ear training lessons, create a simple demo lesson to avoid memory issues
+    if (id === 'interval_recognition_unison') {
+      return {
+        id: 'interval_recognition_unison',
+        title: 'Recognizing Unisons',
+        description: 'Identify when two notes are the same',
+        estimatedDuration: 12,
+        xpReward: 120,
+        exercises: [
+          {
+            id: 'ex1',
+            type: 'audio-multiple-choice' as const,
+            question: 'Listen to these two notes. Are they the same or different?',
+            audioData: {
+              type: 'interval',
+              notes: [{ note: 'C', octave: 4 }, { note: 'C', octave: 4 }],
+              playSequentially: true,
+              duration: 1000
+            },
+            options: [
+              { id: 'a', text: 'Same (Unison)', isCorrect: true },
+              { id: 'b', text: 'Different', isCorrect: false }
+            ],
+            correctAnswer: 'a',
+            explanation: 'These notes are identical - a perfect unison (0 semitones apart)',
+            difficulty: 'beginner' as const
+          },
+          {
+            id: 'ex2',
+            type: 'audio-multiple-choice' as const,
+            question: 'Listen to these two notes. Are they the same or different?',
+            audioData: {
+              type: 'interval',
+              notes: [{ note: 'G', octave: 4 }, { note: 'A', octave: 4 }],
+              playSequentially: true,
+              duration: 1000
+            },
+            options: [
+              { id: 'a', text: 'Same (Unison)', isCorrect: false },
+              { id: 'b', text: 'Different', isCorrect: true }
+            ],
+            correctAnswer: 'b',
+            explanation: 'These notes are different - G and A are a major second apart',
+            difficulty: 'beginner' as const
+          }
+        ]
+      };
+    }
+
     for (const skillTree of sampleSkillTrees) {
       for (const node of skillTree.nodes) {
         for (const lesson of node.lessons) {
@@ -191,37 +240,18 @@ const LessonPage = () => {
   };
 
   useEffect(() => {
-    console.log('LessonPage useEffect - lessonId:', lessonId);
-    console.log('Available skill trees:', sampleSkillTrees.length);
-
     if (!lessonId) {
-      console.log('No lessonId provided, using demo lesson');
       setCurrentLesson(demoLesson);
       return;
     }
 
-    // Debug: Log all available lesson IDs
-    const allLessonIds: string[] = [];
-    sampleSkillTrees.forEach(tree => {
-      tree.nodes.forEach(node => {
-        node.lessons.forEach(lesson => {
-          allLessonIds.push(lesson.id);
-        });
-      });
-    });
-    console.log('All available lesson IDs:', allLessonIds);
-
     // Try to find the lesson in our comprehensive database
     const foundLesson = findLessonById(lessonId);
     if (foundLesson) {
-      console.log('✅ Found lesson:', foundLesson.title, 'with', foundLesson.exercises.length, 'exercises');
       setCurrentLesson(foundLesson);
     } else if (lessonId === 'demo') {
-      console.log('Using demo lesson');
       setCurrentLesson(demoLesson);
     } else {
-      console.warn('❌ Lesson not found:', lessonId, 'falling back to demo');
-      console.log('Searched for lesson ID:', lessonId);
       setCurrentLesson(demoLesson);
     }
 
@@ -231,7 +261,6 @@ const LessonPage = () => {
   }, [lessonId, setCurrentLesson, resetLesson]);
 
   const handleAnswerSelect = (answerId: string) => {
-    console.log('🔍 Answer selected:', answerId);
     setSelectedAnswer(answerId);
   };
 
@@ -408,7 +437,6 @@ const LessonPage = () => {
       console.warn('⚠️ No currentLesson found!');
     }
 
-    console.log('🚀 Navigating to skill-tree');
     navigate('/skill-tree');
   };
 
