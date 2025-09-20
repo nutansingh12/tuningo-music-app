@@ -64,6 +64,25 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
     };
   }
 
+  // Look for questions about specific staff positions that need visual aids
+  const staffPositionPatterns = [
+    /what\s+note\s+is\s+on\s+the\s+(bottom|first|second|third|fourth|top|middle)\s+(line|space)\s+of\s+(treble|bass)\s+clef/,
+    /what\s+note\s+is\s+in\s+the\s+(first|second|third|fourth|top)\s+space\s+of\s+(treble|bass)\s+clef/,
+    /what\s+note\s+is\s+on\s+the\s+.*\s+ledger\s+line\s+(above|below)\s+(treble|bass)/,
+    /what\s+note\s+is\s+in\s+the\s+space\s+(above|below)\s+.*\s+(treble|bass)/
+  ];
+
+  for (const pattern of staffPositionPatterns) {
+    const match = lowerQuestion.match(pattern);
+    if (match && exercise?.answer) {
+      const clefFromMatch = match[match.length - 1]; // Last capture group is usually the clef
+      return {
+        note: exercise.answer.toUpperCase(),
+        clef: (clefFromMatch === 'bass' ? 'bass' : 'treble') as 'treble' | 'bass'
+      };
+    }
+  }
+
   // Look for "note X is shown on the Y clef staff" patterns
   const noteOnClefMatch = lowerQuestion.match(/note\s+([a-g])\s+.*on\s+the\s+(treble|bass)\s+clef/);
   if (noteOnClefMatch) {
