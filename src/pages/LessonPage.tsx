@@ -333,14 +333,27 @@ const LessonPage = () => {
     let isCorrect = false;
     if (currentExercise.type === 'multiple-choice' && currentExercise.options) {
       console.log('🔍 Multiple choice exercise with options:', currentExercise.options);
-      const selectedOption = currentExercise.options.find(option => option.id === selectedAnswer);
-      console.log('🔍 selectedOption:', selectedOption);
-      isCorrect = selectedOption?.isCorrect || false;
-      console.log('🔍 isCorrect from selectedOption.isCorrect:', isCorrect);
+
+      // Check if options are in new format {id, text, isCorrect} or old format ["option1", "option2"]
+      const firstOption = currentExercise.options[0];
+      if (typeof firstOption === 'object' && firstOption.id) {
+        // New format: {id, text, isCorrect}
+        const selectedOption = currentExercise.options.find(option => option.id === selectedAnswer);
+        console.log('🔍 New format - selectedOption:', selectedOption);
+        isCorrect = selectedOption?.isCorrect || false;
+        console.log('🔍 New format - isCorrect:', isCorrect);
+      } else {
+        // Old format: ["option1", "option2"] with separate answer field
+        const exerciseAnswer = currentExercise.answer || currentExercise.correctAnswer;
+        console.log('🔍 Old format - comparing:', selectedAnswer, '===', exerciseAnswer);
+        isCorrect = selectedAnswer === exerciseAnswer;
+        console.log('🔍 Old format - isCorrect:', isCorrect);
+      }
     } else {
       // For non-multiple choice, compare directly with correctAnswer
-      console.log('🔍 Non-multiple choice, comparing:', selectedAnswer, '===', currentExercise.correctAnswer);
-      isCorrect = selectedAnswer === currentExercise.correctAnswer;
+      const exerciseAnswer = currentExercise.answer || currentExercise.correctAnswer;
+      console.log('🔍 Non-multiple choice, comparing:', selectedAnswer, '===', exerciseAnswer);
+      isCorrect = selectedAnswer === exerciseAnswer;
       console.log('🔍 isCorrect from direct comparison:', isCorrect);
     }
 
@@ -650,19 +663,27 @@ const LessonPage = () => {
           {/* Multiple Choice Exercise */}
           {currentExercise.type === 'multiple-choice' && currentExercise.options && (
             <div className="space-y-3">
-              {currentExercise.options.map((option) => (
-                <button
-                  key={option.id}
-                  onClick={() => handleAnswerSelect(option.id)}
-                  className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
-                    selectedAnswer === option.id
-                      ? 'border-primary-500 bg-primary-50'
-                      : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                  }`}
-                >
-                  {option.text}
-                </button>
-              ))}
+              {currentExercise.options.map((option, index) => {
+                // Handle both new format {id, text, isCorrect} and old format ["option1", "option2"]
+                const isNewFormat = typeof option === 'object' && option.id;
+                const optionKey = isNewFormat ? option.id : index;
+                const optionText = isNewFormat ? option.text : option;
+                const optionValue = isNewFormat ? option.id : option;
+
+                return (
+                  <button
+                    key={optionKey}
+                    onClick={() => handleAnswerSelect(optionValue)}
+                    className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
+                      selectedAnswer === optionValue
+                        ? 'border-primary-500 bg-primary-50'
+                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    {optionText}
+                  </button>
+                );
+              })}
             </div>
           )}
 
@@ -697,19 +718,27 @@ const LessonPage = () => {
 
               {/* Answer Options */}
               <div className="space-y-3">
-                {currentExercise.options && currentExercise.options.map((option, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleAnswerSelect(option)}
-                    className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
-                      selectedAnswer === option
-                        ? 'border-primary-500 bg-primary-50'
-                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                    }`}
-                  >
-                    {option}
-                  </button>
-                ))}
+                {currentExercise.options && currentExercise.options.map((option, index) => {
+                  // Handle both new format {id, text, isCorrect} and old format ["option1", "option2"]
+                  const isNewFormat = typeof option === 'object' && option.id;
+                  const optionKey = isNewFormat ? option.id : index;
+                  const optionText = isNewFormat ? option.text : option;
+                  const optionValue = isNewFormat ? option.id : option;
+
+                  return (
+                    <button
+                      key={optionKey}
+                      onClick={() => handleAnswerSelect(optionValue)}
+                      className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
+                        selectedAnswer === optionValue
+                          ? 'border-primary-500 bg-primary-50'
+                          : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                      }`}
+                    >
+                      {optionText}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
