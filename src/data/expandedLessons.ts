@@ -108,7 +108,7 @@ export const expandedLessonDatabase = {
             {
               "id": "a_ex1",
               "type": "multiple-choice",
-              "question": "Which note A is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "A",
               "explanation": "This is the note A on the staff"
@@ -189,7 +189,7 @@ export const expandedLessonDatabase = {
             {
               "id": "b_ex1",
               "type": "multiple-choice",
-              "question": "Which note B is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "B",
               "explanation": "This is the note B on the staff"
@@ -270,7 +270,7 @@ export const expandedLessonDatabase = {
             {
               "id": "c_ex1",
               "type": "multiple-choice",
-              "question": "Which note C is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "C",
               "explanation": "This is the note C on the staff"
@@ -351,7 +351,7 @@ export const expandedLessonDatabase = {
             {
               "id": "d_ex1",
               "type": "multiple-choice",
-              "question": "Which note D is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "D",
               "explanation": "This is the note D on the staff"
@@ -416,7 +416,7 @@ export const expandedLessonDatabase = {
             {
               "id": "e_ex1",
               "type": "multiple-choice",
-              "question": "Which note E is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["D", "E", "F", "G"],
               "answer": "E",
               "explanation": "This is the note E on the staff"
@@ -481,7 +481,7 @@ export const expandedLessonDatabase = {
             {
               "id": "f_ex1",
               "type": "multiple-choice",
-              "question": "Which note F is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["D", "E", "F", "G"],
               "answer": "F",
               "explanation": "This is the note F on the staff"
@@ -546,7 +546,7 @@ export const expandedLessonDatabase = {
             {
               "id": "g_ex1",
               "type": "multiple-choice",
-              "question": "Which note G is shown on the treble clef staff?",
+              "question": "What note is shown on the treble clef staff?",
               "options": ["E", "F", "G", "A"],
               "answer": "G",
               "explanation": "This is the note G on the staff"
@@ -611,7 +611,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_a_ex1",
               "type": "multiple-choice",
-              "question": "Which note A is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["G", "A", "B", "C"],
               "answer": "A",
               "explanation": "This is the note A on the bass clef staff"
@@ -619,7 +619,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_b_ex1",
               "type": "multiple-choice",
-              "question": "Which note B is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "B",
               "explanation": "This is the note B on the bass clef staff"
@@ -627,7 +627,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_c_ex1",
               "type": "multiple-choice",
-              "question": "Which note C is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["A", "B", "C", "D"],
               "answer": "C",
               "explanation": "This is the note C on the bass clef staff"
@@ -635,7 +635,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_d_ex1",
               "type": "multiple-choice",
-              "question": "Which note D is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["B", "C", "D", "E"],
               "answer": "D",
               "explanation": "This is the note D on the bass clef staff"
@@ -643,7 +643,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_e_ex1",
               "type": "multiple-choice",
-              "question": "Which note E is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["C", "D", "E", "F"],
               "answer": "E",
               "explanation": "This is the note E on the bass clef staff"
@@ -651,7 +651,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_f_ex1",
               "type": "multiple-choice",
-              "question": "Which note F is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["D", "E", "F", "G"],
               "answer": "F",
               "explanation": "This is the note F on the bass clef staff"
@@ -659,7 +659,7 @@ export const expandedLessonDatabase = {
             {
               "id": "bass_g_ex1",
               "type": "multiple-choice",
-              "question": "Which note G is shown on the bass clef staff?",
+              "question": "What note is shown on the bass clef staff?",
               "options": ["E", "F", "G", "A"],
               "answer": "G",
               "explanation": "This is the note G on the bass clef staff"

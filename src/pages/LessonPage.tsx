@@ -18,8 +18,8 @@ import { sampleSkillTrees } from '@/data/sampleData';
 import StaffNotation from '@/components/StaffNotation';
 import { useAudioSynthesizer } from '@/hooks/useAudio';
 
-// Helper function to extract note information from question text
-const extractNoteFromQuestion = (question: string): { note: string; clef: 'treble' | 'bass' } | null => {
+// Helper function to extract note information from question text and exercise data
+const extractNoteFromQuestion = (question: string, exercise?: any): { note: string; clef: 'treble' | 'bass' } | null => {
   const lowerQuestion = question.toLowerCase();
 
   // EXCLUDE alphabet sequence questions - these are theoretical, not visual
@@ -44,12 +44,23 @@ const extractNoteFromQuestion = (question: string): { note: string; clef: 'trebl
   const clefMatch = lowerQuestion.match(/(treble|bass)\s+clef/);
   const clef = clefMatch ? (clefMatch[1] as 'treble' | 'bass') : 'treble';
 
-  // Look for patterns like "Which note A is shown" or "note A is shown" (visual identification)
-  const whichNoteMatch = lowerQuestion.match(/which\s+note\s+([a-g])\s+is\s+shown/);
-  if (whichNoteMatch) {
+  // Look for "What note is shown on the [treble/bass] clef staff?" patterns
+  const whatNoteMatch = lowerQuestion.match(/what\s+note\s+is\s+shown\s+on\s+the\s+(treble|bass)\s+clef/);
+  if (whatNoteMatch && exercise?.answer) {
+    // Extract the note from the exercise answer since the question doesn't reveal it
     return {
-      note: whichNoteMatch[1].toUpperCase(),
-      clef
+      note: exercise.answer.toUpperCase(),
+      clef: whatNoteMatch[1] as 'treble' | 'bass'
+    };
+  }
+
+  // Look for "What note is shown on the staff?" (generic)
+  if (lowerQuestion.includes('what note is shown') && lowerQuestion.includes('staff') && exercise?.answer) {
+    // Determine clef from context or default to treble
+    const clefFromContext = lowerQuestion.includes('bass') ? 'bass' : 'treble';
+    return {
+      note: exercise.answer.toUpperCase(),
+      clef: clefFromContext
     };
   }
 
@@ -488,9 +499,10 @@ const LessonPage = () => {
 
           {/* Staff Notation Visual Aid */}
           {(() => {
-            const noteInfo = extractNoteFromQuestion(currentExercise.question);
+            const noteInfo = extractNoteFromQuestion(currentExercise.question, currentExercise);
             console.log('🎼 Staff notation check:', {
               question: currentExercise.question,
+              exercise: currentExercise,
               noteInfo: noteInfo
             });
 
