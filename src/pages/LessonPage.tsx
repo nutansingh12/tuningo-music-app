@@ -440,6 +440,23 @@ const LessonPage = () => {
           setIsPlayingAudio(false);
         }, duration);
       }
+    } else if (audioData.type === 'single-note') {
+      // Play a single note (for perfect pitch exercises)
+      const notes = audioData.notes;
+      const duration = audioData.duration || 2000;
+
+      if (notes && notes.length > 0) {
+        const noteData = notes[0]; // Take the first (and only) note
+        console.log(`🎵 Playing single note: ${noteData.note}${noteData.octave} for ${duration}ms`);
+        playNote(noteData.note, noteData.octave, duration);
+
+        setTimeout(() => {
+          setIsPlayingAudio(false);
+        }, duration);
+      } else {
+        console.error('❌ No notes found in single-note audio data');
+        setIsPlayingAudio(false);
+      }
     } else if (audioData.type === 'comparison') {
       // Play comparison intervals with pause between
       const intervals = audioData.intervals;
@@ -469,6 +486,12 @@ const LessonPage = () => {
       setTimeout(() => {
         setIsPlayingAudio(false);
       }, totalTime);
+    } else {
+      // Fallback for unknown audio types
+      console.error(`❌ Unknown audio type: ${audioData.type}`);
+      console.log('📊 Audio data:', audioData);
+      setIsPlayingAudio(false);
+      showFeedbackMessage(`Unsupported audio type: ${audioData.type}`, 'error');
     }
   };
 
