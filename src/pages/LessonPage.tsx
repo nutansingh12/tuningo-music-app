@@ -524,47 +524,19 @@ const LessonPage = () => {
           {/* Staff Notation Visual Aid */}
           {(() => {
             const noteInfo = extractNoteFromQuestion(currentExercise.question, currentExercise);
-            console.log('🎼 Staff notation check:', {
-              question: currentExercise.question,
-              exercise: currentExercise,
-              noteInfo: noteInfo
-            });
 
             if (noteInfo) {
-              console.log('🎼 Displaying staff notation for:', noteInfo);
               return (
                 <div className="flex justify-center my-6">
-                  <div className="text-center">
-                    <div className="text-sm text-green-600 font-semibold mb-2">
-                      ✅ Staff notation detected: {noteInfo.note} on {noteInfo.clef} clef
-                    </div>
-                    <StaffNotation
-                      note={noteInfo.note}
-                      clef={noteInfo.clef}
-                      className="shadow-lg"
-                    />
-                    {/* Audio playback for the note */}
-                    <button
-                      onClick={() => playNote(noteInfo.note, noteInfo.clef === 'bass' ? 3 : 4, 1000)}
-                      disabled={isPlayingAudio}
-                      className="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 flex items-center space-x-2 mx-auto"
-                    >
-                      <Play className="w-4 h-4" />
-                      <span>Play Note</span>
-                    </button>
-                  </div>
-                </div>
-              );
-            } else {
-              // Show debug info when no staff notation is detected
-              return (
-                <div className="flex justify-center my-6">
-                  <div className="text-sm text-red-600 bg-red-50 p-2 rounded">
-                    ❌ No staff notation pattern matched for: "{currentExercise.question}"
-                  </div>
+                  <StaffNotation
+                    note={noteInfo.note}
+                    clef={noteInfo.clef}
+                    className="shadow-lg"
+                  />
                 </div>
               );
             }
+            return null;
           })()}
 
           {/* Multiple Choice Exercise */}
