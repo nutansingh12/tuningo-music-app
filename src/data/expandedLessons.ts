@@ -94,6 +94,46 @@ export const expandedLessonDatabase = {
               "options": ["B, D, F", "H, I, J", "X, Y, Z", "None"],
               "answer": "B, D, F",
               "explanation": "The missing letters from the musical alphabet are B, D, and F"
+            },
+            {
+              "id": "ex11",
+              "type": "multiple-choice",
+              "question": "On a piano, where is the note A located relative to the black keys?",
+              "options": ["Between two black keys", "To the left of three black keys", "To the right of two black keys", "It varies"],
+              "answer": "To the right of two black keys",
+              "explanation": "A is located to the right of the group of two black keys"
+            },
+            {
+              "id": "ex12",
+              "type": "multiple-choice",
+              "question": "On a piano, where is B located?",
+              "options": ["On a black key", "To the right of the group of three black keys", "Between two white keys", "To the left of C"],
+              "answer": "To the left of C",
+              "explanation": "B is the white key immediately to the left of C"
+            },
+            {
+              "id": "ex13",
+              "type": "multiple-choice",
+              "question": "On a piano, where is C located?",
+              "options": ["On a black key", "To the left of two black keys", "To the right of three black keys", "Between black keys"],
+              "answer": "To the left of two black keys",
+              "explanation": "C is the white key immediately to the left of the group of two black keys"
+            },
+            {
+              "id": "ex14",
+              "type": "multiple-choice",
+              "question": "On a piano, where is D located relative to the black keys?",
+              "options": ["Between two black keys", "To the right of two black keys", "To the left of three black keys", "Between C and E"],
+              "answer": "Between C and E",
+              "explanation": "D is the white key between C and E"
+            },
+            {
+              "id": "ex15",
+              "type": "multiple-choice",
+              "question": "On a piano, where is F located?",
+              "options": ["To the left of three black keys", "To the right of two black keys", "Between black keys", "To the left of two black keys"],
+              "answer": "To the left of three black keys",
+              "explanation": "F is the white key immediately to the left of the group of three black keys"
             }
           ]
         },
@@ -120,14 +160,6 @@ export const expandedLessonDatabase = {
               "options": ["A", "B", "C", "D"],
               "answer": "A",
               "explanation": "A is the first letter of the musical alphabet"
-            },
-            {
-              "id": "a_ex3",
-              "type": "multiple-choice",
-              "question": "On a piano, where is the note A located relative to the black keys?",
-              "options": ["Between two black keys", "To the left of three black keys", "To the right of two black keys", "It varies"],
-              "answer": "To the right of two black keys",
-              "explanation": "A is located to the right of the group of two black keys"
             },
             {
               "id": "a_ex4",
@@ -203,14 +235,6 @@ export const expandedLessonDatabase = {
               "explanation": "B comes directly after A in the musical alphabet"
             },
             {
-              "id": "b_ex3",
-              "type": "multiple-choice",
-              "question": "On a piano, where is B located?",
-              "options": ["On a black key", "To the right of the group of three black keys", "Between two white keys", "To the left of C"],
-              "answer": "To the left of C",
-              "explanation": "B is the white key immediately to the left of C"
-            },
-            {
               "id": "b_ex4",
               "type": "multiple-choice",
               "question": "What is special about the interval from B to C?",
@@ -284,14 +308,6 @@ export const expandedLessonDatabase = {
               "explanation": "Middle C sits between the treble and bass clef staves"
             },
             {
-              "id": "c_ex3",
-              "type": "multiple-choice",
-              "question": "On a piano, where is C located?",
-              "options": ["On a black key", "To the left of two black keys", "To the right of three black keys", "Between black keys"],
-              "answer": "To the left of two black keys",
-              "explanation": "C is the white key immediately to the left of the group of two black keys"
-            },
-            {
               "id": "c_ex4",
               "type": "multiple-choice",
               "question": "What note comes before C?",
@@ -363,14 +379,6 @@ export const expandedLessonDatabase = {
               "options": ["B", "D", "E", "F"],
               "answer": "D",
               "explanation": "D comes directly after C in the musical alphabet"
-            },
-            {
-              "id": "d_ex3",
-              "type": "multiple-choice",
-              "question": "On a piano, where is D located relative to the black keys?",
-              "options": ["Between two black keys", "To the right of two black keys", "To the left of three black keys", "Between C and E"],
-              "answer": "Between C and E",
-              "explanation": "D is the white key between C and E"
             },
             {
               "id": "d_ex4",
@@ -493,14 +501,6 @@ export const expandedLessonDatabase = {
               "options": ["D", "F", "G", "A"],
               "answer": "F",
               "explanation": "F comes directly after E in the musical alphabet"
-            },
-            {
-              "id": "f_ex3",
-              "type": "multiple-choice",
-              "question": "On a piano, where is F located?",
-              "options": ["To the left of three black keys", "To the right of two black keys", "Between black keys", "To the left of two black keys"],
-              "answer": "To the left of three black keys",
-              "explanation": "F is the white key immediately to the left of the group of three black keys"
             },
             {
               "id": "f_ex4",
