@@ -339,14 +339,16 @@ export const level4Lessons = {
       ]
     },
     {
-      "id": "perfect_pitch_c",
-      "title": "Perfect Pitch: Note C",
-      "description": "Identify the note C without reference",
+      "id": "perfect_pitch",
+      "title": "Perfect Pitch Training",
+      "description": "Identify notes without reference - randomized practice",
       "type": "listening",
       "difficulty": "advanced",
-      "estimatedDuration": 20,
-      "xpReward": 200,
+      "estimatedDuration": 25,
+      "xpReward": 250,
       "prerequisites": ["interval_recognition_third"],
+      "randomizeExercises": true,
+      "exerciseCount": 10,
       "exercises": [
         {
           "id": "pitch-c-1",
@@ -404,19 +406,7 @@ export const level4Lessons = {
           "correctAnswer": "a",
           "difficulty": "advanced",
           "explanation": "This is C in a lower octave - recognizing C across different octaves is key to perfect pitch"
-        }
-      ]
-    },
-    {
-      "id": "perfect_pitch_d",
-      "title": "Perfect Pitch: Note D",
-      "description": "Identify the note D without reference",
-      "type": "listening",
-      "difficulty": "advanced",
-      "estimatedDuration": 20,
-      "xpReward": 200,
-      "prerequisites": ["perfect_pitch_c"],
-      "exercises": [
+        },
         {
           "id": "pitch-d-1",
           "type": "audio-multiple-choice",
@@ -473,6 +463,196 @@ export const level4Lessons = {
           "correctAnswer": "b",
           "difficulty": "advanced",
           "explanation": "This is D in a lower octave - use your memory of C to help identify D"
+        },
+        {
+          "id": "pitch-e-1",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "E", "octave": 4}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "D", "isCorrect": false },
+            { "id": "b", "text": "E", "isCorrect": true },
+            { "id": "c", "text": "F", "isCorrect": false },
+            { "id": "d", "text": "G", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "advanced",
+          "explanation": "This is the note E - a major third above C"
+        },
+        {
+          "id": "pitch-e-2",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note in a different octave. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "E", "octave": 5}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "E", "isCorrect": true },
+            { "id": "b", "text": "D", "isCorrect": false },
+            { "id": "c", "text": "F", "isCorrect": false },
+            { "id": "d", "text": "C", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "advanced",
+          "explanation": "This is E in a higher octave - recognizing E across octaves"
+        },
+        {
+          "id": "pitch-f-1",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "F", "octave": 4}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "E", "isCorrect": false },
+            { "id": "b", "text": "F", "isCorrect": true },
+            { "id": "c", "text": "G", "isCorrect": false },
+            { "id": "d", "text": "A", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "advanced",
+          "explanation": "This is the note F - a perfect fourth above C"
+        },
+        {
+          "id": "pitch-f-2",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "F", "octave": 3}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "F", "isCorrect": true },
+            { "id": "b", "text": "E", "isCorrect": false },
+            { "id": "c", "text": "G", "isCorrect": false },
+            { "id": "d", "text": "C", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "advanced",
+          "explanation": "This is F in a lower octave - developing F recognition"
+        },
+        {
+          "id": "pitch-g-1",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "G", "octave": 4}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "F", "isCorrect": false },
+            { "id": "b", "text": "G", "isCorrect": true },
+            { "id": "c", "text": "A", "isCorrect": false },
+            { "id": "d", "text": "B", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "advanced",
+          "explanation": "This is the note G - a perfect fifth above C"
+        },
+        {
+          "id": "pitch-g-2",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "G", "octave": 5}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "G", "isCorrect": true },
+            { "id": "b", "text": "F", "isCorrect": false },
+            { "id": "c", "text": "A", "isCorrect": false },
+            { "id": "d", "text": "C", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "advanced",
+          "explanation": "This is G in a higher octave - perfect fifth recognition across octaves"
+        },
+        {
+          "id": "pitch-a-1",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "A", "octave": 4}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "G", "isCorrect": false },
+            { "id": "b", "text": "A", "isCorrect": true },
+            { "id": "c", "text": "B", "isCorrect": false },
+            { "id": "d", "text": "C", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "advanced",
+          "explanation": "This is the note A - the reference pitch at 440Hz"
+        },
+        {
+          "id": "pitch-a-2",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "A", "octave": 3}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "A", "isCorrect": true },
+            { "id": "b", "text": "G", "isCorrect": false },
+            { "id": "c", "text": "B", "isCorrect": false },
+            { "id": "d", "text": "F", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "advanced",
+          "explanation": "This is A in a lower octave - recognizing the reference pitch across octaves"
+        },
+        {
+          "id": "pitch-b-1",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "B", "octave": 4}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "A", "isCorrect": false },
+            { "id": "b", "text": "B", "isCorrect": true },
+            { "id": "c", "text": "C", "isCorrect": false },
+            { "id": "d", "text": "D", "isCorrect": false }
+          ],
+          "correctAnswer": "b",
+          "difficulty": "advanced",
+          "explanation": "This is the note B - a major seventh above C"
+        },
+        {
+          "id": "pitch-b-2",
+          "type": "audio-multiple-choice",
+          "question": "Listen to this note. What note is it?",
+          "audioData": {
+            "type": "single-note",
+            "notes": [{"note": "B", "octave": 3}],
+            "duration": 2000
+          },
+          "options": [
+            { "id": "a", "text": "B", "isCorrect": true },
+            { "id": "b", "text": "A", "isCorrect": false },
+            { "id": "c", "text": "C", "isCorrect": false },
+            { "id": "d", "text": "G", "isCorrect": false }
+          ],
+          "correctAnswer": "a",
+          "difficulty": "advanced",
+          "explanation": "This is B in a lower octave - the leading tone to C"
         }
       ]
     }

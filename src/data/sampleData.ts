@@ -94,11 +94,8 @@ export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryI
         lessonId = 'interval_recognition_third';
         lessonTitle = 'Recognizing Thirds';
       } else if (lessonIndex === 3) {
-        lessonId = 'perfect_pitch_c';
-        lessonTitle = 'Perfect Pitch: Note C';
-      } else if (lessonIndex === 4) {
-        lessonId = 'perfect_pitch_d';
-        lessonTitle = 'Perfect Pitch: Note D';
+        lessonId = 'perfect_pitch';
+        lessonTitle = 'Perfect Pitch Training';
       }
     }
 
