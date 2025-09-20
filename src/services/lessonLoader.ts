@@ -128,22 +128,15 @@ export const loadLevelLessons = async (levelId: string) => {
 // Load specific lesson by ID across all levels
 export const loadLessonById = async (lessonId: string): Promise<Lesson | null> => {
   console.log(`🔍 Searching for lesson: ${lessonId}`);
-  
-  // Check if it's a specific lesson we know about
-  if (lessonId === 'interval_recognition_unison') {
-    const level4Data = await loadLevelLessons('ear_voice_training');
-    const lesson = level4Data.lessons.find((l: any) => l.id === lessonId);
-    if (lesson) {
-      console.log(`✅ Found lesson: ${lesson.title}`);
-      return lesson;
-    }
-  }
-  
+
   // Search through all levels (but only load them as needed)
   for (const levelMeta of levelMetadata) {
     try {
+      console.log(`🔍 Searching in level: ${levelMeta.id}`);
       const levelData = await loadLevelLessons(levelMeta.id);
-      const lesson = levelData.lessons.find((l: any) => l.id === lessonId);
+      console.log(`🔍 Level ${levelMeta.id} has ${levelData.lessons?.length || 0} lessons`);
+
+      const lesson = levelData.lessons?.find((l: any) => l.id === lessonId);
       if (lesson) {
         console.log(`✅ Found lesson: ${lesson.title} in level: ${levelMeta.title}`);
         return lesson;
@@ -153,7 +146,7 @@ export const loadLessonById = async (lessonId: string): Promise<Lesson | null> =
       continue;
     }
   }
-  
+
   console.log(`❌ Lesson not found: ${lessonId}`);
   return null;
 };
