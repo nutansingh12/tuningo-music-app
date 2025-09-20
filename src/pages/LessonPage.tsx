@@ -528,11 +528,29 @@ const LessonPage = () => {
             if (noteInfo) {
               return (
                 <div className="flex justify-center my-6">
-                  <StaffNotation
-                    note={noteInfo.note}
-                    clef={noteInfo.clef}
-                    className="shadow-lg"
-                  />
+                  <div className="text-center">
+                    <StaffNotation
+                      note={noteInfo.note}
+                      clef={noteInfo.clef}
+                      className="shadow-lg"
+                    />
+                    {/* Audio playback for the note */}
+                    <button
+                      onClick={() => {
+                        try {
+                          const octave = noteInfo.clef === 'bass' ? 3 : 4;
+                          playNote(noteInfo.note, octave, 1000);
+                        } catch (error) {
+                          console.warn('Audio playback failed:', error);
+                        }
+                      }}
+                      disabled={isPlayingAudio}
+                      className="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 flex items-center space-x-2 mx-auto transition-colors"
+                    >
+                      <Play className="w-4 h-4" />
+                      <span>{isPlayingAudio ? 'Playing...' : 'Play Note'}</span>
+                    </button>
+                  </div>
                 </div>
               );
             }
