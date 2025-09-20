@@ -90,6 +90,15 @@ export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryI
       } else if (lessonIndex === 1) {
         lessonId = 'interval_recognition_seconds';
         lessonTitle = 'Recognizing Seconds';
+      } else if (lessonIndex === 2) {
+        lessonId = 'interval_recognition_third';
+        lessonTitle = 'Recognizing Thirds';
+      } else if (lessonIndex === 3) {
+        lessonId = 'perfect_pitch_c';
+        lessonTitle = 'Perfect Pitch: Note C';
+      } else if (lessonIndex === 4) {
+        lessonId = 'perfect_pitch_d';
+        lessonTitle = 'Perfect Pitch: Note D';
       }
     }
 

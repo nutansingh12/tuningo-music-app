@@ -30,9 +30,9 @@ export const levelMetadata = [
   {
     id: "ear_voice_training",
     title: "🎤 LEVEL 4: Ear & Voice Training",
-    description: "Develop perfect pitch and vocal skills", 
+    description: "Develop perfect pitch and vocal skills",
     color: "#8B5CF6",
-    lessonCount: 2
+    lessonCount: 5
   }
 ];
 
