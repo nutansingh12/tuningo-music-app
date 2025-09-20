@@ -48,21 +48,22 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
 
   // Look for "What note is shown on the [treble/bass] clef staff?" patterns
   const whatNoteMatch = lowerQuestion.match(/what\s+note\s+is\s+shown\s+on\s+the\s+(treble|bass)\s+clef/);
-  if (whatNoteMatch && exercise?.answer) {
+  const exerciseAnswer = exercise?.answer || exercise?.correctAnswer;
+  if (whatNoteMatch && exerciseAnswer) {
 
     // Extract the note from the exercise answer since the question doesn't reveal it
     return {
-      note: exercise.answer.toUpperCase(),
+      note: exerciseAnswer.toUpperCase(),
       clef: whatNoteMatch[1] as 'treble' | 'bass'
     };
   }
 
   // Look for "What note is shown on the staff?" (generic)
-  if (lowerQuestion.includes('what note is shown') && lowerQuestion.includes('staff') && exercise?.answer) {
+  if (lowerQuestion.includes('what note is shown') && lowerQuestion.includes('staff') && exerciseAnswer) {
     // Determine clef from context or default to treble
     const clefFromContext = lowerQuestion.includes('bass') ? 'bass' : 'treble';
     return {
-      note: exercise.answer.toUpperCase(),
+      note: exerciseAnswer.toUpperCase(),
       clef: clefFromContext
     };
   }
@@ -77,10 +78,10 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
 
   for (const pattern of staffPositionPatterns) {
     const match = lowerQuestion.match(pattern);
-    if (match && exercise?.answer) {
+    if (match && exerciseAnswer) {
       const clefFromMatch = match[match.length - 1]; // Last capture group is usually the clef
       return {
-        note: exercise.answer.toUpperCase(),
+        note: exerciseAnswer.toUpperCase(),
         clef: (clefFromMatch === 'bass' ? 'bass' : 'treble') as 'treble' | 'bass'
       };
     }
