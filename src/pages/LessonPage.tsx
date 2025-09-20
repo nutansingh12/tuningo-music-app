@@ -22,6 +22,8 @@ import { useAudioSynthesizer } from '@/hooks/useAudio';
 const extractNoteFromQuestion = (question: string, exercise?: any): { note: string; clef: 'treble' | 'bass' } | null => {
   const lowerQuestion = question.toLowerCase();
 
+
+
   // EXCLUDE alphabet sequence questions - these are theoretical, not visual
   if (lowerQuestion.includes('musical alphabet') ||
       lowerQuestion.includes('comes after') ||
@@ -47,6 +49,7 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
   // Look for "What note is shown on the [treble/bass] clef staff?" patterns
   const whatNoteMatch = lowerQuestion.match(/what\s+note\s+is\s+shown\s+on\s+the\s+(treble|bass)\s+clef/);
   if (whatNoteMatch && exercise?.answer) {
+
     // Extract the note from the exercise answer since the question doesn't reveal it
     return {
       note: exercise.answer.toUpperCase(),
@@ -91,6 +94,7 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
       clef: noteOnClefMatch[2] as 'treble' | 'bass'
     };
   }
+
 
   return null;
 };
@@ -529,15 +533,28 @@ const LessonPage = () => {
               console.log('🎼 Displaying staff notation for:', noteInfo);
               return (
                 <div className="flex justify-center my-6">
-                  <StaffNotation
-                    note={noteInfo.note}
-                    clef={noteInfo.clef}
-                    className="shadow-lg"
-                  />
+                  <div className="text-center">
+                    <div className="text-sm text-green-600 font-semibold mb-2">
+                      ✅ Staff notation detected: {noteInfo.note} on {noteInfo.clef} clef
+                    </div>
+                    <StaffNotation
+                      note={noteInfo.note}
+                      clef={noteInfo.clef}
+                      className="shadow-lg"
+                    />
+                  </div>
+                </div>
+              );
+            } else {
+              // Show debug info when no staff notation is detected
+              return (
+                <div className="flex justify-center my-6">
+                  <div className="text-sm text-red-600 bg-red-50 p-2 rounded">
+                    ❌ No staff notation pattern matched for: "{currentExercise.question}"
+                  </div>
                 </div>
               );
             }
-            return null;
           })()}
 
           {/* Multiple Choice Exercise */}
