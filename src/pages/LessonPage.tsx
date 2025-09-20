@@ -543,6 +543,15 @@ const LessonPage = () => {
                       clef={noteInfo.clef}
                       className="shadow-lg"
                     />
+                    {/* Audio playback for the note */}
+                    <button
+                      onClick={() => playNote(noteInfo.note, noteInfo.clef === 'bass' ? 3 : 4, 1000)}
+                      disabled={isPlayingAudio}
+                      className="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 flex items-center space-x-2 mx-auto"
+                    >
+                      <Play className="w-4 h-4" />
+                      <span>Play Note</span>
+                    </button>
                   </div>
                 </div>
               );
