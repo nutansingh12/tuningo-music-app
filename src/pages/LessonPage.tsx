@@ -22,6 +22,15 @@ import { useAudioSynthesizer } from '@/hooks/useAudio';
 const extractNoteFromQuestion = (question: string): { note: string; clef: 'treble' | 'bass' } | null => {
   const lowerQuestion = question.toLowerCase();
 
+  // EXCLUDE alphabet sequence questions - these are theoretical, not visual
+  if (lowerQuestion.includes('musical alphabet') ||
+      lowerQuestion.includes('comes after') ||
+      lowerQuestion.includes('comes before') ||
+      lowerQuestion.includes('what note comes') ||
+      lowerQuestion.includes('which letter comes')) {
+    return null;
+  }
+
   // Look for patterns like "A on staff", "B on staff", etc.
   const noteOnStaffMatch = lowerQuestion.match(/([a-g])\s+on\s+staff/);
   if (noteOnStaffMatch) {
@@ -35,16 +44,7 @@ const extractNoteFromQuestion = (question: string): { note: string; clef: 'trebl
   const clefMatch = lowerQuestion.match(/(treble|bass)\s+clef/);
   const clef = clefMatch ? (clefMatch[1] as 'treble' | 'bass') : 'treble';
 
-  // Look for specific note mentions in context of staff
-  const noteMatch = lowerQuestion.match(/note\s+([a-g])/);
-  if (noteMatch) {
-    return {
-      note: noteMatch[1].toUpperCase(),
-      clef
-    };
-  }
-
-  // Look for patterns like "Which note A is shown" or "note A is shown"
+  // Look for patterns like "Which note A is shown" or "note A is shown" (visual identification)
   const whichNoteMatch = lowerQuestion.match(/which\s+note\s+([a-g])\s+is\s+shown/);
   if (whichNoteMatch) {
     return {
@@ -53,7 +53,7 @@ const extractNoteFromQuestion = (question: string): { note: string; clef: 'trebl
     };
   }
 
-  // Look for patterns like "note A on the treble clef" or "note A on the bass clef"
+  // Look for "note X is shown on the Y clef staff" patterns
   const noteOnClefMatch = lowerQuestion.match(/note\s+([a-g])\s+.*on\s+the\s+(treble|bass)\s+clef/);
   if (noteOnClefMatch) {
     return {
