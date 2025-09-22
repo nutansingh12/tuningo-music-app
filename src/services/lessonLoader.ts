@@ -8,10 +8,10 @@ const lessonCache = new Map<string, any>();
 export const levelMetadata = [
   {
     id: "intro_to_notes",
-    title: "🎵 LEVEL 1: Musical Alphabet & Note Recognition", 
+    title: "🎵 LEVEL 1: Musical Alphabet & Note Recognition",
     description: "Learn the basics of musical notes and staff reading",
     color: "#3B82F6",
-    lessonCount: 2
+    lessonCount: 21
   },
   {
     id: "building_skills", 

@@ -1410,282 +1410,419 @@ export const level1Lessons =     {
             }
           ]
         },
-        // RHYTHM SERIES (50 lessons)
+        // RHYTHM TRAINING - Comprehensive randomized lesson
         {
-          "id": "whole_notes",
-          "title": "Whole Notes",
-          "description": "4 beats in 4/4 time",
-          "estimatedDuration": 12,
-          "xpReward": 120,
+          "id": "rhythm_training",
+          "title": "Rhythm Training",
+          "description": "Master note values, rests, and time signatures - randomized practice",
+          "type": "theory",
+          "difficulty": "beginner",
+          "estimatedDuration": 25,
+          "xpReward": 250,
+          "prerequisites": [],
+          "randomizeExercises": true,
+          "exerciseCount": 10,
           "exercises": [
+            // WHOLE NOTES EXERCISES
             {
-              "id": "ex1",
+              "id": "whole-1",
               "type": "multiple-choice",
               "question": "How many beats does a whole note get in 4/4 time?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "4",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": false },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": true }
+              ],
+              "correctAnswer": "d",
+              "difficulty": "beginner",
               "explanation": "A whole note gets 4 beats in 4/4 time"
             },
             {
-              "id": "ex2",
+              "id": "whole-2",
               "type": "multiple-choice",
               "question": "What does a whole note look like?",
-              "options": ["Filled note head with stem", "Empty note head with stem", "Empty note head without stem", "Filled note head without stem"],
-              "answer": "Empty note head without stem",
+              "options": [
+                { "id": "a", "text": "Filled note head with stem", "isCorrect": false },
+                { "id": "b", "text": "Empty note head with stem", "isCorrect": false },
+                { "id": "c", "text": "Empty note head without stem", "isCorrect": true },
+                { "id": "d", "text": "Filled note head without stem", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "beginner",
               "explanation": "A whole note is an empty oval with no stem"
             },
             {
-              "id": "ex3",
+              "id": "whole-3",
               "type": "multiple-choice",
               "question": "How many whole notes fit in one measure of 4/4 time?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "1",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": true },
+                { "id": "b", "text": "2", "isCorrect": false },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
               "explanation": "One whole note fills an entire 4/4 measure"
             },
             {
-              "id": "ex4",
+              "id": "whole-4",
               "type": "multiple-choice",
               "question": "How many half notes equal one whole note?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "Two half notes equal one whole note"
             },
             {
-              "id": "ex5",
+              "id": "whole-5",
               "type": "multiple-choice",
               "question": "In 3/4 time, how many beats would a whole note get?",
-              "options": ["3", "4", "It doesn't fit", "6"],
-              "answer": "It doesn't fit",
+              "options": [
+                { "id": "a", "text": "3", "isCorrect": false },
+                { "id": "b", "text": "4", "isCorrect": false },
+                { "id": "c", "text": "It doesn't fit", "isCorrect": true },
+                { "id": "d", "text": "6", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "intermediate",
               "explanation": "A whole note (4 beats) doesn't fit in 3/4 time (3 beats per measure)"
             },
             {
-              "id": "ex6",
+              "id": "whole-6",
               "type": "multiple-choice",
               "question": "Where is a whole note positioned on the staff?",
-              "options": ["Hanging from a line", "Sitting on a line or in a space", "Always in spaces", "Always on lines"],
-              "answer": "Sitting on a line or in a space",
+              "options": [
+                { "id": "a", "text": "Hanging from a line", "isCorrect": false },
+                { "id": "b", "text": "Sitting on a line or in a space", "isCorrect": true },
+                { "id": "c", "text": "Always in spaces", "isCorrect": false },
+                { "id": "d", "text": "Always on lines", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "Whole notes sit on lines or in spaces, just like other notes"
-            }
-          ]
-        },
-        {
-          "id": "half_notes",
-          "title": "Half Notes",
-          "description": "2 beats in 4/4 time",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
+            // HALF NOTES EXERCISES
             {
-              "id": "ex1",
+              "id": "half-1",
               "type": "multiple-choice",
               "question": "How many beats does a half note get?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "A half note gets 2 beats in 4/4 time"
-            }
-          ]
-        },
-        {
-          "id": "quarter_notes",
-          "title": "Quarter Notes",
-          "description": "1 beat in 4/4 time",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "half-2",
+              "type": "multiple-choice",
+              "question": "How many half notes fit in one measure of 4/4 time?",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
+              "explanation": "Two half notes fit in one 4/4 measure (2 + 2 = 4 beats)"
+            },
+            // QUARTER NOTES EXERCISES
+            {
+              "id": "quarter-1",
               "type": "multiple-choice",
               "question": "How many beats does a quarter note get?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "1",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": true },
+                { "id": "b", "text": "2", "isCorrect": false },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
               "explanation": "A quarter note gets 1 beat in 4/4 time"
-            }
-          ]
-        },
-        {
-          "id": "eighth_notes",
-          "title": "Eighth Notes",
-          "description": "Half a beat in 4/4 time",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "quarter-2",
+              "type": "multiple-choice",
+              "question": "How many quarter notes fit in one measure of 4/4 time?",
+              "options": [
+                { "id": "a", "text": "2", "isCorrect": false },
+                { "id": "b", "text": "3", "isCorrect": false },
+                { "id": "c", "text": "4", "isCorrect": true },
+                { "id": "d", "text": "8", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "beginner",
+              "explanation": "Four quarter notes fit in one 4/4 measure"
+            },
+            // EIGHTH NOTES EXERCISES
+            {
+              "id": "eighth-1",
               "type": "multiple-choice",
               "question": "How many eighth notes equal one quarter note?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "Two eighth notes equal one quarter note"
-            }
-          ]
-        },
-        {
-          "id": "sixteenth_notes",
-          "title": "Sixteenth Notes",
-          "description": "Quarter of a beat in 4/4 time",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "eighth-2",
+              "type": "multiple-choice",
+              "question": "How many eighth notes fit in one measure of 4/4 time?",
+              "options": [
+                { "id": "a", "text": "4", "isCorrect": false },
+                { "id": "b", "text": "6", "isCorrect": false },
+                { "id": "c", "text": "8", "isCorrect": true },
+                { "id": "d", "text": "16", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "intermediate",
+              "explanation": "Eight eighth notes fit in one 4/4 measure"
+            },
+            // SIXTEENTH NOTES EXERCISES
+            {
+              "id": "sixteenth-1",
               "type": "multiple-choice",
               "question": "How many sixteenth notes equal one quarter note?",
-              "options": ["2", "3", "4", "8"],
-              "answer": "4",
+              "options": [
+                { "id": "a", "text": "2", "isCorrect": false },
+                { "id": "b", "text": "3", "isCorrect": false },
+                { "id": "c", "text": "4", "isCorrect": true },
+                { "id": "d", "text": "8", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "intermediate",
               "explanation": "Four sixteenth notes equal one quarter note"
-            }
-          ]
-        },
-        {
-          "id": "dotted_notes",
-          "title": "Dotted Notes",
-          "description": "Adding half the value",
-          "estimatedDuration": 7,
-          "xpReward": 70,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "sixteenth-2",
+              "type": "multiple-choice",
+              "question": "How many sixteenth notes fit in one measure of 4/4 time?",
+              "options": [
+                { "id": "a", "text": "8", "isCorrect": false },
+                { "id": "b", "text": "12", "isCorrect": false },
+                { "id": "c", "text": "16", "isCorrect": true },
+                { "id": "d", "text": "32", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "intermediate",
+              "explanation": "Sixteen sixteenth notes fit in one 4/4 measure"
+            },
+            // DOTTED NOTES EXERCISES
+            {
+              "id": "dotted-1",
               "type": "multiple-choice",
               "question": "A dotted half note gets how many beats?",
-              "options": ["2", "3", "4", "6"],
-              "answer": "3",
+              "options": [
+                { "id": "a", "text": "2", "isCorrect": false },
+                { "id": "b", "text": "3", "isCorrect": true },
+                { "id": "c", "text": "4", "isCorrect": false },
+                { "id": "d", "text": "6", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "intermediate",
               "explanation": "A dotted half note = 2 + 1 = 3 beats"
-            }
-          ]
-        },
-        {
-          "id": "tied_notes",
-          "title": "Tied Notes",
-          "description": "Connecting note values",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "dotted-2",
+              "type": "multiple-choice",
+              "question": "A dotted quarter note gets how many beats?",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "1.5", "isCorrect": true },
+                { "id": "c", "text": "2", "isCorrect": false },
+                { "id": "d", "text": "3", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "intermediate",
+              "explanation": "A dotted quarter note = 1 + 0.5 = 1.5 beats"
+            },
+            // TIED NOTES EXERCISES
+            {
+              "id": "tied-1",
               "type": "multiple-choice",
               "question": "Two tied quarter notes equal how many beats?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "Two tied quarter notes = 1 + 1 = 2 beats"
-            }
-          ]
-        },
-        {
-          "id": "rests_whole",
-          "title": "Whole Rests",
-          "description": "4 beats of silence",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "tied-2",
+              "type": "multiple-choice",
+              "question": "A tied whole note and half note equal how many beats?",
+              "options": [
+                { "id": "a", "text": "4", "isCorrect": false },
+                { "id": "b", "text": "5", "isCorrect": false },
+                { "id": "c", "text": "6", "isCorrect": true },
+                { "id": "d", "text": "8", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "intermediate",
+              "explanation": "A tied whole note and half note = 4 + 2 = 6 beats"
+            },
+            // RESTS EXERCISES
+            {
+              "id": "rest-whole-1",
               "type": "multiple-choice",
               "question": "How many beats of silence is a whole rest?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "4",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": false },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": true }
+              ],
+              "correctAnswer": "d",
+              "difficulty": "beginner",
               "explanation": "A whole rest is 4 beats of silence"
-            }
-          ]
-        },
-        {
-          "id": "rests_half",
-          "title": "Half Rests",
-          "description": "2 beats of silence",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "rest-half-1",
               "type": "multiple-choice",
               "question": "How many beats of silence is a half rest?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "A half rest is 2 beats of silence"
-            }
-          ]
-        },
-        {
-          "id": "rests_quarter",
-          "title": "Quarter Rests",
-          "description": "1 beat of silence",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "rest-quarter-1",
               "type": "multiple-choice",
               "question": "How many beats of silence is a quarter rest?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "1",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": true },
+                { "id": "b", "text": "2", "isCorrect": false },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
               "explanation": "A quarter rest is 1 beat of silence"
-            }
-          ]
-        },
-        {
-          "id": "rests_eighth",
-          "title": "Eighth Rests",
-          "description": "Half beat of silence",
-          "estimatedDuration": 5,
-          "xpReward": 50,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "rest-eighth-1",
               "type": "multiple-choice",
               "question": "How many eighth rests equal one quarter rest?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "Two eighth rests equal one quarter rest"
-            }
-          ]
-        },
-        {
-          "id": "time_signature_4_4",
-          "title": "4/4 Time Signature",
-          "description": "Four quarter note beats per measure",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "rest-basics-1",
+              "type": "multiple-choice",
+              "question": "Which rest looks like a small rectangle sitting on top of a line?",
+              "options": [
+                { "id": "a", "text": "Whole rest", "isCorrect": false },
+                { "id": "b", "text": "Half rest", "isCorrect": true },
+                { "id": "c", "text": "Quarter rest", "isCorrect": false },
+                { "id": "d", "text": "Eighth rest", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
+              "explanation": "The half rest sits on the middle line like a hat"
+            },
+            // TIME SIGNATURE EXERCISES
+            {
+              "id": "time-4-4-1",
               "type": "multiple-choice",
               "question": "In 4/4 time, how many quarter notes fit in one measure?",
-              "options": ["2", "3", "4", "8"],
-              "answer": "4",
+              "options": [
+                { "id": "a", "text": "2", "isCorrect": false },
+                { "id": "b", "text": "3", "isCorrect": false },
+                { "id": "c", "text": "4", "isCorrect": true },
+                { "id": "d", "text": "8", "isCorrect": false }
+              ],
+              "correctAnswer": "c",
+              "difficulty": "beginner",
               "explanation": "4/4 time has 4 quarter note beats per measure"
-            }
-          ]
-        },
-        {
-          "id": "time_signature_3_4",
-          "title": "3/4 Time Signature",
-          "description": "Three quarter note beats per measure",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "time-3-4-1",
               "type": "multiple-choice",
               "question": "In 3/4 time, how many quarter notes fit in one measure?",
-              "options": ["2", "3", "4", "6"],
-              "answer": "3",
+              "options": [
+                { "id": "a", "text": "2", "isCorrect": false },
+                { "id": "b", "text": "3", "isCorrect": true },
+                { "id": "c", "text": "4", "isCorrect": false },
+                { "id": "d", "text": "6", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "3/4 time has 3 quarter note beats per measure"
-            }
-          ]
-        },
-        {
-          "id": "time_signature_2_4",
-          "title": "2/4 Time Signature",
-          "description": "Two quarter note beats per measure",
-          "estimatedDuration": 6,
-          "xpReward": 60,
-          "exercises": [
+            },
             {
-              "id": "ex1",
+              "id": "time-2-4-1",
               "type": "multiple-choice",
               "question": "In 2/4 time, how many quarter notes fit in one measure?",
-              "options": ["1", "2", "3", "4"],
-              "answer": "2",
+              "options": [
+                { "id": "a", "text": "1", "isCorrect": false },
+                { "id": "b", "text": "2", "isCorrect": true },
+                { "id": "c", "text": "3", "isCorrect": false },
+                { "id": "d", "text": "4", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
               "explanation": "2/4 time has 2 quarter note beats per measure"
+            },
+            {
+              "id": "time-signature-1",
+              "type": "multiple-choice",
+              "question": "What does the top number in a time signature tell us?",
+              "options": [
+                { "id": "a", "text": "How fast to play", "isCorrect": false },
+                { "id": "b", "text": "How many beats per measure", "isCorrect": true },
+                { "id": "c", "text": "What key we're in", "isCorrect": false },
+                { "id": "d", "text": "How loud to play", "isCorrect": false }
+              ],
+              "correctAnswer": "b",
+              "difficulty": "beginner",
+              "explanation": "The top number tells us how many beats are in each measure"
+            },
+            {
+              "id": "time-signature-2",
+              "type": "multiple-choice",
+              "question": "What does the bottom number in a time signature tell us?",
+              "options": [
+                { "id": "a", "text": "What note value gets one beat", "isCorrect": true },
+                { "id": "b", "text": "How many measures in the song", "isCorrect": false },
+                { "id": "c", "text": "What clef to use", "isCorrect": false },
+                { "id": "d", "text": "How many sharps or flats", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "intermediate",
+              "explanation": "The bottom number tells us what note value gets one beat (4 = quarter note, 2 = half note, etc.)"
             }
           ]
         }
