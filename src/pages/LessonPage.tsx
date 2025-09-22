@@ -145,47 +145,7 @@ const LessonPage = () => {
   const findLessonById = async (id: string) => {
     console.log(`🔍 Loading lesson: ${id}`);
 
-    // For ANY Level 4 lesson, return a simple working lesson
-    if (id === 'interval_recognition_unison' || id.includes('ear_voice_training') || id.includes('level_4')) {
-      console.log(`✅ Creating simple ear training lesson for ID: ${id}`);
-      return {
-        id: id,
-        title: 'Recognizing Unisons',
-        description: 'Identify when two notes are the same',
-        type: 'listening' as const,
-        difficulty: 'beginner' as const,
-        estimatedDuration: 12,
-        xpReward: 120,
-        prerequisites: [],
-        exercises: [
-          {
-            id: 'ex1',
-            type: 'multiple-choice' as const,
-            question: 'Listen to these two notes. Are they the same or different?',
-            options: [
-              { id: 'a', text: 'Same (Unison)', isCorrect: true },
-              { id: 'b', text: 'Different', isCorrect: false }
-            ],
-            correctAnswer: 'a',
-            explanation: 'These notes are identical - a perfect unison (0 semitones apart)',
-            difficulty: 'beginner' as const
-          },
-          {
-            id: 'ex2',
-            type: 'multiple-choice' as const,
-            question: 'What is a unison in music?',
-            options: [
-              { id: 'a', text: 'Two notes of the same pitch', isCorrect: true },
-              { id: 'b', text: 'Two different notes', isCorrect: false },
-              { id: 'c', text: 'A type of instrument', isCorrect: false }
-            ],
-            correctAnswer: 'a',
-            explanation: 'A unison occurs when two notes have exactly the same pitch',
-            difficulty: 'beginner' as const
-          }
-        ]
-      };
-    }
+
 
     try {
       const lesson = await loadLessonById(id);
@@ -282,6 +242,8 @@ const LessonPage = () => {
         // Try to find the lesson using lazy loading
         const foundLesson = await findLessonById(lessonId);
         console.log(`🎯 Found lesson result:`, foundLesson);
+        console.log(`🎯 Found lesson exercises count:`, foundLesson?.exercises?.length);
+        console.log(`🎯 Found lesson exercises:`, foundLesson?.exercises?.map(e => e.id));
 
         if (foundLesson && foundLesson.exercises && foundLesson.exercises.length > 0) {
           console.log(`✅ Setting lesson: ${foundLesson.title} with ${foundLesson.exercises.length} exercises`);
@@ -681,9 +643,11 @@ const LessonPage = () => {
       <div className="card">
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold">{currentLesson.title}</h2>
-          <span className="text-sm text-gray-600">
-            {exerciseIndex + 1} of {currentLesson.exercises.length}
-          </span>
+          <div className="text-sm text-gray-600">
+            <div>{exerciseIndex + 1} of {currentLesson.exercises.length}</div>
+            <div className="text-xs">ID: {currentLesson.id}</div>
+            <div className="text-xs">Exercises: {currentLesson.exercises.map(e => e.id).join(', ')}</div>
+          </div>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <motion.div
