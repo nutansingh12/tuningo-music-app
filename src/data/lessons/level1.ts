@@ -139,8 +139,12 @@ export const level1Lessons =     {
           "id": "note_recognition_combined",
           "title": "Recognizing Notes",
           "description": "Master identifying all musical notes A-G with randomized exercises",
+          "type": "theory",
+          "difficulty": "beginner",
           "estimatedDuration": 20,
           "xpReward": 200,
+          "randomizeExercises": true,
+          "exerciseCount": 10,
           "exercisePool": [
             // Note A exercises
             {

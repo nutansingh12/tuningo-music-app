@@ -248,13 +248,17 @@ const LessonPage = () => {
         if (foundLesson && foundLesson.exercises && foundLesson.exercises.length > 0) {
           console.log(`✅ Setting lesson: ${foundLesson.title} with ${foundLesson.exercises.length} exercises`);
 
-          // Handle randomized exercises for Perfect Pitch lesson
+          // Handle randomized exercises for lessons with randomizeExercises flag
           let processedLesson = { ...foundLesson };
           if ((foundLesson as any).randomizeExercises && (foundLesson as any).exerciseCount) {
             const exerciseCount = (foundLesson as any).exerciseCount;
-            const allExercises = [...foundLesson.exercises];
+
+            // Check if lesson uses exercisePool or exercises
+            const sourceExercises = (foundLesson as any).exercisePool || foundLesson.exercises;
+            const allExercises = [...sourceExercises];
 
             console.log(`🎲 Randomizing ${exerciseCount} exercises from ${allExercises.length} available exercises`);
+            console.log(`🎲 Source: ${(foundLesson as any).exercisePool ? 'exercisePool' : 'exercises'}`);
 
             // Shuffle array using Fisher-Yates algorithm
             for (let i = allExercises.length - 1; i > 0; i--) {
@@ -262,7 +266,7 @@ const LessonPage = () => {
               [allExercises[i], allExercises[j]] = [allExercises[j], allExercises[i]];
             }
 
-            // Take the first exerciseCount exercises
+            // Take the first exerciseCount exercises and set them as the lesson's exercises
             processedLesson.exercises = allExercises.slice(0, exerciseCount);
             console.log(`🎲 Selected ${processedLesson.exercises.length} randomized exercises`);
             console.log(`🎲 Exercise IDs: ${processedLesson.exercises.map(e => e.id).join(', ')}`);
