@@ -151,126 +151,72 @@ export const level1Lessons =     {
               "id": "treble_sight_1",
               "type": "multiple-choice",
               "question": "What note is in the second space of the treble clef?",
-              "options": [
-                { "id": "a", "text": "A", "isCorrect": true },
-                { "id": "b", "text": "F", "isCorrect": false },
-                { "id": "c", "text": "C", "isCorrect": false },
-                { "id": "d", "text": "E", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["A", "F", "C", "E"],
+              "answer": "A",
               "explanation": "A is located in the second space of treble clef. Remember: FACE for the spaces."
             },
             {
               "id": "treble_sight_2",
               "type": "multiple-choice",
               "question": "What note is on the middle line of the treble clef?",
-              "options": [
-                { "id": "a", "text": "B", "isCorrect": true },
-                { "id": "b", "text": "G", "isCorrect": false },
-                { "id": "c", "text": "D", "isCorrect": false },
-                { "id": "d", "text": "F", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["B", "G", "D", "F"],
+              "answer": "B",
               "explanation": "B is on the middle (third) line of treble clef. Remember: Every Good Boy Does Fine for the lines."
             },
             {
               "id": "treble_sight_3",
               "type": "multiple-choice",
               "question": "What note is on the bottom line of the treble clef?",
-              "options": [
-                { "id": "a", "text": "E", "isCorrect": true },
-                { "id": "b", "text": "G", "isCorrect": false },
-                { "id": "c", "text": "B", "isCorrect": false },
-                { "id": "d", "text": "D", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["E", "G", "B", "D"],
+              "answer": "E",
               "explanation": "E is on the bottom line of treble clef. Remember: Every Good Boy Does Fine."
             },
             {
               "id": "treble_sight_4",
               "type": "multiple-choice",
               "question": "What note is in the first space of the treble clef?",
-              "options": [
-                { "id": "a", "text": "F", "isCorrect": true },
-                { "id": "b", "text": "A", "isCorrect": false },
-                { "id": "c", "text": "C", "isCorrect": false },
-                { "id": "d", "text": "E", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["F", "A", "C", "E"],
+              "answer": "F",
               "explanation": "F is in the first space of treble clef. Remember: FACE for the spaces."
             },
             {
               "id": "treble_sight_5",
               "type": "multiple-choice",
               "question": "What note is on the top line of the treble clef?",
-              "options": [
-                { "id": "a", "text": "F", "isCorrect": true },
-                { "id": "b", "text": "D", "isCorrect": false },
-                { "id": "c", "text": "A", "isCorrect": false },
-                { "id": "d", "text": "C", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["F", "D", "A", "C"],
+              "answer": "F",
               "explanation": "F is on the top (fifth) line of treble clef. Remember: Every Good Boy Does Fine."
             },
             {
               "id": "bass_sight_1",
               "type": "multiple-choice",
               "question": "What note is on the bottom line of the bass clef?",
-              "options": [
-                { "id": "a", "text": "G", "isCorrect": true },
-                { "id": "b", "text": "B", "isCorrect": false },
-                { "id": "c", "text": "D", "isCorrect": false },
-                { "id": "d", "text": "F", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["G", "B", "D", "F"],
+              "answer": "G",
               "explanation": "G is on the bottom line of bass clef. Remember: Good Boys Do Fine Always."
             },
             {
               "id": "bass_sight_2",
               "type": "multiple-choice",
               "question": "What note is in the first space of the bass clef?",
-              "options": [
-                { "id": "a", "text": "A", "isCorrect": true },
-                { "id": "b", "text": "C", "isCorrect": false },
-                { "id": "c", "text": "E", "isCorrect": false },
-                { "id": "d", "text": "G", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["A", "C", "E", "G"],
+              "answer": "A",
               "explanation": "A is in the first space of bass clef. Remember: All Cows Eat Grass."
             },
             {
               "id": "interval_recognition_1",
               "type": "multiple-choice",
               "question": "What note is a perfect fifth above C?",
-              "options": [
-                { "id": "a", "text": "G", "isCorrect": true },
-                { "id": "b", "text": "F", "isCorrect": false },
-                { "id": "c", "text": "E", "isCorrect": false },
-                { "id": "d", "text": "A", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "intermediate",
+              "options": ["G", "F", "E", "A"],
+              "answer": "G",
               "explanation": "A perfect fifth above C is G. Count: C-D-E-F-G (5 letter names)."
             },
             {
               "id": "note_sequence_1",
               "type": "multiple-choice",
               "question": "What note comes immediately after F in the musical alphabet?",
-              "options": [
-                { "id": "a", "text": "G", "isCorrect": true },
-                { "id": "b", "text": "E", "isCorrect": false },
-                { "id": "c", "text": "F#", "isCorrect": false },
-                { "id": "d", "text": "A", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "beginner",
+              "options": ["G", "E", "F#", "A"],
+              "answer": "G",
               "explanation": "The musical alphabet goes A-B-C-D-E-F-G, so G comes after F."
             },
             // Advanced Note Recognition
@@ -278,28 +224,16 @@ export const level1Lessons =     {
               "id": "middle_c_recognition",
               "type": "multiple-choice",
               "question": "Where is Middle C located on the grand staff?",
-              "options": [
-                { "id": "a", "text": "On a ledger line between treble and bass clefs", "isCorrect": true },
-                { "id": "b", "text": "On the bottom line of treble clef", "isCorrect": false },
-                { "id": "c", "text": "On the top line of bass clef", "isCorrect": false },
-                { "id": "d", "text": "In the first space of treble clef", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "intermediate",
+              "options": ["On a ledger line between treble and bass clefs", "On the bottom line of treble clef", "On the top line of bass clef", "In the first space of treble clef"],
+              "answer": "On a ledger line between treble and bass clefs",
               "explanation": "Middle C sits on a ledger line between the treble and bass clef staves."
             },
             {
               "id": "enharmonic_recognition",
               "type": "multiple-choice",
               "question": "Which of these note pairs are enharmonic equivalents (same pitch, different names)?",
-              "options": [
-                { "id": "a", "text": "F# and Gb", "isCorrect": true },
-                { "id": "b", "text": "C and D", "isCorrect": false },
-                { "id": "c", "text": "E and F", "isCorrect": false },
-                { "id": "d", "text": "A and B", "isCorrect": false }
-              ],
-              "correctAnswer": "a",
-              "difficulty": "intermediate",
+              "options": ["F# and Gb", "C and D", "E and F", "A and B"],
+              "answer": "F# and Gb",
               "explanation": "F# (F sharp) and Gb (G flat) are enharmonic equivalents - they sound the same but are written differently."
             },
             {
