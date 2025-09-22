@@ -244,10 +244,15 @@ const LessonPage = () => {
         console.log(`🎯 Found lesson result:`, foundLesson);
         console.log(`🎯 Found lesson exercises count:`, foundLesson?.exercises?.length);
         console.log(`🎯 Found lesson exercises:`, foundLesson?.exercises?.map(e => e.id));
+        console.log(`🎯 Found lesson exercisePool count:`, (foundLesson as any)?.exercisePool?.length);
+        console.log(`🎯 Found lesson exercisePool:`, (foundLesson as any)?.exercisePool?.slice(0, 3)?.map((e: any) => e.id));
 
         // Check if lesson has exercises or exercisePool
         const hasExercises = foundLesson && foundLesson.exercises && foundLesson.exercises.length > 0;
         const hasExercisePool = foundLesson && (foundLesson as any).exercisePool && (foundLesson as any).exercisePool.length > 0;
+
+        console.log(`🎯 hasExercises:`, hasExercises);
+        console.log(`🎯 hasExercisePool:`, hasExercisePool);
 
         if (foundLesson && (hasExercises || hasExercisePool)) {
           const exerciseSource = hasExercises ? 'exercises' : 'exercisePool';

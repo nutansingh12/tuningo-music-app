@@ -139,6 +139,10 @@ export const loadLessonById = async (lessonId: string): Promise<Lesson | null> =
       const lesson = levelData.lessons?.find((l: any) => l.id === lessonId);
       if (lesson) {
         console.log(`✅ Found lesson: ${lesson.title} in level: ${levelMeta.title}`);
+        console.log(`✅ Lesson has exercises:`, lesson.exercises?.length || 0);
+        console.log(`✅ Lesson has exercisePool:`, lesson.exercisePool?.length || 0);
+        console.log(`✅ Lesson randomizeExercises:`, lesson.randomizeExercises);
+        console.log(`✅ Lesson exerciseCount:`, lesson.exerciseCount);
         return lesson;
       }
     } catch (error) {

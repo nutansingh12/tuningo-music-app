@@ -146,95 +146,161 @@ export const level1Lessons =     {
           "randomizeExercises": true,
           "exerciseCount": 10,
           "exercisePool": [
-            // Note A exercises
+            // Treble Clef Sight-Reading Exercises
             {
-              "id": "a_ex1",
+              "id": "treble_sight_1",
               "type": "multiple-choice",
-              "question": "What note is shown on the treble clef staff?",
-              "options": ["A", "B", "C", "D"],
-              "answer": "A",
-              "explanation": "This is the note A on the staff"
+              "question": "What note is in the second space of the treble clef?",
+              "options": [
+                { "id": "a", "text": "A", "isCorrect": true },
+                { "id": "b", "text": "F", "isCorrect": false },
+                { "id": "c", "text": "C", "isCorrect": false },
+                { "id": "d", "text": "E", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "A is located in the second space of treble clef. Remember: FACE for the spaces."
             },
             {
-              "id": "a_ex2",
+              "id": "treble_sight_2",
               "type": "multiple-choice",
-              "question": "What is the first letter of the musical alphabet?",
-              "options": ["A", "B", "C", "D"],
-              "answer": "A",
-              "explanation": "A is the first letter of the musical alphabet"
+              "question": "What note is on the middle line of the treble clef?",
+              "options": [
+                { "id": "a", "text": "B", "isCorrect": true },
+                { "id": "b", "text": "G", "isCorrect": false },
+                { "id": "c", "text": "D", "isCorrect": false },
+                { "id": "d", "text": "F", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "B is on the middle (third) line of treble clef. Remember: Every Good Boy Does Fine for the lines."
             },
             {
-              "id": "a_ex4",
+              "id": "treble_sight_3",
               "type": "multiple-choice",
-              "question": "What note comes before A in the musical alphabet?",
-              "options": ["Z", "G", "B", "H"],
-              "answer": "G",
-              "explanation": "G comes before A, then the alphabet repeats"
+              "question": "What note is on the bottom line of the treble clef?",
+              "options": [
+                { "id": "a", "text": "E", "isCorrect": true },
+                { "id": "b", "text": "G", "isCorrect": false },
+                { "id": "c", "text": "B", "isCorrect": false },
+                { "id": "d", "text": "D", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "E is on the bottom line of treble clef. Remember: Every Good Boy Does Fine."
             },
             {
-              "id": "a_ex5",
+              "id": "treble_sight_4",
               "type": "multiple-choice",
-              "question": "What note comes after A?",
-              "options": ["B", "C", "G", "A#"],
-              "answer": "B",
-              "explanation": "B comes directly after A in the musical alphabet"
+              "question": "What note is in the first space of the treble clef?",
+              "options": [
+                { "id": "a", "text": "F", "isCorrect": true },
+                { "id": "b", "text": "A", "isCorrect": false },
+                { "id": "c", "text": "C", "isCorrect": false },
+                { "id": "d", "text": "E", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "F is in the first space of treble clef. Remember: FACE for the spaces."
             },
             {
-              "id": "a_ex6",
+              "id": "treble_sight_5",
               "type": "multiple-choice",
-              "question": "How many semitones are between A and A# (A sharp)?",
-              "options": ["1", "2", "3", "12"],
-              "answer": "1",
-              "explanation": "A sharp is one semitone (half step) above A"
+              "question": "What note is on the top line of the treble clef?",
+              "options": [
+                { "id": "a", "text": "F", "isCorrect": true },
+                { "id": "b", "text": "D", "isCorrect": false },
+                { "id": "c", "text": "A", "isCorrect": false },
+                { "id": "d", "text": "C", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "F is on the top (fifth) line of treble clef. Remember: Every Good Boy Does Fine."
             },
             {
-              "id": "a_ex7",
+              "id": "bass_sight_1",
               "type": "multiple-choice",
-              "question": "What is the frequency of the A above middle C (A4)?",
-              "options": ["220 Hz", "440 Hz", "880 Hz", "110 Hz"],
-              "answer": "440 Hz",
-              "explanation": "A4 (the A above middle C) is standardized at 440 Hz"
+              "question": "What note is on the bottom line of the bass clef?",
+              "options": [
+                { "id": "a", "text": "G", "isCorrect": true },
+                { "id": "b", "text": "B", "isCorrect": false },
+                { "id": "c", "text": "D", "isCorrect": false },
+                { "id": "d", "text": "F", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "G is on the bottom line of bass clef. Remember: Good Boys Do Fine Always."
             },
             {
-              "id": "a_ex8",
+              "id": "bass_sight_2",
               "type": "multiple-choice",
-              "question": "In treble clef, where is the note A located?",
-              "options": ["On the second line", "In the second space", "On the first line", "Above the staff"],
-              "answer": "In the second space",
-              "explanation": "In treble clef, A is located in the second space from the bottom"
+              "question": "What note is in the first space of the bass clef?",
+              "options": [
+                { "id": "a", "text": "A", "isCorrect": true },
+                { "id": "b", "text": "C", "isCorrect": false },
+                { "id": "c", "text": "E", "isCorrect": false },
+                { "id": "d", "text": "G", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "A is in the first space of bass clef. Remember: All Cows Eat Grass."
             },
             {
-              "id": "a_ex9",
+              "id": "interval_recognition_1",
               "type": "multiple-choice",
-              "question": "What interval is from A to C?",
-              "options": ["Major second", "Minor third", "Major third", "Perfect fourth"],
-              "answer": "Minor third",
-              "explanation": "A to C is a minor third (3 semitones)"
+              "question": "What note is a perfect fifth above C?",
+              "options": [
+                { "id": "a", "text": "G", "isCorrect": true },
+                { "id": "b", "text": "F", "isCorrect": false },
+                { "id": "c", "text": "E", "isCorrect": false },
+                { "id": "d", "text": "A", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "intermediate",
+              "explanation": "A perfect fifth above C is G. Count: C-D-E-F-G (5 letter names)."
             },
             {
-              "id": "a_ex10",
+              "id": "note_sequence_1",
               "type": "multiple-choice",
-              "question": "Which key signature has A as its tonic (starting note)?",
-              "options": ["A major", "C major", "G major", "F major"],
-              "answer": "A major",
-              "explanation": "A major is the key that starts on the note A"
+              "question": "What note comes immediately after F in the musical alphabet?",
+              "options": [
+                { "id": "a", "text": "G", "isCorrect": true },
+                { "id": "b", "text": "E", "isCorrect": false },
+                { "id": "c", "text": "F#", "isCorrect": false },
+                { "id": "d", "text": "A", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "beginner",
+              "explanation": "The musical alphabet goes A-B-C-D-E-F-G, so G comes after F."
             },
-            // Note B exercises
+            // Advanced Note Recognition
             {
-              "id": "b_ex1",
+              "id": "middle_c_recognition",
               "type": "multiple-choice",
-              "question": "What note is shown on the treble clef staff?",
-              "options": ["A", "B", "C", "D"],
-              "answer": "B",
-              "explanation": "This is the note B on the staff"
+              "question": "Where is Middle C located on the grand staff?",
+              "options": [
+                { "id": "a", "text": "On a ledger line between treble and bass clefs", "isCorrect": true },
+                { "id": "b", "text": "On the bottom line of treble clef", "isCorrect": false },
+                { "id": "c", "text": "On the top line of bass clef", "isCorrect": false },
+                { "id": "d", "text": "In the first space of treble clef", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "intermediate",
+              "explanation": "Middle C sits on a ledger line between the treble and bass clef staves."
             },
             {
-              "id": "b_ex2",
+              "id": "enharmonic_recognition",
               "type": "multiple-choice",
-              "question": "What note comes after A in the musical alphabet?",
-              "options": ["B", "C", "A#", "Bb"],
-              "answer": "B",
-              "explanation": "B comes directly after A in the musical alphabet"
+              "question": "Which of these note pairs are enharmonic equivalents (same pitch, different names)?",
+              "options": [
+                { "id": "a", "text": "F# and Gb", "isCorrect": true },
+                { "id": "b", "text": "C and D", "isCorrect": false },
+                { "id": "c", "text": "E and F", "isCorrect": false },
+                { "id": "d", "text": "A and B", "isCorrect": false }
+              ],
+              "correctAnswer": "a",
+              "difficulty": "intermediate",
+              "explanation": "F# (F sharp) and Gb (G flat) are enharmonic equivalents - they sound the same but are written differently."
             },
             {
               "id": "b_ex4",
