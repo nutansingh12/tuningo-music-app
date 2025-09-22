@@ -17,7 +17,7 @@ import { useUserStore } from '@/store/userStore';
 import { sampleSkillTrees } from '@/data/sampleData';
 import StaffNotation from '@/components/StaffNotation';
 import { useAudioSynthesizer } from '@/hooks/useAudio';
-import { loadLessonById } from '@/services/lessonLoader';
+import { loadLessonById, findNextLessonInLevel } from '@/services/lessonLoader';
 
 // Helper function to extract note information from question text and exercise data
 const extractNoteFromQuestion = (question: string, exercise?: any): { note: string; clef: 'treble' | 'bass' } | null => {
@@ -144,12 +144,6 @@ const LessonPage = () => {
   // Function to find lesson by ID using lazy loading
   const findLessonById = async (id: string) => {
     console.log(`🔍 Loading lesson: ${id}`);
-
-    // Clear cache to force fresh load (temporary debugging)
-    import('@/services/lessonLoader').then(module => {
-      module.clearLessonCache();
-      console.log('🗑️ Cache cleared for fresh lesson load');
-    });
 
 
 
@@ -520,7 +514,7 @@ const LessonPage = () => {
     }
   };
 
-  const handleFinishLesson = () => {
+  const handleFinishLesson = async () => {
     console.log('🚀 handleFinishLesson called!');
     console.log('🚀 currentLesson:', currentLesson);
     console.log('🚀 exerciseResults:', exerciseResults);
@@ -554,10 +548,30 @@ const LessonPage = () => {
       } else {
         console.warn('⚠️ Could not find node ID for lesson:', currentLesson.id);
       }
+
+      // 🎯 NEW FEATURE: Try to find the next lesson in the same level
+      try {
+        console.log('🔍 Looking for next lesson in the same level...');
+        const nextLessonId = await findNextLessonInLevel(currentLesson.id);
+
+        if (nextLessonId) {
+          console.log('🎯 Next lesson found! Navigating to:', nextLessonId);
+          showFeedbackMessage('🎉 Moving to next lesson!', 'success');
+          navigate(`/lesson/${nextLessonId}`);
+          return;
+        } else {
+          console.log('📚 No more lessons in this level, returning to skill tree');
+          showFeedbackMessage('🎓 Level completed! Great job!', 'success');
+        }
+      } catch (error) {
+        console.error('❌ Error finding next lesson:', error);
+        showFeedbackMessage('⚠️ Error finding next lesson', 'error');
+      }
     } else {
       console.warn('⚠️ No currentLesson found!');
     }
 
+    // Fallback: navigate back to skill tree
     navigate('/skill-tree');
   };
 

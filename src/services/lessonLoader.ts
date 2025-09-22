@@ -164,3 +164,39 @@ export const getCacheStatus = () => {
     cacheSize: lessonCache.size
   };
 };
+
+// Find the next lesson in the same level
+export const findNextLessonInLevel = async (currentLessonId: string): Promise<string | null> => {
+  console.log(`🔍 Finding next lesson after: ${currentLessonId}`);
+
+  // Search through all levels to find the current lesson and its next sibling
+  for (const levelMeta of levelMetadata) {
+    try {
+      const levelData = await loadLevelLessons(levelMeta.id);
+      const lessons = levelData.lessons || [];
+
+      // Find current lesson index
+      const currentIndex = lessons.findIndex((lesson: any) => lesson.id === currentLessonId);
+
+      if (currentIndex !== -1) {
+        console.log(`✅ Found current lesson at index ${currentIndex} in level: ${levelMeta.title}`);
+
+        // Check if there's a next lesson in this level
+        if (currentIndex + 1 < lessons.length) {
+          const nextLesson = lessons[currentIndex + 1];
+          console.log(`🎯 Next lesson found: ${nextLesson.id} - ${nextLesson.title}`);
+          return nextLesson.id;
+        } else {
+          console.log(`📚 No more lessons in this level (${levelMeta.title})`);
+          return null;
+        }
+      }
+    } catch (error) {
+      console.warn(`⚠️ Could not search level ${levelMeta.id}:`, error);
+      continue;
+    }
+  }
+
+  console.log(`❌ Current lesson not found: ${currentLessonId}`);
+  return null;
+};
