@@ -99,14 +99,35 @@ export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryI
       }
     }
 
-    // Special handling for Level 1
+    // Special handling for Level 1 - All 21 lessons
     if (level.id === 'intro_to_notes') {
-      if (lessonIndex === 0) {
-        lessonId = 'intro_to_notes';
-        lessonTitle = 'Musical Alphabet Basics';
-      } else if (lessonIndex === 1) {
-        lessonId = 'note_recognition_combined';
-        lessonTitle = 'Recognizing Notes';
+      const level1Lessons = [
+        { id: 'intro_to_notes', title: 'Musical Alphabet Basics' },
+        { id: 'note_recognition_combined', title: 'Recognizing Notes' },
+        { id: 'treble_clef_lines', title: 'Treble Clef Line Notes' },
+        { id: 'treble_clef_spaces', title: 'Treble Clef Space Notes' },
+        { id: 'bass_clef_lines', title: 'Bass Clef Line Notes' },
+        { id: 'bass_clef_spaces', title: 'Bass Clef Space Notes' },
+        { id: 'ledger_lines_above', title: 'Ledger Lines Above Staff' },
+        { id: 'ledger_lines_below', title: 'Ledger Lines Below Staff' },
+        { id: 'middle_c', title: 'Middle C' },
+        { id: 'notes_staff', title: 'Notes on the Staff' },
+        { id: 'sharps_flats', title: 'Sharps & Flats Basics' },
+        { id: 'natural_sign', title: 'Natural Sign' },
+        { id: 'rests_basics', title: 'Rests & Silence' },
+        { id: 'treble_clef', title: 'Treble Clef Reading' },
+        { id: 'bass_clef', title: 'Bass Clef Reading' },
+        { id: 'note_values', title: 'Note Value Comparison' },
+        { id: 'simple_time', title: 'Simple Time Signatures' },
+        { id: 'listening_high_low', title: 'Listening Drill: High vs Low' },
+        { id: 'accidentals_intro', title: 'Sharps & Flats Basics' },
+        { id: 'note_durations_mix', title: 'Note Value Comparison' },
+        { id: 'rhythm_training', title: 'Rhythm Training' }
+      ];
+
+      if (lessonIndex < level1Lessons.length) {
+        lessonId = level1Lessons[lessonIndex].id;
+        lessonTitle = level1Lessons[lessonIndex].title;
       }
     }
 
