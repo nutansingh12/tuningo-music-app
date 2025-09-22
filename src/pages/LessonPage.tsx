@@ -145,6 +145,12 @@ const LessonPage = () => {
   const findLessonById = async (id: string) => {
     console.log(`🔍 Loading lesson: ${id}`);
 
+    // Clear cache to force fresh load (temporary debugging)
+    import('@/services/lessonLoader').then(module => {
+      module.clearLessonCache();
+      console.log('🗑️ Cache cleared for fresh lesson load');
+    });
+
 
 
     try {
