@@ -245,8 +245,14 @@ const LessonPage = () => {
         console.log(`🎯 Found lesson exercises count:`, foundLesson?.exercises?.length);
         console.log(`🎯 Found lesson exercises:`, foundLesson?.exercises?.map(e => e.id));
 
-        if (foundLesson && foundLesson.exercises && foundLesson.exercises.length > 0) {
-          console.log(`✅ Setting lesson: ${foundLesson.title} with ${foundLesson.exercises.length} exercises`);
+        // Check if lesson has exercises or exercisePool
+        const hasExercises = foundLesson && foundLesson.exercises && foundLesson.exercises.length > 0;
+        const hasExercisePool = foundLesson && (foundLesson as any).exercisePool && (foundLesson as any).exercisePool.length > 0;
+
+        if (foundLesson && (hasExercises || hasExercisePool)) {
+          const exerciseSource = hasExercises ? 'exercises' : 'exercisePool';
+          const exerciseCount = hasExercises ? foundLesson.exercises.length : (foundLesson as any).exercisePool.length;
+          console.log(`✅ Setting lesson: ${foundLesson.title} with ${exerciseCount} ${exerciseSource}`);
 
           // Handle randomized exercises for lessons with randomizeExercises flag
           let processedLesson = { ...foundLesson };
