@@ -20,7 +20,7 @@ import { useAudioSynthesizer } from '@/hooks/useAudio';
 import { loadLessonById, findNextLessonInLevel } from '@/services/lessonLoader';
 
 // Helper function to extract note information from question text and exercise data
-const extractNoteFromQuestion = (question: string, exercise?: any): { note: string; clef: 'treble' | 'bass' } | null => {
+const extractNoteFromQuestion = (question: string, exercise?: any): { note: string; clef: 'treble' | 'bass'; showLabel: boolean } | null => {
   const lowerQuestion = question.toLowerCase();
 
 
@@ -39,7 +39,8 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
   if (noteOnStaffMatch) {
     return {
       note: noteOnStaffMatch[1].toUpperCase(),
-      clef: 'treble' // Default to treble clef
+      clef: 'treble', // Default to treble clef
+      showLabel: true // This is a note identification exercise, show the label
     };
   }
 
@@ -53,9 +54,11 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
   if (whatNoteMatch && exerciseAnswer) {
 
     // Extract the note from the exercise answer since the question doesn't reveal it
+    // This is a SIGHT-READING exercise - hide the label!
     return {
       note: exerciseAnswer.toUpperCase(),
-      clef: whatNoteMatch[1] as 'treble' | 'bass'
+      clef: whatNoteMatch[1] as 'treble' | 'bass',
+      showLabel: false // Hide label for proper sight-reading
     };
   }
 
@@ -63,9 +66,11 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
   if (lowerQuestion.includes('what note is shown') && lowerQuestion.includes('staff') && exerciseAnswer) {
     // Determine clef from context or default to treble
     const clefFromContext = lowerQuestion.includes('bass') ? 'bass' : 'treble';
+    // This is also a SIGHT-READING exercise - hide the label!
     return {
       note: exerciseAnswer.toUpperCase(),
-      clef: clefFromContext
+      clef: clefFromContext,
+      showLabel: false // Hide label for proper sight-reading
     };
   }
 
@@ -81,9 +86,11 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
     const match = lowerQuestion.match(pattern);
     if (match && exerciseAnswer) {
       const clefFromMatch = match[match.length - 1]; // Last capture group is usually the clef
+      // These are SIGHT-READING exercises asking about staff positions - hide the label!
       return {
         note: exerciseAnswer.toUpperCase(),
-        clef: (clefFromMatch === 'bass' ? 'bass' : 'treble') as 'treble' | 'bass'
+        clef: (clefFromMatch === 'bass' ? 'bass' : 'treble') as 'treble' | 'bass',
+        showLabel: false // Hide label for proper sight-reading
       };
     }
   }
@@ -91,9 +98,11 @@ const extractNoteFromQuestion = (question: string, exercise?: any): { note: stri
   // Look for "note X is shown on the Y clef staff" patterns
   const noteOnClefMatch = lowerQuestion.match(/note\s+([a-g])\s+.*on\s+the\s+(treble|bass)\s+clef/);
   if (noteOnClefMatch) {
+    // This pattern reveals the note in the question, so it's educational - show the label
     return {
       note: noteOnClefMatch[1].toUpperCase(),
-      clef: noteOnClefMatch[2] as 'treble' | 'bass'
+      clef: noteOnClefMatch[2] as 'treble' | 'bass',
+      showLabel: true // Show label since note is mentioned in question
     };
   }
 
@@ -236,6 +245,11 @@ const LessonPage = () => {
         setCurrentLesson(demoLesson);
         return;
       }
+
+      // Clear cache to force fresh load
+      const { clearLessonCache } = await import('../services/lessonLoader');
+      clearLessonCache();
+      console.log(`🗑️ Cache cleared for fresh lesson load`);
 
       try {
         console.log(`🔍 Attempting to load lesson: ${lessonId}`);
@@ -719,6 +733,7 @@ const LessonPage = () => {
                     <StaffNotation
                       note={noteInfo.note}
                       clef={noteInfo.clef}
+                      showLabel={noteInfo.showLabel}
                       className="shadow-lg"
                     />
                     {/* Audio playback for the note */}

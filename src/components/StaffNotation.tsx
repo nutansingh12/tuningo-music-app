@@ -4,12 +4,14 @@ interface StaffNotationProps {
   note: string;
   clef?: 'treble' | 'bass';
   className?: string;
+  showLabel?: boolean; // New prop to control whether to show the note label
 }
 
-const StaffNotation: React.FC<StaffNotationProps> = ({ 
-  note, 
-  clef = 'treble', 
-  className = '' 
+const StaffNotation: React.FC<StaffNotationProps> = ({
+  note,
+  clef = 'treble',
+  className = '',
+  showLabel = false // Default to false for proper sight-reading
 }) => {
   // Note positions on treble clef staff (from bottom line = 0)
   const trebleNotePositions: { [key: string]: number } = {
@@ -107,17 +109,19 @@ const StaffNotation: React.FC<StaffNotationProps> = ({
           strokeWidth="1.5"
         />
 
-        {/* Note label */}
-        <text
-          x="90"
-          y={noteY + 35}
-          textAnchor="middle"
-          fontSize="14"
-          fontWeight="bold"
-          fill="#333"
-        >
-          {note.toUpperCase()}
-        </text>
+        {/* Note label - only show if showLabel is true */}
+        {showLabel && (
+          <text
+            x="90"
+            y={noteY + 35}
+            textAnchor="middle"
+            fontSize="14"
+            fontWeight="bold"
+            fill="#333"
+          >
+            {note.toUpperCase()}
+          </text>
+        )}
       </svg>
       
       <div className="text-center mt-2 text-sm text-gray-600">
