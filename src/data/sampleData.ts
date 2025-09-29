@@ -82,6 +82,49 @@ export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryI
     let lessonId = `${level.id}_lesson_${lessonIndex + 1}`;
     let lessonTitle = `Lesson ${lessonIndex + 1}`;
 
+    // Special handling for Level 2 (intervals)
+    if (level.id === 'building_skills') {
+      const level2Lessons = [
+        { id: 'unison_interval', title: 'Unison Interval' },
+        { id: 'minor_second', title: 'Minor Second' },
+        { id: 'major_second', title: 'Major Second' },
+        { id: 'minor_third', title: 'Minor Third' },
+        { id: 'major_third', title: 'Major Third' },
+        { id: 'perfect_fourth', title: 'Perfect Fourth' },
+        { id: 'tritone', title: 'Tritone' },
+        { id: 'perfect_fifth', title: 'Perfect Fifth' },
+        { id: 'minor_sixth', title: 'Minor Sixth' },
+        { id: 'major_sixth', title: 'Major Sixth' },
+        { id: 'minor_seventh', title: 'Minor Seventh' },
+        { id: 'major_seventh', title: 'Major Seventh' },
+        { id: 'octave', title: 'Octave' }
+      ];
+
+      if (lessonIndex < level2Lessons.length) {
+        lessonId = level2Lessons[lessonIndex].id;
+        lessonTitle = level2Lessons[lessonIndex].title;
+      }
+    }
+
+    // Special handling for Level 3 (scales)
+    if (level.id === 'expanding') {
+      const level3Lessons = [
+        { id: 'c_major_scale', title: 'C Major Scale' },
+        { id: 'g_major_scale', title: 'G Major Scale' },
+        { id: 'd_major_scale', title: 'D Major Scale' },
+        { id: 'a_major_scale', title: 'A Major Scale' },
+        { id: 'e_major_scale', title: 'E Major Scale' },
+        { id: 'enharmonic_scales', title: 'Enharmonic Scales' },
+        { id: 'f_major_scale', title: 'F Major Scale' },
+        { id: 'c_sharp_major_scale', title: 'C# Major Scale' }
+      ];
+
+      if (lessonIndex < level3Lessons.length) {
+        lessonId = level3Lessons[lessonIndex].id;
+        lessonTitle = level3Lessons[lessonIndex].title;
+      }
+    }
+
     // Special handling for Level 4 (ear training)
     if (level.id === 'ear_voice_training') {
       if (lessonIndex === 0) {
