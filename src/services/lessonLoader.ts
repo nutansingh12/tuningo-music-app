@@ -14,18 +14,18 @@ export const levelMetadata = [
     lessonCount: 21
   },
   {
-    id: "building_skills", 
+    id: "building_skills",
     title: "🎯 LEVEL 2: Building Skills",
     description: "Develop fundamental music theory knowledge",
     color: "#10B981",
-    lessonCount: 3
+    lessonCount: 13
   },
   {
     id: "expanding",
-    title: "🎨 LEVEL 3: Expanding Knowledge", 
+    title: "🎨 LEVEL 3: Expanding Knowledge",
     description: "Advanced concepts and composition",
     color: "#F59E0B",
-    lessonCount: 2
+    lessonCount: 8
   },
   {
     id: "ear_voice_training",
@@ -61,52 +61,13 @@ export const loadLevelLessons = async (levelId: string) => {
         break;
         
       case 'building_skills':
-        // For now, return minimal data for levels 2 & 3
-        levelData = {
-          id: 'building_skills',
-          title: '🎯 LEVEL 2: Building Skills',
-          lessons: [
-            {
-              id: 'demo_lesson_2',
-              title: 'Demo Lesson 2',
-              description: 'Coming soon...',
-              exercises: [
-                {
-                  id: 'demo-ex',
-                  type: 'multiple-choice',
-                  question: 'This level is coming soon!',
-                  options: ['OK', 'Understood'],
-                  answer: 'OK',
-                  explanation: 'Level 2 content will be added in future updates.'
-                }
-              ]
-            }
-          ]
-        };
+        const level2Module = await import('../data/lessons/level2');
+        levelData = level2Module.level1Lessons; // Note: exported as level1Lessons in the file
         break;
-        
+
       case 'expanding':
-        levelData = {
-          id: 'expanding', 
-          title: '🎨 LEVEL 3: Expanding Knowledge',
-          lessons: [
-            {
-              id: 'demo_lesson_3',
-              title: 'Demo Lesson 3', 
-              description: 'Coming soon...',
-              exercises: [
-                {
-                  id: 'demo-ex',
-                  type: 'multiple-choice',
-                  question: 'This level is coming soon!',
-                  options: ['OK', 'Understood'],
-                  answer: 'OK',
-                  explanation: 'Level 3 content will be added in future updates.'
-                }
-              ]
-            }
-          ]
-        };
+        const level3Module = await import('../data/lessons/level3');
+        levelData = level3Module.level1Lessons; // Note: exported as level1Lessons in the file
         break;
         
       default:
