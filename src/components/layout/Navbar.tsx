@@ -1,14 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Home, 
-  TreePine, 
-  User, 
-  Trophy, 
+import {
+  Home,
+  TreePine,
+  User,
+  Trophy,
   Award,
   Heart,
   Flame,
-  Star
+  Star,
+  Gamepad2
 } from 'lucide-react';
 import { useUserStore } from '@/store/userStore';
 
@@ -19,6 +20,7 @@ const Navbar = () => {
   const navItems = [
     { path: '/', icon: Home, label: 'Home' },
     { path: '/skill-tree', icon: TreePine, label: 'Learn' },
+    { path: '/mini-games', icon: Gamepad2, label: 'Games' },
     { path: '/leaderboard', icon: Trophy, label: 'Leaderboard' },
     { path: '/achievements', icon: Award, label: 'Achievements' },
     { path: '/profile', icon: User, label: 'Profile' },

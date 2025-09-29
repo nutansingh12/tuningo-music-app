@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -9,9 +10,14 @@ import {
   Headphones
 } from 'lucide-react';
 import { useUserStore } from '@/store/userStore';
+import { useMonetizationStore } from '@/store/monetizationStore';
+import PremiumModal from '@/components/monetization/PremiumModal';
+import AdBanner from '@/components/monetization/AdBanner';
 
 const HomePage = () => {
   const { user, progress } = useUserStore();
+  const { showAds, shouldShowAd, subscribeToPlan } = useMonetizationStore();
+  const [showPremiumModal, setShowPremiumModal] = React.useState(false);
 
   const dailyGoalProgress = progress ? (progress.weeklyXP / 7) / progress.dailyGoal : 0;
 
@@ -42,7 +48,7 @@ const HomePage = () => {
       description: 'Fun musical games',
       icon: Music,
       color: 'bg-orange-500',
-      link: '/skill-tree',
+      link: '/mini-games',
     },
   ];
 
@@ -225,6 +231,53 @@ const HomePage = () => {
           </motion.button>
         </Link>
       </motion.div>
+
+      {/* Premium Upgrade Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.0 }}
+        className="mt-8"
+      >
+        <div className="card bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200">
+          <div className="text-center space-y-4">
+            <div className="text-4xl">👑</div>
+            <h3 className="text-xl font-bold text-gray-800">Upgrade to Premium</h3>
+            <p className="text-gray-600">
+              Get unlimited hearts, no ads, and exclusive content!
+            </p>
+            <button
+              onClick={() => setShowPremiumModal(true)}
+              className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors font-semibold"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Ad Banner */}
+      {showAds && shouldShowAd() && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2 }}
+          className="mt-6"
+        >
+          <AdBanner position="inline" />
+        </motion.div>
+      )}
+
+      {/* Premium Modal */}
+      <PremiumModal
+        isOpen={showPremiumModal}
+        onClose={() => setShowPremiumModal(false)}
+        onSubscribe={(plan) => {
+          subscribeToPlan(plan);
+          setShowPremiumModal(false);
+          alert(`Successfully subscribed to ${plan} plan!`);
+        }}
+      />
     </div>
   );
 };

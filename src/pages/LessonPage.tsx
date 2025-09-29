@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { useGameStore } from '@/store/gameStore';
 import { useUserStore } from '@/store/userStore';
+import { useMonetizationStore } from '@/store/monetizationStore';
 import { sampleSkillTrees } from '@/data/sampleData';
 import StaffNotation from '@/components/StaffNotation';
 import { useAudioSynthesizer } from '@/hooks/useAudio';

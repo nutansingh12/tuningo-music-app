@@ -119,7 +119,7 @@ const StaffNotation: React.FC<StaffNotationProps> = ({
             fontWeight="bold"
             fill="#333"
           >
-            {note.toUpperCase()}
+            {/* {note.toUpperCase()} */}
           </text>
         )}
       </svg>

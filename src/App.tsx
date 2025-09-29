@@ -9,6 +9,7 @@ import LessonPage from '@/pages/LessonPage';
 import ProfilePage from '@/pages/ProfilePage';
 import LeaderboardPage from '@/pages/LeaderboardPage';
 import AchievementsPage from '@/pages/AchievementsPage';
+import MiniGamesPage from '@/pages/MiniGamesPage';
 
 // Components
 import Navbar from '@/components/layout/Navbar';
@@ -50,6 +51,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/skill-tree" element={<SkillTreePage />} />
               <Route path="/lesson/:lessonId" element={<LessonPage />} />
+              <Route path="/mini-games" element={<MiniGamesPage />} />
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/leaderboard" element={<LeaderboardPage />} />
               <Route path="/achievements" element={<AchievementsPage />} />
