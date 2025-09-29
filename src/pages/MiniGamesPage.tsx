@@ -31,7 +31,7 @@ const MiniGamesPage = () => {
       icon: '🥁',
       difficulty: 'easy',
       estimatedTime: 1,
-      xpReward: 50,
+      xpReward: 15,
       component: RhythmTapper
     },
     {
@@ -41,7 +41,7 @@ const MiniGamesPage = () => {
       icon: '🎵',
       difficulty: 'easy',
       estimatedTime: 2,
-      xpReward: 75,
+      xpReward: 20,
       component: NoteCatcher
     },
     {
@@ -51,7 +51,7 @@ const MiniGamesPage = () => {
       icon: '🎹',
       difficulty: 'medium',
       estimatedTime: 3,
-      xpReward: 100,
+      xpReward: 25,
       component: () => <div className="text-center p-8">Coming Soon! 🚧</div>
     },
     {
@@ -61,7 +61,7 @@ const MiniGamesPage = () => {
       icon: '🏃‍♂️',
       difficulty: 'medium',
       estimatedTime: 4,
-      xpReward: 125,
+      xpReward: 30,
       component: () => <div className="text-center p-8">Coming Soon! 🚧</div>
     },
     {
@@ -71,7 +71,7 @@ const MiniGamesPage = () => {
       icon: '🎤',
       difficulty: 'hard',
       estimatedTime: 3,
-      xpReward: 150,
+      xpReward: 35,
       component: () => <div className="text-center p-8">Coming Soon! 🚧</div>
     }
   ];

@@ -11,7 +11,7 @@ export const level1Lessons =     {
           "title": "Musical Alphabet Basics",
           "description": "Learn the 7 letters of music",
           "estimatedDuration": 15,
-          "xpReward": 150,
+          "xpReward": 25,
           "exercises": [
             {
               "id": "ex1",
@@ -142,7 +142,7 @@ export const level1Lessons =     {
           "type": "theory",
           "difficulty": "beginner",
           "estimatedDuration": 20,
-          "xpReward": 200,
+          "xpReward": 30,
           "randomizeExercises": true,
           "exerciseCount": 10,
           "exercisePool": [
@@ -674,7 +674,7 @@ export const level1Lessons =     {
           "title": "Treble Clef Line Notes",
           "description": "Every Good Boy Does Fine",
           "estimatedDuration": 15,
-          "xpReward": 150,
+          "xpReward": 25,
           "exercises": [
             {
               "id": "ex1",
@@ -747,7 +747,7 @@ export const level1Lessons =     {
           "title": "Treble Clef Space Notes",
           "description": "FACE in the space",
           "estimatedDuration": 15,
-          "xpReward": 150,
+          "xpReward": 25,
           "exercises": [
             {
               "id": "ex1",
@@ -820,7 +820,7 @@ export const level1Lessons =     {
           "title": "Bass Clef Line Notes",
           "description": "Good Boys Do Fine Always",
           "estimatedDuration": 15,
-          "xpReward": 150,
+          "xpReward": 25,
           "exercises": [
             {
               "id": "ex1",
@@ -893,7 +893,7 @@ export const level1Lessons =     {
           "title": "Bass Clef Space Notes",
           "description": "All Cows Eat Grass",
           "estimatedDuration": 15,
-          "xpReward": 150,
+          "xpReward": 25,
           "exercises": [
             {
               "id": "ex1",
@@ -966,7 +966,7 @@ export const level1Lessons =     {
           "title": "Ledger Lines Above Staff",
           "description": "Notes above the staff",
           "estimatedDuration": 18,
-          "xpReward": 180,
+          "xpReward": 30,
           "exercises": [
             {
               "id": "ex1",
@@ -1055,7 +1055,7 @@ export const level1Lessons =     {
           "title": "Ledger Lines Below Staff",
           "description": "Notes below the staff",
           "estimatedDuration": 18,
-          "xpReward": 180,
+          "xpReward": 30,
           "exercises": [
             {
               "id": "ex1",
@@ -1144,7 +1144,7 @@ export const level1Lessons =     {
           "title": "Middle C",
           "description": "The center of the piano",
           "estimatedDuration": 15,
-          "xpReward": 150,
+          "xpReward": 25,
           "exercises": [
             {
               "id": "ex1",
@@ -1234,7 +1234,7 @@ export const level1Lessons =     {
           "title": "Notes on the Staff",
           "description": "Learn where notes sit on the treble and bass staff.",
           "estimatedDuration": 6,
-          "xpReward": 60,
+          "xpReward": 15,
           "exercises": [
             {
               "id": "ex1",
@@ -1251,7 +1251,7 @@ export const level1Lessons =     {
           "title": "Sharps & Flats Basics",
           "description": "Understand how notes move up or down a semitone.",
           "estimatedDuration": 6,
-          "xpReward": 60,
+          "xpReward": 15,
           "exercises": [
             {
               "id": "ex1",
@@ -1268,7 +1268,7 @@ export const level1Lessons =     {
           "title": "Natural Sign",
           "description": "How the natural sign cancels sharps and flats.",
           "estimatedDuration": 5,
-          "xpReward": 50,
+          "xpReward": 12,
           "exercises": [
             {
               "id": "ex1",
@@ -1285,7 +1285,7 @@ export const level1Lessons =     {
           "title": "Rests & Silence",
           "description": "Understand whole, half, and quarter rests.",
           "estimatedDuration": 6,
-          "xpReward": 60,
+          "xpReward": 15,
           "exercises": [
             {
               "id": "ex1",
@@ -1302,7 +1302,7 @@ export const level1Lessons =     {
           "title": "Treble Clef Reading",
           "description": "Learn the notes on the treble clef.",
           "estimatedDuration": 7,
-          "xpReward": 70,
+          "xpReward": 18,
           "exercises": [
             {
               "id": "ex1",
@@ -1318,7 +1318,7 @@ export const level1Lessons =     {
           "title": "Bass Clef Reading",
           "description": "Learn the notes on the bass clef.",
           "estimatedDuration": 7,
-          "xpReward": 70,
+          "xpReward": 18,
           "exercises": [
             {
               "id": "ex1",
@@ -1334,7 +1334,7 @@ export const level1Lessons =     {
           "title": "Note Value Comparison",
           "description": "See how note durations fit together.",
           "estimatedDuration": 7,
-          "xpReward": 70,
+          "xpReward": 18,
           "exercises": [
             {
               "id": "ex1",
@@ -1351,7 +1351,7 @@ export const level1Lessons =     {
           "title": "Simple Time Signatures",
           "description": "Learn 2/4, 3/4, and 4/4.",
           "estimatedDuration": 6,
-          "xpReward": 60,
+          "xpReward": 15,
           "exercises": [
             {
               "id": "ex1",
@@ -1368,7 +1368,7 @@ export const level1Lessons =     {
           "title": "Listening Drill: High vs Low",
           "description": "Differentiate high and low pitches by ear.",
           "estimatedDuration": 5,
-          "xpReward": 50,
+          "xpReward": 12,
           "exercises": [
             {
               "id": "ex1",
@@ -1385,7 +1385,7 @@ export const level1Lessons =     {
           "title": "Sharps & Flats Basics",
           "description": "Understanding how notes can be raised or lowered",
           "estimatedDuration": 6,
-          "xpReward": 60,
+          "xpReward": 15,
           "exercises": [
             {
               "id": "ex1",
@@ -1402,7 +1402,7 @@ export const level1Lessons =     {
           "title": "Note Value Comparison",
           "description": "See how rhythms fit together",
           "estimatedDuration": 7,
-          "xpReward": 70,
+          "xpReward": 18,
           "exercises": [
             {
               "id": "ex1",
@@ -1422,7 +1422,7 @@ export const level1Lessons =     {
           "type": "theory",
           "difficulty": "beginner",
           "estimatedDuration": 25,
-          "xpReward": 250,
+          "xpReward": 50,
           "prerequisites": [],
           "randomizeExercises": true,
           "exerciseCount": 10,

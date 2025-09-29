@@ -195,7 +195,7 @@ export const useUserStore = create<UserState>()(
         if (!state.user || !state.progress) return;
 
         const newXP = state.user.xp + amount;
-        const newLevel = Math.floor(newXP / 100) + 1; // 100 XP per level
+        const newLevel = Math.floor(newXP / 500) + 1; // 500 XP per level
         
         set({
           user: {

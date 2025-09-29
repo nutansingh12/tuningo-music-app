@@ -137,7 +137,7 @@ export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryI
       description: `${level.title} - ${lessonTitle}`,
       type: getSkillNodeType(level.id),
       difficulty: getDifficulty(categoryIndex, lessonIndex),
-      xpReward: 100 + (lessonIndex * 50),
+      xpReward: 20 + (lessonIndex * 5),
       lessons: [{
         id: lessonId,
         title: lessonTitle,
@@ -145,7 +145,7 @@ export const sampleSkillTrees: SkillTree[] = levelMetadata.map((level, categoryI
         type: getLessonType({ title: lessonTitle }),
         difficulty: getDifficulty(categoryIndex, lessonIndex),
         estimatedDuration: 10 + (lessonIndex * 5),
-        xpReward: 100 + (lessonIndex * 50),
+        xpReward: 20 + (lessonIndex * 5),
         exercises: [], // Will be loaded dynamically
         prerequisites: []
       }],
@@ -173,7 +173,7 @@ export const sampleAchievements: Achievement[] = [
       value: 1
     },
     reward: {
-      xp: 100
+      xp: 25
     },
     rarity: 'common'
   },
@@ -188,7 +188,7 @@ export const sampleAchievements: Achievement[] = [
       value: 10
     },
     reward: {
-      xp: 250
+      xp: 50
     },
     rarity: 'common'
   },
